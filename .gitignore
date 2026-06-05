@@ -1,0 +1,5 @@
+.env
+news-digest/
+news-legal-digest/
+output/
+node_modules/

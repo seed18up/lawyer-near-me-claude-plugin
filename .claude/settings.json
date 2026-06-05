@@ -1,0 +1,71 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"$file = $env:CLAUDE_TOOL_INPUT | ConvertFrom-Json | Select-Object -ExpandProperty file_path -ErrorAction SilentlyContinue; if ($file -match 'legal|contract|terms|privacy|compliance') { Write-Host '[HOOK] Legal file detected — ensure Legal Advisory Team has reviewed this content before publishing.' -ForegroundColor Yellow }\"",
+            "description": "Warn when editing legal-related files"
+          }
+        ]
+      },
+      {
+        "matcher": "WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"Write-Host '[HOOK] Web search initiated — Marketing Team: log insights to campaign-research.md for future reference.' -ForegroundColor Cyan\"",
+            "description": "Remind to log research findings"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"$input_data = $env:CLAUDE_TOOL_INPUT | ConvertFrom-Json -ErrorAction SilentlyContinue; $file = $input_data.file_path; if ($file -match 'marketing|campaign|social|seo|content') { Write-Host ('[HOOK] Marketing asset created: ' + $file + ' — Consider sharing with team for review.') -ForegroundColor Green }\"",
+            "description": "Notify when marketing assets are created"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"$input_data = $env:CLAUDE_TOOL_INPUT | ConvertFrom-Json -ErrorAction SilentlyContinue; $file = $input_data.file_path; if ($file -match 'terms|privacy|contract|compliance') { Write-Host ('[HOOK] Legal document updated: ' + $file + ' — PDPA compliance check required. Notify Compliance Officer.') -ForegroundColor Red }\"",
+            "description": "Alert when legal documents are modified"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"Write-Host '' ; Write-Host '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' -ForegroundColor Blue ; Write-Host ' Lawyer Near Me — Session Summary' -ForegroundColor Blue ; Write-Host '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' -ForegroundColor Blue ; Write-Host ' Marketing Team: ตรวจสอบ content ที่สร้างและส่ง Legal review' -ForegroundColor White ; Write-Host ' Legal Team: ยืนยัน compliance ก่อน publish ทุกครั้ง' -ForegroundColor White ; Write-Host ' ทุก legal content ต้องผ่าน Legal Advisor กอน deploy' -ForegroundColor Yellow ; Write-Host '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' -ForegroundColor Blue\"",
+            "description": "Display Lawyer Near Me team checklist on session end"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(.claude/**)",
+      "Write(.claude/**)",
+      "Read(src/**)",
+      "Read(docs/**)",
+      "Write(docs/marketing/**)",
+      "Write(docs/legal/**)",
+      "WebSearch(legal Thailand lawyer)",
+      "WebSearch(marketing legal services)"
+    ]
+  }
+}
