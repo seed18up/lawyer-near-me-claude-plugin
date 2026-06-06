@@ -624,6 +624,41 @@
       transform: translateY(-2px);
     }
 
+    /* ── Image banner ── */
+    .news-card-img {
+      position: relative;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      background-color: var(--navy-light);
+      overflow: hidden;
+    }
+
+    .news-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(0,0,0,.70) 0%,
+        rgba(0,0,0,.20) 55%,
+        transparent 100%);
+    }
+
+    .news-card-img-badges {
+      position: absolute;
+      bottom: 14px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
+    .news-card-body {
+      padding: 0;
+    }
+
     .news-card-top {
       padding: 20px 24px 16px;
       display: flex;
@@ -1787,7 +1822,7 @@
        before this script runs to inject live data.
        Fallback: hardcoded seed data below.
     ────────────────────────────────────── */
-    /* ── Category → badge style mapping ── */
+    /* ── Category mappings ── */
     const CATEGORY_STYLE = {
       property:  'badge-gold',
       labor:     'badge-blue',
@@ -1807,6 +1842,49 @@
       criminal:  'ปรึกษาทนายคดีอาญา',
     };
 
+    /* ── Curated Unsplash images per category (CDN, no API key needed) ── */
+    const CATEGORY_IMAGES = {
+      property: [
+        'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1570129477492-1f17d3f82f33?w=800&q=80&fit=crop&auto=format',
+      ],
+      labor: [
+        'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop&auto=format',
+      ],
+      consumer: [
+        'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80&fit=crop&auto=format',
+      ],
+      criminal: [
+        'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1532938911079-1346d177168a?w=800&q=80&fit=crop&auto=format',
+      ],
+      family: [
+        'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1516534669431-49b2d45f6610?w=800&q=80&fit=crop&auto=format',
+      ],
+      contract: [
+        'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop&auto=format',
+        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&fit=crop&auto=format',
+      ],
+      civil: [
+        'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop&auto=format',
+      ],
+    };
+
+    /* ── Pick image: use explicit image_url, or select from pool by category ── */
+    function pickImage(story, en) {
+      if (story.image_url) return story.image_url;
+      const pool = CATEGORY_IMAGES[en] || CATEGORY_IMAGES.criminal;
+      /* Deterministic pick by title length so same story always gets same image */
+      const idx = (story.title || story.headline || '').length % pool.length;
+      return pool[idx];
+    }
+
     /* ── Normalize story from news-data.json format → render format ── */
     function normalizeStory(s) {
       const en = (s.category_en || '').toLowerCase();
@@ -1820,6 +1898,7 @@
         action:         s.action  || '',
         practice_area:  s.practice_area || s.category,
         cta:            s.cta || CATEGORY_CTA[en] || 'ปรึกษาทนาย',
+        image_url:      pickImage(s, en),
       };
     }
 
@@ -1877,12 +1956,15 @@
       container.innerHTML = stories.map(function(s) {
         return `
           <article class="news-card">
-            <div class="news-card-top">
-              <span class="news-category-badge ${s.category_style}">${s.category}</span>
-              <span class="urgency-dot ${urgencyClass[s.urgency] || 'urgency-low'}"
-                title="ความสำคัญ: ${urgencyLabel[s.urgency] || 'ทั่วไป'}"></span>
+            <div class="news-card-img" style="background-image:url('${s.image_url}')">
+              <div class="news-card-img-badges">
+                <span class="news-category-badge ${s.category_style}">${s.category}</span>
+                <span class="urgency-dot ${urgencyClass[s.urgency] || 'urgency-low'}"
+                  title="ความสำคัญ: ${urgencyLabel[s.urgency] || 'ทั่วไป'}"></span>
+              </div>
             </div>
-            <div class="news-headline">${s.headline}</div>
+            <div class="news-card-body">
+            <div class="news-headline" style="padding:20px 24px 0">${s.headline}</div>
             <div class="news-columns">
               <div class="news-col">
                 <div class="news-col-label col-label-what">🔵 เกิดอะไรขึ้น?</div>
@@ -1900,6 +1982,7 @@
             <div class="news-card-footer">
               <span class="news-practice-tag">${s.practice_area}</span>
               <a href="#cta" class="news-cta-link">${s.cta} →</a>
+            </div>
             </div>
           </article>`;
       }).join('');

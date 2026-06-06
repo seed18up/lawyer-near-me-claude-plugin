@@ -125,10 +125,51 @@ async function generateNews() {
     process.exit(1);
   }
 
+  // ── Attach a curated Unsplash image per category ──
+  const IMAGES = {
+    property: [
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1570129477492-1f17d3f82f33?w=800&q=80&fit=crop&auto=format',
+    ],
+    labor: [
+      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop&auto=format',
+    ],
+    consumer: [
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80&fit=crop&auto=format',
+    ],
+    criminal: [
+      'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1532938911079-1346d177168a?w=800&q=80&fit=crop&auto=format',
+    ],
+    family: [
+      'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1516534669431-49b2d45f6610?w=800&q=80&fit=crop&auto=format',
+    ],
+    contract: [
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&fit=crop&auto=format',
+    ],
+  };
+
+  const usedImages = new Set();
+  const enrichedStories = stories.map((s) => {
+    const en = (s.category_en || 'criminal').toLowerCase();
+    const pool = IMAGES[en] || IMAGES.criminal;
+    // Pick first unused image; wrap around if all used
+    const img = pool.find((u) => !usedImages.has(u)) || pool[0];
+    usedImages.add(img);
+    return { ...s, image_url: s.image_url || img };
+  });
+
   const output = {
     updated: today,
     updated_th: getTodayThai(),
-    stories,
+    stories: enrichedStories,
   };
 
   const outputPath = join(ROOT, 'news-data.json');
