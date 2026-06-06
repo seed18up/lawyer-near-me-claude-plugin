@@ -2,7 +2,7 @@
 
 /**
  * Daily Legal News Generator for Lawyer Near Me (ทนายใกล้ฉัน)
- * Uses Anthropic API (claude-sonnet-4-6) to generate 3 Thai legal news stories.
+ * Uses Anthropic API (claude-sonnet-4-6) to generate 2 high-drama Thai legal news stories.
  * Writes output to news-data.json at the repo root.
  *
  * No npm packages required — uses Node 18+ built-in fetch().
@@ -42,16 +42,25 @@ function getTodayThai() {
 async function generateNews() {
   const today = getTodayISO();
 
-  const prompt = `สร้างข่าวกฎหมายไทย 3 เรื่องที่น่าสนใจ สมจริง อัปเดทสำหรับวันที่ ${today}
-แต่ละเรื่องต้องมี:
+  const prompt = `สร้างข่าวกฎหมายไทย 2 เรื่อง ที่เป็นดราม่า น่าแชร์ต่อ กระทบชีวิตประจำวัน และสมจริง สำหรับวันที่ ${today}
+
+ลักษณะข่าวที่ต้องการ:
+- ต้องเป็นเรื่องที่คนทั่วไปอาจเจอได้ในชีวิต เช่น ถูกโกง, โดนเอาเปรียบ, สิทธิ์ถูกละเมิด, หนี้, แรงงาน, ซื้อบ้านโกง
+- หัวข่าวต้องสะเทือนอารมณ์ อ่านแล้วอยากแชร์ต่อ เช่น "ระวัง!", "เจอแบบนี้ทำยังไง?", "สิทธิ์คุณถูกละเมิด!", "ศาลตัดสินแล้ว!"
+- เนื้อหาต้องมีความขัดแย้ง (ผู้เสียหาย vs นายจ้าง/บริษัท/คู่สมรส/นักต้มตุ๋น)
+- ต้องมี emotional hook — ทำให้คนรู้สึกโกรธ, กลัว, หรืออยากช่วยเหลือ
+
+แต่ละเรื่องต้องมี field เหล่านี้:
 - category: ประเภทคดี (เช่น "คดีแรงงาน", "อสังหาริมทรัพย์", "ผู้บริโภค", "ครอบครัว", "สัญญาธุรกิจ", "คดีอาญา")
 - category_en: English slug (labor, property, consumer, family, contract, criminal)
-- title: หัวข่าวดึงดูด ภาษาไทย
-- what_happened: เกิดอะไรขึ้น 2-3 ประโยค
-- impact: กระทบคุณอย่างไร 1-2 ประโยค
-- action: ควรทำอะไร 1-2 ประโยค
-- practice_area: สาขากฎหมาย เช่น "Civil / Consumer Protection"
+- title: หัวข่าวดราม่า กระชับ ดึงดูด ภาษาไทย (ไม่เกิน 80 ตัวอักษร)
+- drama_hook: ประโยคเปิดดราม่า 1 ประโยค ที่ทำให้คนหยุดอ่าน (ใช้สำหรับ Social Media)
+- what_happened: เกิดอะไรขึ้น เล่าแบบดราม่า 2-3 ประโยค มีตัวละคร มีความขัดแย้ง
+- impact: กระทบคุณอย่างไร หรือบทเรียนที่ได้ 1-2 ประโยค
+- action: ควรทำอะไรทันที ถ้าเจอแบบนี้ 1-2 ประโยค
+- practice_area: สาขากฎหมาย เช่น "Civil / Labor Law"
 - urgency: "high" | "medium" | "low"
+- hashtags: array ของ hashtag ภาษาไทย 4-5 อัน เช่น ["#สิทธิแรงงาน","#ระวังโดนโกง"]
 
 ตอบเป็น JSON array เท่านั้น ไม่มีข้อความอื่น`;
 

@@ -1,0 +1,45 @@
+name: Facebook Auto-Post (ทนายใกล้ฉัน)
+
+on:
+  schedule:
+    # รอบเช้า 08:00 AM Bangkok (UTC+7) = 01:00 UTC
+    - cron: '0 1 * * *'
+    # รอบเย็น 19:00 PM Bangkok (UTC+7) = 12:00 UTC
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    inputs:
+      story_index:
+        description: 'Story index to post (0 = morning, 1 = evening)'
+        required: true
+        default: '0'
+
+jobs:
+  post-facebook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Determine story index from schedule
+        id: story
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "index=${{ github.event.inputs.story_index }}" >> $GITHUB_OUTPUT
+          elif [ "$HOUR" = "01" ]; then
+            echo "index=0" >> $GITHUB_OUTPUT
+          else
+            echo "index=1" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Post story to Facebook Page
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: node scripts/post-to-facebook.js ${{ steps.story.outputs.index }}
