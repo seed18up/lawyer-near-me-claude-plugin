@@ -3,72 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ทนายใกล้ฉัน — แพลตฟอร์มกฎหมายไทย ขับเคลื่อนด้วย AI</title>
+  <title>ทนายใกล้ฉัน — ค้นหาทนายความใกล้บ้านคุณ | Lawyer Near Me Thailand</title>
+  <meta name="description" content="ค้นหาทนายความที่ใช่ในพื้นที่ใกล้บ้าน จองนัดออนไลน์ ปรึกษาฟรีครั้งแรก ทนาย 1,200+ คนทั่วไทย">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ─────────────────────────────────────────
+       RESET & CUSTOM PROPERTIES
+    ───────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --navy: #1B3A8B;
-      --navy-dark: #132c6e;
-      --navy-light: #e8edf8;
-      --red: #B71C1C;
-      --red-light: #fdecea;
-      --white: #ffffff;
-      --gray-bg: #f4f6fb;
+      --navy:        #1B3A8B;
+      --navy-dark:   #112566;
+      --navy-deeper: #0b1a48;
+      --navy-light:  #e8edf8;
+      --navy-mid:    #2a4fa8;
+      --red:         #B71C1C;
+      --red-dark:    #8f1515;
+      --red-light:   #fdecea;
+      --gold:        #F9A825;
+      --gold-light:  #fff8e1;
+      --white:       #ffffff;
+      --gray-bg:     #f5f7fc;
       --gray-border: #e2e8f0;
-      --text-main: #1a1a2e;
-      --text-muted: #64748b;
-      --font: 'Sarabun', sans-serif;
+      --gray-100:    #f1f5f9;
+      --gray-200:    #e2e8f0;
+      --text-main:   #111827;
+      --text-muted:  #6b7280;
+      --text-light:  #9ca3af;
+      --font:        'Sarabun', sans-serif;
+      --radius-sm:   6px;
+      --radius:      10px;
+      --radius-lg:   16px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow:      0 4px 16px rgba(27,58,139,.10);
+      --shadow-lg:   0 12px 40px rgba(27,58,139,.14);
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font);
       background: var(--white);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.65;
+      font-size: 16px;
     }
 
-    /* ── NAVBAR ── */
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+    button { cursor: pointer; font-family: var(--font); }
+
+    /* ─────────────────────────────────────────
+       TOPBAR — Breaking news ticker
+    ───────────────────────────────────────── */
+    .topbar {
+      background: var(--red);
+      color: var(--white);
+      height: 36px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-size: 13px;
+      font-weight: 600;
+      position: relative;
+      z-index: 200;
+    }
+
+    .topbar-label {
+      background: var(--red-dark);
+      white-space: nowrap;
+      padding: 0 16px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .topbar-label .blink-dot {
+      width: 6px;
+      height: 6px;
+      background: #ffcdd2;
+      border-radius: 50%;
+      animation: blink 1.2s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    .topbar-ticker-wrap {
+      flex: 1;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar-ticker {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      animation: ticker 38s linear infinite;
+    }
+
+    .topbar-ticker:hover { animation-play-state: paused; }
+
+    .ticker-item {
+      padding: 0 40px 0 0;
+      opacity: .95;
+    }
+
+    .ticker-sep {
+      padding: 0 12px;
+      opacity: .55;
+    }
+
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .topbar-date {
+      white-space: nowrap;
+      padding: 0 16px;
+      font-size: 12px;
+      opacity: .85;
+      flex-shrink: 0;
+      border-left: 1px solid rgba(255,255,255,.25);
+    }
+
+    /* ─────────────────────────────────────────
+       NAVBAR
+    ───────────────────────────────────────── */
     .navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 60px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
       background: var(--white);
       border-bottom: 1px solid var(--gray-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 40px;
+      padding: 0 32px;
       z-index: 100;
-      box-shadow: 0 2px 12px rgba(27,58,139,0.07);
+      box-shadow: 0 2px 12px rgba(27,58,139,.07);
     }
 
     .navbar-brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 800;
       color: var(--navy);
-      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--navy);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
     }
 
     .navbar-nav {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 4px;
     }
 
     .nav-link {
       font-size: 14px;
       font-weight: 600;
       color: var(--text-muted);
-      text-decoration: none;
-      padding: 7px 16px;
-      border-radius: 6px;
-      transition: color 0.15s, background 0.15s;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      transition: color .15s, background .15s;
     }
 
     .nav-link:hover { color: var(--navy); background: var(--navy-light); }
@@ -78,595 +209,1741 @@
       color: var(--white);
       font-size: 14px;
       font-weight: 700;
-      text-decoration: none;
-      padding: 8px 20px;
-      border-radius: 6px;
-      transition: background 0.2s;
+      padding: 9px 22px;
+      border-radius: var(--radius-sm);
+      margin-left: 8px;
+      transition: background .2s, transform .1s;
     }
 
-    .nav-cta:hover { background: #9b1616; }
+    .nav-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
 
-    /* ── HERO ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+    }
+
+    /* ─────────────────────────────────────────
+       HERO — 2-column
+    ───────────────────────────────────────── */
     .hero {
-      margin-top: 60px;
-      background: linear-gradient(160deg, var(--navy) 0%, #0d1f5c 55%, #1a0a3c 100%);
+      background: linear-gradient(135deg, var(--navy-deeper) 0%, var(--navy) 50%, #1e4bb5 100%);
       color: var(--white);
-      padding: 80px 40px 64px;
-      text-align: center;
-      position: relative;
+      padding: 72px 32px 80px;
       overflow: hidden;
+      position: relative;
     }
 
     .hero::before {
       content: '';
       position: absolute;
-      top: -80px; right: -80px;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(183,28,28,0.18) 0%, transparent 70%);
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(249,168,37,.15) 0%, transparent 65%);
       border-radius: 50%;
+      pointer-events: none;
     }
 
-    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(183,28,28,.18) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
 
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Left column */
     .hero-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 18px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      padding: 6px 16px;
       border-radius: 20px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
-    .hero-eyebrow .dot {
-      width: 7px; height: 7px;
+    .live-dot {
+      width: 7px;
+      height: 7px;
       background: #4ade80;
       border-radius: 50%;
-      animation: pulse 2s infinite;
+      animation: pulse-dot 2s ease-in-out infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(.8); }
     }
 
     .hero-title {
-      font-size: 52px;
+      font-size: 50px;
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
+      margin-bottom: 18px;
+      letter-spacing: -.5px;
     }
 
-    .hero-title .accent { color: #fbbf24; }
+    .hero-title .accent-gold { color: var(--gold); }
+    .hero-title .accent-red  { color: #ff8a80; }
 
     .hero-subtitle {
-      font-size: 19px;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.80);
-      margin-bottom: 40px;
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 18px;
+      color: rgba(255,255,255,.80);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 520px;
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 56px;
-    }
-
-    .btn-hero-primary {
-      background: var(--red);
-      color: var(--white);
-      padding: 15px 32px;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 4px 20px rgba(183,28,28,0.4);
-    }
-
-    .btn-hero-primary:hover { background: #9b1616; transform: translateY(-2px); }
-
-    .btn-hero-outline {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.55);
-      padding: 15px 32px;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .btn-hero-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
-
-    /* ── SHOWCASE (PNG) ── */
-    .showcase-wrap {
-      background: var(--gray-bg);
-      padding: 64px 40px;
-    }
-
-    .showcase-inner { max-width: 1100px; margin: 0 auto; }
-
-    .showcase-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .showcase-tag {
-      display: inline-block;
-      background: var(--navy-light);
-      color: var(--navy);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 5px 16px;
-      border-radius: 20px;
-      margin-bottom: 14px;
-    }
-
-    .showcase-title {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .showcase-sub {
-      font-size: 16px;
-      color: var(--text-muted);
-    }
-
-    .showcase-frame {
+    /* Fake search bar */
+    .hero-search {
       background: var(--white);
-      border-radius: 16px;
-      box-shadow: 0 8px 48px rgba(27,58,139,0.14);
-      overflow: hidden;
-      border: 1px solid var(--gray-border);
-    }
-
-    .showcase-topbar {
-      background: #f1f3f5;
-      border-bottom: 1px solid var(--gray-border);
-      padding: 10px 18px;
+      border-radius: var(--radius);
       display: flex;
       align-items: center;
-      gap: 8px;
+      padding: 6px 6px 6px 18px;
+      gap: 10px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.25);
     }
 
-    .dot-red   { width: 12px; height: 12px; border-radius: 50%; background: #ff5f57; }
-    .dot-yellow{ width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; }
-    .dot-green { width: 12px; height: 12px; border-radius: 50%; background: #28c840; }
+    .hero-search-icon { font-size: 18px; flex-shrink: 0; opacity: .6; }
 
-    .showcase-url {
-      margin-left: 12px;
-      background: var(--white);
-      border: 1px solid var(--gray-border);
-      border-radius: 5px;
-      padding: 3px 14px;
-      font-size: 12px;
-      color: var(--text-muted);
+    .hero-search-input {
       flex: 1;
-      max-width: 400px;
-    }
-
-    .showcase-img {
-      width: 100%;
-      display: block;
-    }
-
-    .showcase-caption {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
+      border: none;
+      outline: none;
+      font-family: var(--font);
+      font-size: 15px;
       color: var(--text-muted);
+      background: transparent;
+      cursor: default;
     }
 
-    .showcase-caption strong { color: var(--navy); }
-
-    /* ── SHOWCASE TABS ── */
-    .sc-tabs {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .sc-tab {
-      background: var(--white);
-      border: 2px solid var(--gray-border);
-      color: var(--text-muted);
+    .hero-search-select {
+      border: none;
+      border-left: 1px solid var(--gray-200);
+      padding: 0 14px 0 14px;
       font-family: var(--font);
       font-size: 14px;
       font-weight: 600;
-      padding: 10px 22px;
-      border-radius: 8px;
+      color: var(--navy);
+      background: transparent;
+      outline: none;
       cursor: pointer;
-      transition: all 0.15s;
+      height: 40px;
     }
 
-    .sc-tab:hover { border-color: var(--navy); color: var(--navy); }
-    .sc-tab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
-
-    /* ── FEATURES ── */
-    .features-section {
-      padding: 72px 40px;
-      max-width: 1100px;
-      margin: 0 auto;
+    .hero-search-btn {
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: background .2s;
     }
 
-    .section-eyebrow {
+    .hero-search-btn:hover { background: var(--red-dark); }
+
+    /* Social proof badges */
+    .hero-badges {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+    }
+
+    .hero-badge-icon { font-size: 18px; }
+
+    .hero-badge-text { font-size: 13px; }
+    .hero-badge-text strong { display: block; font-size: 15px; font-weight: 800; }
+
+    /* Right column — CSS illustration */
+    .hero-illustration {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+    }
+
+    .lawyer-card-illustration {
+      background: rgba(255,255,255,.95);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: var(--shadow-lg);
+      color: var(--text-main);
+    }
+
+    .lawyer-card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .lawyer-avatar {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--navy-light) 0%, #c7d7f5 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .lawyer-info-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .lawyer-info-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .lawyer-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #166534;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 4px;
+    }
+
+    .lawyer-stars {
+      display: flex;
+      gap: 2px;
+      color: var(--gold);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .lawyer-stars-count {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-left: 4px;
+      align-self: center;
+    }
+
+    .lawyer-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .lawyer-tag {
+      background: var(--navy-light);
+      color: var(--navy);
       font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .lawyer-card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lawyer-btn-primary {
+      flex: 1;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+    }
+
+    .lawyer-btn-outline {
+      flex: 1;
+      background: transparent;
+      color: var(--navy);
+      border: 1.5px solid var(--navy-light);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+    }
+
+    .lawyer-price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      background: var(--gray-bg);
+      border-radius: var(--radius-sm);
+    }
+
+    .lawyer-price-label { font-size: 12px; color: var(--text-muted); }
+    .lawyer-price-val   { font-size: 16px; font-weight: 800; color: var(--navy); }
+
+    .match-chip {
+      background: rgba(255,255,255,.95);
+      border-radius: 40px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .match-chip .match-icon { font-size: 20px; }
+    .match-chip .match-dist { color: var(--navy); font-weight: 800; }
+
+    /* ─────────────────────────────────────────
+       TODAY'S LEGAL NEWS
+    ───────────────────────────────────────── */
+    .news-section {
+      background: var(--gray-bg);
+      padding: 64px 32px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .section-header {
+      max-width: 1120px;
+      margin: 0 auto 36px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-label {
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--red);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .section-title {
-      font-size: 34px;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    #news-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* News card */
+    .news-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s, transform .2s;
+    }
+
+    .news-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .news-card-top {
+      padding: 20px 24px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .news-category-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .badge-red   { background: var(--red-light);  color: var(--red); }
+    .badge-blue  { background: var(--navy-light);  color: var(--navy); }
+    .badge-gold  { background: var(--gold-light);  color: #7a5000; }
+    .badge-green { background: #dcfce7;             color: #166534; }
+
+    .urgency-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    .urgency-high   { background: var(--red);  box-shadow: 0 0 0 3px rgba(183,28,28,.2); animation: pulse-urgency 1.8s ease-in-out infinite; }
+    .urgency-medium { background: var(--gold); box-shadow: 0 0 0 3px rgba(249,168,37,.2); }
+    .urgency-low    { background: #86efac; }
+
+    @keyframes pulse-urgency {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(183,28,28,.2); }
+      50%       { box-shadow: 0 0 0 6px rgba(183,28,28,.08); }
+    }
+
+    .news-headline {
+      padding: 18px 24px 14px;
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .news-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .news-col {
+      padding: 16px 20px;
+    }
+
+    .news-col + .news-col {
+      border-left: 1px solid var(--gray-100);
+    }
+
+    .news-col-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .col-label-what   { color: var(--navy); }
+    .col-label-impact { color: var(--red); }
+    .col-label-action { color: #166534; }
+
+    .news-col-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .news-card-footer {
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .news-practice-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--gray-bg);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .news-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--navy-light);
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      transition: background .15s, color .15s;
+    }
+
+    .news-cta-link:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* ─────────────────────────────────────────
+       HOW IT WORKS
+    ───────────────────────────────────────── */
+    .howit-section {
+      padding: 72px 32px;
+      background: var(--white);
+    }
+
+    .howit-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .howit-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(16.66% + 32px);
+      right: calc(16.66% + 32px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--navy-light), var(--navy-light));
+      border-top: 2px dashed var(--gray-200);
+    }
+
+    .step-card {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .step-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-circle-1 { background: var(--navy-light); }
+    .step-circle-2 { background: var(--red-light); }
+    .step-circle-3 { background: var(--gold-light); }
+
+    .step-icon { font-size: 32px; }
+
+    .step-num {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .step-title {
+      font-size: 20px;
       font-weight: 800;
       color: var(--navy);
       margin-bottom: 10px;
     }
 
-    .section-sub {
-      font-size: 16px;
+    .step-desc {
+      font-size: 15px;
       color: var(--text-muted);
-      margin-bottom: 48px;
-      max-width: 560px;
+      line-height: 1.75;
+      max-width: 260px;
+      margin: 0 auto;
     }
 
-    .features-grid {
+    /* ─────────────────────────────────────────
+       PRACTICE AREAS
+    ───────────────────────────────────────── */
+    .practice-section {
+      background: var(--navy);
+      padding: 72px 32px;
+    }
+
+    .practice-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .practice-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .practice-header .section-label-light {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 8px;
+    }
+
+    .practice-header h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .practice-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: background .2s, transform .2s;
+      cursor: pointer;
+    }
+
+    .practice-card:hover {
+      background: rgba(255,255,255,.11);
+      transform: translateY(-3px);
+    }
+
+    .practice-emoji {
+      font-size: 36px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .practice-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .practice-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,.65);
+      line-height: 1.7;
+    }
+
+    .practice-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    /* ─────────────────────────────────────────
+       TRUST SIGNALS
+    ───────────────────────────────────────── */
+    .trust-section {
+      padding: 72px 32px;
+      background: var(--white);
+    }
+
+    .trust-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      margin-bottom: 56px;
     }
 
-    @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
-
-    .feature-card {
+    .stat-card {
       background: var(--gray-bg);
-      border-radius: 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
       padding: 32px 28px;
-      border: 1px solid var(--gray-border);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-
-    .feature-card:hover { box-shadow: 0 8px 32px rgba(27,58,139,0.1); transform: translateY(-3px); }
-
-    .feature-icon {
-      width: 52px; height: 52px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px;
-      margin-bottom: 18px;
-    }
-
-    .feature-icon.navy { background: var(--navy-light); }
-    .feature-icon.red  { background: var(--red-light); }
-    .feature-icon.gold { background: #fef9c3; }
-
-    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-    .feature-card p  { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
-
-    /* ── AUDIENCE SPLIT ── */
-    .audience-section {
-      background: var(--navy);
-      padding: 72px 40px;
-    }
-
-    .audience-inner {
-      max-width: 1000px;
-      margin: 0 auto;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .audience-inner h2 {
-      font-size: 34px;
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+    }
+
+    .stat-card-1::before { background: var(--navy); }
+    .stat-card-2::before { background: var(--red); }
+    .stat-card-3::before { background: var(--gold); }
+
+    .stat-icon { font-size: 36px; margin-bottom: 12px; }
+    .stat-num  { font-size: 48px; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+    .stat-unit { font-size: 22px; }
+    .stat-label{ font-size: 16px; color: var(--text-muted); font-weight: 500; margin-bottom: 6px; }
+    .stat-sub  { font-size: 13px; color: var(--text-light); }
+
+    .trust-badges {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gray-bg);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 14px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .trust-badge-item .badge-logo {
+      font-size: 24px;
+    }
+
+    .trust-badge-item strong {
+      color: var(--text-main);
+      display: block;
+      font-size: 13px;
+    }
+
+    /* ─────────────────────────────────────────
+       CTA SECTION
+    ───────────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy-deeper) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+      padding: 80px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(249,168,37,.12) 0%, transparent 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249,168,37,.15);
+      border: 1px solid rgba(249,168,37,.3);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .cta-title {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .cta-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn-primary {
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      border: none;
+      box-shadow: 0 6px 24px rgba(183,28,28,.4);
+      transition: background .2s, transform .15s;
+      cursor: pointer;
+    }
+
+    .cta-btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+    .cta-btn-outline {
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 17px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,.4);
+      transition: border-color .2s, background .2s;
+      cursor: pointer;
+    }
+
+    .cta-btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+
+    .cta-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--navy-deeper);
+      color: rgba(255,255,255,.6);
+      padding: 56px 32px 32px;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-block {}
+    .footer-brand-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
       font-weight: 800;
       color: var(--white);
       margin-bottom: 10px;
     }
 
-    .audience-inner p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 48px;
-    }
-
-    .audience-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    @media (max-width: 640px) { .audience-cards { grid-template-columns: 1fr; } }
-
-    .audience-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 14px;
-      padding: 32px 28px;
-      text-align: left;
-      transition: background 0.2s;
-    }
-
-    .audience-card:hover { background: rgba(255,255,255,0.11); }
-
-    .audience-emoji { font-size: 36px; margin-bottom: 14px; display: block; }
-    .audience-card h3 { font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 10px; }
-    .audience-card p  { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 20px; }
-
-    .audience-link {
-      display: inline-flex;
+    .footer-brand-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
       align-items: center;
-      gap: 6px;
-      color: var(--white);
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .footer-tagline {
       font-size: 14px;
-      font-weight: 700;
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-btn {
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,.08);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: background .2s;
       text-decoration: none;
-      padding: 9px 20px;
-      border-radius: 7px;
-      transition: background 0.2s;
     }
 
-    .audience-link.red-btn  { background: var(--red); }
-    .audience-link.red-btn:hover  { background: #9b1616; }
-    .audience-link.white-btn { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); }
-    .audience-link.white-btn:hover { background: rgba(255,255,255,0.22); }
+    .footer-social-btn:hover { background: rgba(255,255,255,.15); }
 
-    /* ── STATS BANNER ── */
-    .stats-banner {
-      background: var(--white);
-      border-top: 1px solid var(--gray-border);
-      border-bottom: 1px solid var(--gray-border);
-      padding: 40px;
+    .footer-col-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 16px;
     }
 
-    .stats-inner {
-      max-width: 900px;
-      margin: 0 auto;
+    .footer-links {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 24px;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .stat-item { text-align: center; }
-    .stat-num  { font-size: 44px; font-weight: 800; color: var(--navy); line-height: 1; display: block; }
-    .stat-label{ font-size: 14px; color: var(--text-muted); font-weight: 500; margin-top: 4px; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #0f172a;
-      color: rgba(255,255,255,0.6);
-      padding: 40px;
+    .footer-links a {
+      color: rgba(255,255,255,.65);
       font-size: 14px;
-      line-height: 2;
+      transition: color .15s;
     }
 
-    .footer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-contact-item {
       display: flex;
-      justify-content: space-between;
       align-items: flex-start;
-      gap: 32px;
+      gap: 8px;
+      color: rgba(255,255,255,.6);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact-item .contact-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
-    .footer-brand { font-size: 18px; font-weight: 800; color: var(--white); margin-bottom: 6px; }
-    .footer-copy  { font-size: 13px; color: rgba(255,255,255,0.4); }
-    .footer-links { display: flex; flex-direction: column; gap: 4px; }
-    .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.15s; }
-    .footer-links a:hover { color: var(--white); }
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,.35);
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+      max-width: 560px;
+      line-height: 1.6;
+      text-align: right;
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero-illustration {
+        display: none;
+      }
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 0 20px; }
+      .navbar-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 48px 20px 56px; }
+      .hero-title { font-size: 36px; }
+      .hero-subtitle { font-size: 16px; }
+      .hero-search { flex-wrap: wrap; }
+      .hero-search-select { border-left: none; padding-left: 0; }
+      .news-section, .howit-section, .trust-section, .cta-section { padding: 48px 20px; }
+      .practice-section { padding: 48px 20px; }
+      .section-title { font-size: 24px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+      .practice-grid { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: 1fr; }
+      .news-columns { grid-template-columns: 1fr; }
+      .news-col + .news-col { border-left: none; border-top: 1px solid var(--gray-100); }
+      .cta-title { font-size: 30px; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .footer-disclaimer { text-align: left; }
+    }
+
+    @media (max-width: 500px) {
+      .practice-grid { grid-template-columns: 1fr; }
+      .hero-badges { flex-direction: column; }
+    }
+
+    /* ─────────────────────────────────────────
+       UTILITIES
+    ───────────────────────────────────────── */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .text-center { text-align: center; }
+
+    .mt-4 { margin-top: 16px; }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a class="navbar-brand" href="#">
-      <span>⚖️</span> ทนายใกล้ฉัน
-    </a>
-    <div class="navbar-nav">
-      <a class="nav-link" href="#features">ฟีเจอร์</a>
-      <a class="nav-link" href="#showcase">ตัวอย่าง AI</a>
-      <a class="nav-link" href="plugin.html">สำหรับนักพัฒนา</a>
-      <a class="nav-cta" href="https://github.com/seed18up/lawyer-near-me-claude-plugin" target="_blank">⭐ GitHub</a>
+  <!-- ╔══════════════════════════════════════╗
+       ║  TOPBAR — Breaking News Ticker       ║
+       ╚══════════════════════════════════════╝ -->
+  <div class="topbar">
+    <div class="topbar-label">
+      <span class="blink-dot"></span>
+      ข่าวด่วน
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="dot"></span>
-        ระบบ AI สำหรับแพลตฟอร์มกฎหมายไทย
-      </div>
-      <h1 class="hero-title">
-        ทุกปัญหากฎหมาย<br>
-        มี<span class="accent">ทางออก</span>
-      </h1>
-      <p class="hero-subtitle">
-        ทนายใกล้ฉัน ใช้ AI อัจฉริยะช่วยวิเคราะห์ข่าวกฎหมาย<br>
-        ประเมินความเสี่ยง และเชื่อมคุณกับทนายความที่ใช่ — ทันที
-      </p>
-      <div class="hero-ctas">
-        <a class="btn-hero-primary" href="#showcase">ดูตัวอย่าง AI ทำงาน</a>
-        <a class="btn-hero-outline" href="#features">เรียนรู้เพิ่มเติม</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS BANNER -->
-  <div class="stats-banner">
-    <div class="stats-inner">
-      <div class="stat-item">
-        <span class="stat-num">7</span>
-        <div class="stat-label">AI Agents เชี่ยวชาญ</div>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">10</span>
-        <div class="stat-label">Slash Commands</div>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">5</span>
-        <div class="stat-label">ขั้นตอน Pipeline อัตโนมัติ</div>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">3</span>
-        <div class="stat-label">ทีม AI ทำงานร่วมกัน</div>
+    <div class="topbar-ticker-wrap">
+      <div class="topbar-ticker" id="ticker-track">
+        <span class="ticker-item">⚖️ ศาลอาญาตัดสินคดีฉ้อโกงออนไลน์ผ่านแอปลงทุนปลอม เหยื่อกว่า 2,400 ราย</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">📋 กระทรวงแรงงานออกประกาศปรับค่าจ้างขั้นต่ำ มีผลบังคับใช้ 1 ม.ค. ปีหน้า</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">🏠 กรมที่ดินเตือนตรวจสอบโฉนดก่อนซื้อ-ขาย หลังพบการปลอมแปลงเอกสารเพิ่มขึ้น 40%</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">📢 สภาทนายความฯ เปิดรับสมัครสอบใบอนุญาตทนายความ รุ่นที่ 52 แล้ว</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">🔒 PDPA: คณะกรรมการฯ ออกแนวปฏิบัติใหม่สำหรับการเก็บข้อมูล Biometric ในองค์กร</span>
+        <span class="ticker-sep">•</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">⚖️ ศาลอาญาตัดสินคดีฉ้อโกงออนไลน์ผ่านแอปลงทุนปลอม เหยื่อกว่า 2,400 ราย</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">📋 กระทรวงแรงงานออกประกาศปรับค่าจ้างขั้นต่ำ มีผลบังคับใช้ 1 ม.ค. ปีหน้า</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">🏠 กรมที่ดินเตือนตรวจสอบโฉนดก่อนซื้อ-ขาย หลังพบการปลอมแปลงเอกสารเพิ่มขึ้น 40%</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">📢 สภาทนายความฯ เปิดรับสมัครสอบใบอนุญาตทนายความ รุ่นที่ 52 แล้ว</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item">🔒 PDPA: คณะกรรมการฯ ออกแนวปฏิบัติใหม่สำหรับการเก็บข้อมูล Biometric ในองค์กร</span>
+        <span class="ticker-sep">•</span>
       </div>
     </div>
+    <div class="topbar-date" id="topbar-date">6 มิ.ย. 2569</div>
   </div>
 
-  <!-- SHOWCASE -->
-  <section class="showcase-wrap" id="showcase">
-    <div class="showcase-inner">
-      <div class="showcase-header">
-        <div class="showcase-tag">ตัวอย่างจริง</div>
-        <h2 class="showcase-title">AI ทำงานให้คุณทุกวัน</h2>
-        <p class="showcase-sub">ระบบสร้างหน้าเว็บขายงานทนาย และวิเคราะห์ข่าวกฎหมายพร้อม Legal Opinion อัตโนมัติ</p>
-      </div>
+  <!-- ╔══════════════════════════════════════╗
+       ║  NAVBAR                              ║
+       ╚══════════════════════════════════════╝ -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <div class="brand-icon">⚖️</div>
+      ทนายใกล้ฉัน
+    </a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="#practice">ค้นหาทนาย</a>
+      <a class="nav-link" href="#news">ข่าวกฎหมาย</a>
+      <a class="nav-link" href="#howit">วิธีใช้งาน</a>
+      <a class="nav-link" href="#trust">เกี่ยวกับเรา</a>
+      <a class="nav-cta" href="#cta">ปรึกษาฟรี ➜</a>
+    </div>
+    <button class="hamburger" aria-label="เมนู">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-      <!-- Tab switcher -->
-      <div class="sc-tabs">
-        <button class="sc-tab active" onclick="showScreen(0)">🏛️ หน้าเว็บทนายความ</button>
-        <button class="sc-tab" onclick="showScreen(1)">📰 AI Legal News Digest</button>
-      </div>
+  <!-- ╔══════════════════════════════════════╗
+       ║  HERO                                ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="hero">
+    <div class="hero-inner">
 
-      <div class="showcase-frame">
-        <div class="showcase-topbar">
-          <span class="dot-red"></span>
-          <span class="dot-yellow"></span>
-          <span class="dot-green"></span>
-          <span class="showcase-url" id="sc-url">lawyernearme.in.th · หน้าเว็บทนายความ</span>
+      <!-- Left: Content -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="live-dot"></span>
+          ทนาย 1,200+ คน พร้อมให้คำปรึกษา
         </div>
-        <img class="showcase-img" id="sc-img-0" src="assets/legal-news-mockup.png" alt="หน้าเว็บขายงานทนายความ ทนายใกล้ฉัน">
-        <img class="showcase-img" id="sc-img-1" src="assets/legal-news-sample.png" alt="AI Legal News Digest" style="display:none;">
+
+        <h1 class="hero-title">
+          เจอปัญหากฎหมาย?<br>
+          เริ่มต้นที่<span class="accent-gold"> ทนายใกล้ฉัน</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          ค้นหาทนายความที่ใช่ในพื้นที่ใกล้บ้าน จองนัดออนไลน์ได้ทันที
+          ปรึกษาฟรีครั้งแรก — ไม่ต้องเดินทางไกล
+        </p>
+
+        <!-- Fake search bar -->
+        <div class="hero-search">
+          <span class="hero-search-icon">📍</span>
+          <input
+            class="hero-search-input"
+            type="text"
+            placeholder="ระบุที่อยู่หรือพื้นที่ เช่น สุขุมวิท, เชียงใหม่..."
+            readonly
+          >
+          <select class="hero-search-select">
+            <option>ทุกประเภทคดี</option>
+            <option>คดีอาญา</option>
+            <option>คดีแพ่ง</option>
+            <option>ครอบครัว</option>
+            <option>อสังหาริมทรัพย์</option>
+            <option>แรงงาน</option>
+            <option>ธุรกิจ</option>
+          </select>
+          <button class="hero-search-btn">ค้นหาทนาย 🔍</button>
+        </div>
+
+        <!-- Social proof badges -->
+        <div class="hero-badges">
+          <div class="hero-badge">
+            <span class="hero-badge-icon">⭐</span>
+            <div class="hero-badge-text">
+              <strong>4.9/5</strong>
+              จาก 12,000+ รีวิว
+            </div>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon">✅</span>
+            <div class="hero-badge-text">
+              <strong>Verified</strong>
+              สภาทนายความแห่งประเทศไทย
+            </div>
+          </div>
+          <div class="hero-badge">
+            <span class="hero-badge-icon">🔒</span>
+            <div class="hero-badge-text">
+              <strong>PDPA</strong>
+              ข้อมูลปลอดภัย 100%
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p class="showcase-caption" id="sc-caption">
-        <strong>หน้าเว็บทนายความ</strong> — ออกแบบเพื่อขายงาน สร้างความน่าเชื่อถือ และปิดการขายทนายความ
+      <!-- Right: CSS illustration -->
+      <div class="hero-illustration">
+        <div class="lawyer-card-illustration">
+          <div class="lawyer-card-top">
+            <div class="lawyer-avatar">👨‍⚖️</div>
+            <div>
+              <div class="lawyer-info-name">นายสมชาย วิริยะกุล</div>
+              <div class="lawyer-info-title">ทนายความชำนาญการ · กรุงเทพฯ</div>
+              <div class="lawyer-verified">✓ ยืนยันใบอนุญาต</div>
+            </div>
+          </div>
+          <div class="lawyer-stars">
+            ★★★★★
+            <span class="lawyer-stars-count">(238 รีวิว)</span>
+          </div>
+          <div class="lawyer-tags">
+            <span class="lawyer-tag">คดีแพ่ง</span>
+            <span class="lawyer-tag">อสังหาฯ</span>
+            <span class="lawyer-tag">สัญญา</span>
+          </div>
+          <div class="lawyer-price-row">
+            <div>
+              <div class="lawyer-price-label">ปรึกษาครั้งแรก</div>
+              <div class="lawyer-price-val">ฟรี</div>
+            </div>
+            <div style="text-align:right">
+              <div class="lawyer-price-label">ค่าจ้างต่อชั่วโมง</div>
+              <div class="lawyer-price-val">฿1,500</div>
+            </div>
+          </div>
+          <div class="lawyer-card-actions">
+            <div class="lawyer-btn-primary">📅 จองนัดเลย</div>
+            <div class="lawyer-btn-outline">💬 ส่งข้อความ</div>
+          </div>
+        </div>
+
+        <div class="match-chip">
+          <span class="match-icon">📍</span>
+          <div>
+            ใกล้คุณแค่ <span class="match-dist">1.2 กม.</span> · ว่างวันนี้
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  TODAY'S LEGAL NEWS                  ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="news-section" id="news">
+    <div class="section-header">
+      <div>
+        <div class="section-label">อัปเดตล่าสุด</div>
+        <h2 class="section-title">📰 ข่าวกฎหมายวันนี้</h2>
+      </div>
+      <div class="date-badge" id="news-date-badge">
+        📅 6 มิถุนายน 2569
+      </div>
+    </div>
+
+    <div id="news-container">
+      <!-- JS will render cards here -->
+      <noscript>
+        <p style="text-align:center;color:#6b7280;padding:40px">กรุณาเปิดใช้งาน JavaScript เพื่อดูข่าวกฎหมาย</p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  HOW IT WORKS                        ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="howit-section" id="howit">
+    <div class="howit-inner">
+      <div class="howit-header">
+        <div class="section-label">ขั้นตอนง่ายๆ</div>
+        <h2 class="section-title" style="color:var(--navy)">ใช้งานง่าย ได้ทนายเร็ว</h2>
+        <p style="color:var(--text-muted);margin-top:10px;font-size:16px">3 ขั้นตอนเท่านั้น จากปัญหาถึงคำปรึกษา</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <div class="step-circle step-circle-1">
+              <span class="step-icon">🔍</span>
+            </div>
+            <div class="step-num">ขั้นตอนที่ 1</div>
+          </div>
+          <div class="step-title">ค้นหาทนาย</div>
+          <p class="step-desc">
+            ระบุพื้นที่และประเภทคดีที่ต้องการ ระบบจะแสดงทนายความที่ตรงกับความต้องการของคุณ พร้อมรีวิวจริงจากลูกความ
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <div class="step-circle step-circle-2">
+              <span class="step-icon">🤝</span>
+            </div>
+            <div class="step-num">ขั้นตอนที่ 2</div>
+          </div>
+          <div class="step-title">จับคู่ & จองนัด</div>
+          <p class="step-desc">
+            เปรียบเทียบโปรไฟล์ ดูอัตราค่าธรรมเนียม และจองนัดปรึกษาฟรีครั้งแรกได้เลย ตามปฏิทินที่ว่างของทนาย
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-wrap">
+            <div class="step-circle step-circle-3">
+              <span class="step-icon">💬</span>
+            </div>
+            <div class="step-num">ขั้นตอนที่ 3</div>
+          </div>
+          <div class="step-title">ปรึกษาได้เลย</div>
+          <p class="step-desc">
+            พบทนายที่ออฟฟิศ หรือปรึกษาออนไลน์ผ่าน Video Call ได้จากทุกที่ ปลอดภัย เป็นส่วนตัว มีบันทึกการสนทนา
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  PRACTICE AREAS                      ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="practice-section" id="practice">
+    <div class="practice-inner">
+      <div class="practice-header">
+        <div class="section-label-light">ความเชี่ยวชาญ</div>
+        <h2>เลือกประเภทคดีที่ต้องการความช่วยเหลือ</h2>
+      </div>
+
+      <div class="practice-grid">
+        <div class="practice-card">
+          <span class="practice-emoji">🔒</span>
+          <div class="practice-name">คดีอาญา</div>
+          <p class="practice-desc">การต่อสู้คดี การขอประกันตัว ถูกกล่าวหา หรือต้องการร้องทุกข์แจ้งความ</p>
+          <a href="#" class="practice-link">ค้นหาทนายคดีอาญา →</a>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-emoji">⚖️</span>
+          <div class="practice-name">คดีแพ่ง</div>
+          <p class="practice-desc">ข้อพิพาทสัญญา การเรียกค่าเสียหาย หนี้สิน และคดีแพ่งทั่วไปทุกประเภท</p>
+          <a href="#" class="practice-link">ค้นหาทนายคดีแพ่ง →</a>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-emoji">👨‍👩‍👧</span>
+          <div class="practice-name">ครอบครัว</div>
+          <p class="practice-desc">หย่าร้าง แบ่งทรัพย์สิน ค่าอุปการะเลี้ยงดู การรับบุตรบุญธรรม และมรดก</p>
+          <a href="#" class="practice-link">ค้นหาทนายคดีครอบครัว →</a>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-emoji">🏠</span>
+          <div class="practice-name">อสังหาริมทรัพย์</div>
+          <p class="practice-desc">ซื้อขายที่ดิน โฉนด สัญญาเช่า ข้อพิพาทครอบครองที่ดิน และการโอนกรรมสิทธิ์</p>
+          <a href="#" class="practice-link">ค้นหาทนายอสังหาฯ →</a>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-emoji">👷</span>
+          <div class="practice-name">แรงงาน</div>
+          <p class="practice-desc">ไล่ออกไม่เป็นธรรม ค่าชดเชย สัญญาจ้าง อุบัติเหตุในที่ทำงาน และข้อพิพาทนายจ้าง</p>
+          <a href="#" class="practice-link">ค้นหาทนายแรงงาน →</a>
+        </div>
+
+        <div class="practice-card">
+          <span class="practice-emoji">🏢</span>
+          <div class="practice-name">ธุรกิจ & บริษัท</div>
+          <p class="practice-desc">จดทะเบียนบริษัท สัญญาธุรกิจ ทรัพย์สินทางปัญญา M&A และข้อพิพาทหุ้นส่วน</p>
+          <a href="#" class="practice-link">ค้นหาทนายธุรกิจ →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  TRUST SIGNALS                       ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="trust-section" id="trust">
+    <div class="trust-inner">
+      <div class="text-center" style="margin-bottom:48px">
+        <div class="section-label">ความน่าเชื่อถือ</div>
+        <h2 class="section-title" style="color:var(--navy)">ตัวเลขที่พูดแทนเรา</h2>
+        <p style="color:var(--text-muted);margin-top:10px">ไว้วางใจโดยประชาชน นักกฎหมาย และองค์กรชั้นนำทั่วประเทศ</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card stat-card-1">
+          <div class="stat-icon">👨‍⚖️</div>
+          <div class="stat-num">1,200<span class="stat-unit">+</span></div>
+          <div class="stat-label">ทนายความที่ผ่านการ Verify</div>
+          <div class="stat-sub">ทั่วทุกจังหวัดในประเทศไทย</div>
+        </div>
+
+        <div class="stat-card stat-card-2">
+          <div class="stat-icon">👥</div>
+          <div class="stat-num">85,000<span class="stat-unit">+</span></div>
+          <div class="stat-label">ผู้ใช้งานทั่วประเทศ</div>
+          <div class="stat-sub">เพิ่มขึ้นทุกวัน</div>
+        </div>
+
+        <div class="stat-card stat-card-3">
+          <div class="stat-icon">✅</div>
+          <div class="stat-num">9,400<span class="stat-unit">+</span></div>
+          <div class="stat-label">คดีที่ดำเนินการสำเร็จ</div>
+          <div class="stat-sub">อัตราความพึงพอใจ 96%</div>
+        </div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge-item">
+          <span class="badge-logo">🏛️</span>
+          <div>
+            <strong>สภาทนายความฯ</strong>
+            Verified Partner
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <span class="badge-logo">🔒</span>
+          <div>
+            <strong>PDPA Compliant</strong>
+            คุ้มครองข้อมูลส่วนบุคคล
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <span class="badge-logo">🏆</span>
+          <div>
+            <strong>Best LegalTech 2025</strong>
+            Thailand Tech Award
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <span class="badge-logo">🔐</span>
+          <div>
+            <strong>SSL Secure</strong>
+            ข้อมูลเข้ารหัส 256-bit
+          </div>
+        </div>
+        <div class="trust-badge-item">
+          <span class="badge-logo">💳</span>
+          <div>
+            <strong>Payment Protected</strong>
+            ระบบ Escrow ปลอดภัย
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+       ║  CTA SECTION                         ║
+       ╚══════════════════════════════════════╝ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="cta-eyebrow">
+        ✨ ปรึกษาฟรีครั้งแรก — ไม่มีค่าใช้จ่าย
+      </div>
+      <h2 class="cta-title">ทุกปัญหากฎหมาย<br>มีทางออก</h2>
+      <p class="cta-sub">
+        อย่าปล่อยให้ปัญหากฎหมายรอช้า เริ่มต้นค้นหาทนายความที่ใช่ในพื้นที่ของคุณ
+        และรับการปรึกษาฟรีได้วันนี้เลย
       </p>
+      <div class="cta-buttons">
+        <button class="cta-btn-primary">🔍 ค้นหาทนายใกล้บ้านฉัน</button>
+        <button class="cta-btn-outline">📞 โทรสอบถาม</button>
+      </div>
+      <p class="cta-note">ไม่ต้องสมัครสมาชิกก็ค้นหาได้ · รองรับทุกจังหวัดทั่วไทย</p>
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features-section" id="features">
-    <div class="section-eyebrow">ความสามารถ</div>
-    <h2 class="section-title">AI ทำงานแทนทีมของคุณ</h2>
-    <p class="section-sub">ระบบ multi-agent ที่มี Legal Team และ Marketing Team ทำงานร่วมกันอัตโนมัติ</p>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon navy">⚖️</div>
-        <h3>Legal Opinion อัตโนมัติ</h3>
-        <p>AI Legal Advisor วิเคราะห์ประเด็นกฎหมายจากข่าวกระแสสังคม พร้อมออก Legal Opinion อ้างอิงกฎหมายไทยที่เกี่ยวข้องทุกวัน</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon red">📰</div>
-        <h3>วิเคราะห์ข่าวกฎหมาย Real-time</h3>
-        <p>ดึงข่าวใหม่ทุกวัน สรุปเป็นภาษาชาวบ้านที่เข้าใจง่าย พร้อมบอกว่าเรื่องนี้เกี่ยวกับคุณอย่างไรและควรทำอะไร</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon gold">🔍</div>
-        <h3>SEO & Content Strategy</h3>
-        <p>วิเคราะห์ keyword สำหรับ legal industry ไทย สร้าง content ที่ค้นหาเจอบน Google และเหมาะกับ "near me" search</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon navy">🛡️</div>
-        <h3>PDPA Compliance Check</h3>
-        <p>ตรวจสอบความสอดคล้องกับ พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล ก่อน publish ทุกครั้ง — ลดความเสี่ยงทางกฎหมาย</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon red">📋</div>
-        <h3>ร่างสัญญาอัตโนมัติ</h3>
-        <p>AI Contract Specialist ช่วยร่างและตรวจสอบสัญญา — partnership agreements, vendor contracts, ToS ด้วยมาตรฐานกฎหมายไทย</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon gold">🤝</div>
-        <h3>ทีม AI ทำงานร่วมกัน</h3>
-        <p>Marketing Team สร้าง content → Legal Team review → Compliance ตรวจสอบ → ส่งมอบผลลัพธ์ที่ถูกต้องและ optimize</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUDIENCE SPLIT -->
-  <section class="audience-section" id="audience">
-    <div class="audience-inner">
-      <h2>เลือกตามบทบาทของคุณ</h2>
-      <p>Lawyer Near Me AI Plugin ออกแบบมาเพื่อทุกกลุ่มผู้ใช้งาน</p>
-      <div class="audience-cards">
-
-        <div class="audience-card">
-          <span class="audience-emoji">🏢</span>
-          <h3>ผู้บริหาร & ผู้ประกอบการ</h3>
-          <p>เห็นภาพรวมความสามารถของ AI ที่ขับเคลื่อนแพลตฟอร์ม Lawyer Near Me — Legal Opinion, compliance automation, และ content strategy ที่ทำงานได้จริง</p>
-          <a class="audience-link red-btn" href="#showcase">ดูตัวอย่าง AI ทำงาน ↓</a>
-        </div>
-
-        <div class="audience-card">
-          <span class="audience-emoji">👨‍💻</span>
-          <h3>ทนายความ & นักพัฒนา</h3>
-          <p>ดู agent definitions, slash commands, และ installation guide สำหรับนำ plugin ไปใช้กับ Claude Code ในโปรเจกต์ของคุณ</p>
-          <a class="audience-link white-btn" href="plugin.html">ดูรายละเอียด Plugin →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- ╔══════════════════════════════════════╗
+       ║  FOOTER                              ║
+       ╚══════════════════════════════════════╝ -->
   <footer>
     <div class="footer-inner">
-      <div>
-        <div class="footer-brand">⚖️ ทนายใกล้ฉัน</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:4px;">lawyernearme.in.th · ทุกปัญหากฎหมาย มีทางออก</div>
-        <div class="footer-copy">MIT License · สร้างด้วย Claude Code · 2026</div>
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand-block">
+          <div class="footer-brand-name">
+            <div class="footer-brand-icon">⚖️</div>
+            ทนายใกล้ฉัน
+          </div>
+          <p class="footer-tagline">
+            แพลตฟอร์มเชื่อมผู้ใช้กับทนายความที่ใช่<br>
+            ในพื้นที่ใกล้บ้าน — เข้าถึงง่าย โปร่งใส น่าเชื่อถือ
+          </p>
+          <div class="footer-social">
+            <a class="footer-social-btn" href="#" aria-label="Facebook">📘</a>
+            <a class="footer-social-btn" href="#" aria-label="LINE">💚</a>
+            <a class="footer-social-btn" href="#" aria-label="Twitter">🐦</a>
+            <a class="footer-social-btn" href="#" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <div class="footer-col-title">บริการ</div>
+          <div class="footer-links">
+            <a href="#">ค้นหาทนายความ</a>
+            <a href="#">จองนัดออนไลน์</a>
+            <a href="#">ปรึกษาออนไลน์</a>
+            <a href="#">เปรียบเทียบราคา</a>
+            <a href="#">สำหรับทนายความ</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">บริษัท</div>
+          <div class="footer-links">
+            <a href="#">เกี่ยวกับเรา</a>
+            <a href="#">ข่าวกฎหมาย</a>
+            <a href="#">บทความกฎหมาย</a>
+            <a href="#">ร่วมงานกับเรา</a>
+            <a href="#">ติดต่อเรา</a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <div class="footer-col-title">ติดต่อ</div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">📧</span>
+            hello@lawyernearme.in.th
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">📞</span>
+            02-xxx-xxxx<br>
+            <small style="font-size:12px;opacity:.7">จ.–ศ. 9:00–18:00 น.</small>
+          </div>
+          <div class="footer-contact-item">
+            <span class="contact-icon">💬</span>
+            LINE Official: @lawyernearme
+          </div>
+          <div class="footer-links mt-4">
+            <a href="#">นโยบายความเป็นส่วนตัว</a>
+            <a href="#">ข้อกำหนดการใช้งาน</a>
+            <a href="#">นโยบาย PDPA</a>
+          </div>
+        </div>
+
       </div>
-      <div class="footer-links">
-        <a href="#features">ฟีเจอร์</a>
-        <a href="#showcase">ตัวอย่าง AI</a>
-        <a href="plugin.html">สำหรับนักพัฒนา</a>
-        <a href="https://github.com/seed18up/lawyer-near-me-claude-plugin" target="_blank">GitHub Repository</a>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 ทนายใกล้ฉัน (Lawyer Near Me Co., Ltd.) · lawyernearme.in.th<br>
+          จดทะเบียนในประเทศไทย · ทะเบียนพาณิชย์เลขที่ XXXX-XXXX-XXXX
+        </div>
+        <div class="footer-disclaimer">
+          เนื้อหาบนเว็บไซต์นี้มีวัตถุประสงค์เพื่อการศึกษาทั่วไปเท่านั้น
+          ไม่ถือเป็นคำปรึกษาทางกฎหมาย กรุณาปรึกษาทนายความที่ได้รับใบอนุญาต
+          สำหรับปัญหากฎหมายของท่านโดยเฉพาะ
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- ╔══════════════════════════════════════╗
+       ║  SCRIPTS                             ║
+       ╚══════════════════════════════════════╝ -->
   <script>
-    const scData = [
-      {
-        url: 'lawyernearme.in.th · หน้าเว็บทนายความ',
-        caption: '<strong>หน้าเว็บทนายความ</strong> — ออกแบบเพื่อขายงาน สร้างความน่าเชื่อถือ และปิดการขายทนายความ'
-      },
-      {
-        url: 'lawyernearme.in.th · AI Legal News Digest',
-        caption: '<strong>AI Legal News Digest</strong> — สรุปข่าว 3 ข่าว · วิเคราะห์ SEO · Legal Opinion อย่างเป็นทางการ'
-      }
-    ];
+    /* ──────────────────────────────────────
+       NEWS DATA
+       Outer script can set window.__NEWS_DATA__
+       before this script runs to inject live data.
+       Fallback: hardcoded seed data below.
+    ────────────────────────────────────── */
+    /* ── Category → badge style mapping ── */
+    const CATEGORY_STYLE = {
+      property:  'badge-gold',
+      labor:     'badge-blue',
+      consumer:  'badge-red',
+      family:    'badge-blue',
+      contract:  'badge-blue',
+      criminal:  'badge-red',
+      civil:     'badge-blue',
+    };
 
-    function showScreen(idx) {
-      document.querySelectorAll('.sc-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
-      document.getElementById('sc-img-0').style.display = idx === 0 ? 'block' : 'none';
-      document.getElementById('sc-img-1').style.display = idx === 1 ? 'block' : 'none';
-      document.getElementById('sc-url').textContent = scData[idx].url;
-      document.getElementById('sc-caption').innerHTML = scData[idx].caption;
+    const CATEGORY_CTA = {
+      property:  'ปรึกษาทนายอสังหาฯ',
+      labor:     'ปรึกษาทนายแรงงาน',
+      consumer:  'ปรึกษาทนายผู้บริโภค',
+      family:    'ปรึกษาทนายครอบครัว',
+      contract:  'ปรึกษาทนายสัญญา',
+      criminal:  'ปรึกษาทนายคดีอาญา',
+    };
+
+    /* ── Normalize story from news-data.json format → render format ── */
+    function normalizeStory(s) {
+      const en = (s.category_en || '').toLowerCase();
+      return {
+        category:       s.category,
+        category_style: s.category_style || CATEGORY_STYLE[en] || 'badge-blue',
+        urgency:        s.urgency || 'medium',
+        headline:       s.headline || s.title || '',
+        what:           s.what    || s.what_happened || '',
+        impact:         s.impact  || '',
+        action:         s.action  || '',
+        practice_area:  s.practice_area || s.category,
+        cta:            s.cta || CATEGORY_CTA[en] || 'ปรึกษาทนาย',
+      };
     }
+
+    /* ── Hardcoded seed data (fallback when fetch fails / local file://) ── */
+    const SEED_DATA = {
+      updated_th: "6 มิถุนายน 2569",
+      stories: [
+        {
+          category: "คดีอาญา", category_en: "criminal", urgency: "high",
+          title: "ศาลอาญาตัดสิน 15 ปี คดีฉ้อโกงออนไลน์ผ่านแอปลงทุนปลอม เหยื่อสูญเงินรวมกว่า 280 ล้านบาท",
+          what_happened: "ศาลอาญากรุงเทพใต้พิพากษาจำคุก 15 ปี จำเลยหลักในคดีแอปลงทุนปลอม \"CryptoMax\" ที่หลอกลวงเหยื่อ 2,400 รายทั่วประเทศ ในช่วงปี 2567–2568 รวมมูลค่าความเสียหายกว่า 280 ล้านบาท",
+          impact: "หากคุณหรือคนรู้จักถูกหลอกลวงในลักษณะเดียวกัน มีสิทธิ์ยื่นร้องทุกข์และเรียกค่าเสียหายทางแพ่งควบคู่กันได้ อายุความคดีอาญาฉ้อโกง 10 ปีนับจากวันเกิดเหตุ",
+          action: "รวบรวมหลักฐานการโอนเงิน สกรีนช็อต ชื่อแอป และรายชื่อผู้รับเงิน แล้วปรึกษาทนายคดีอาญาทันที",
+          practice_area: "⚖️ คดีอาญา & ฉ้อโกง"
+        },
+        {
+          category: "แรงงาน", category_en: "labor", urgency: "medium",
+          title: "นายจ้างกว่า 340 รายถูกร้องเรียนเลิกจ้างไม่เป็นธรรม หลังประกาศขึ้นค่าแรงขั้นต่ำ",
+          what_happened: "หลังประกาศขึ้นค่าจ้างขั้นต่ำรอบใหม่ นายจ้างในอุตสาหกรรมการผลิตกว่า 340 รายถูกแรงงานร้องเรียนต่อกรมสวัสดิการและคุ้มครองแรงงาน ฐานเลิกจ้างไม่เป็นธรรม",
+          impact: "ลูกจ้างที่ถูกเลิกจ้างโดยไม่มีเหตุอันควร มีสิทธิ์ยื่นเรื่องต่อศาลแรงงานโดยไม่เสียค่าธรรมเนียมศาล และต้องดำเนินการภายใน 1 ปี",
+          action: "ตรวจสอบว่าคุณได้รับค่าชดเชยตามอายุงานครบหรือไม่ จากนั้นปรึกษาทนายแรงงานเพื่อประเมินสิทธิ์",
+          practice_area: "👷 กฎหมายแรงงาน"
+        },
+        {
+          category: "อสังหาฯ", category_en: "property", urgency: "medium",
+          title: "กรมที่ดินเตือนตรวจพบโฉนดปลอมใน 8 จังหวัด ความเสียหายกว่า 1,200 ล้านบาท",
+          what_happened: "กรมที่ดินแจ้งเตือนประชาชนหลังพบขบวนการปลอมโฉนดที่ดินใน 8 จังหวัด ได้แก่ ชลบุรี ระยอง ภูเก็ต เชียงใหม่ ขอนแก่น นครราชสีมา และปริมณฑล มูลค่าความเสียหายรวมกว่า 1,200 ล้านบาท",
+          impact: "ผู้ซื้อที่ดินด้วยโฉนดปลอมอาจสูญเสียเงินและกรรมสิทธิ์โดยสมบูรณ์ แม้จะซื้อโดยสุจริตก็ตาม",
+          action: "ก่อนซื้อที่ดินทุกครั้ง: (1) ตรวจสอบโฉนดที่กรมที่ดินด้วยตนเอง (2) ว่าจ้างทนายอสังหาฯ ตรวจสอบภาระผูกพัน",
+          practice_area: "🏠 อสังหาริมทรัพย์"
+        }
+      ]
+    };
+
+    /* ── Active data store (filled by fetch or fallback) ── */
+    let NEWS_DATA = null;
+
+    /* ──────────────────────────────────────
+       RENDER NEWS CARDS
+    ────────────────────────────────────── */
+    function renderNewsCards(data) {
+      const container = document.getElementById('news-container');
+      if (!container) return;
+
+      const dateBadge = document.getElementById('news-date-badge');
+      if (dateBadge) {
+        dateBadge.innerHTML = '📅 ' + (data.updated_th || data.updated || '');
+      }
+
+      const urgencyClass = { high: 'urgency-high', medium: 'urgency-medium', low: 'urgency-low' };
+      const urgencyLabel = { high: 'สำคัญมาก', medium: 'น่าติดตาม', low: 'ทั่วไป' };
+
+      const stories = (data.stories || []).map(normalizeStory);
+
+      container.innerHTML = stories.map(function(s) {
+        return `
+          <article class="news-card">
+            <div class="news-card-top">
+              <span class="news-category-badge ${s.category_style}">${s.category}</span>
+              <span class="urgency-dot ${urgencyClass[s.urgency] || 'urgency-low'}"
+                title="ความสำคัญ: ${urgencyLabel[s.urgency] || 'ทั่วไป'}"></span>
+            </div>
+            <div class="news-headline">${s.headline}</div>
+            <div class="news-columns">
+              <div class="news-col">
+                <div class="news-col-label col-label-what">🔵 เกิดอะไรขึ้น?</div>
+                <div class="news-col-body">${s.what}</div>
+              </div>
+              <div class="news-col">
+                <div class="news-col-label col-label-impact">🔴 กระทบคุณอย่างไร?</div>
+                <div class="news-col-body">${s.impact}</div>
+              </div>
+              <div class="news-col">
+                <div class="news-col-label col-label-action">🟢 ควรทำอะไร?</div>
+                <div class="news-col-body">${s.action}</div>
+              </div>
+            </div>
+            <div class="news-card-footer">
+              <span class="news-practice-tag">${s.practice_area}</span>
+              <a href="#cta" class="news-cta-link">${s.cta} →</a>
+            </div>
+          </article>`;
+      }).join('');
+    }
+
+    /* ──────────────────────────────────────
+       LOAD NEWS — fetch news-data.json then fallback
+    ────────────────────────────────────── */
+    function loadNews() {
+      fetch('./news-data.json?v=' + Date.now())
+        .then(function(r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          NEWS_DATA = data;
+          renderNewsCards(NEWS_DATA);
+        })
+        .catch(function() {
+          // Fallback: use hardcoded seed data (works on file://)
+          NEWS_DATA = SEED_DATA;
+          renderNewsCards(NEWS_DATA);
+        });
+    }
+
+    /* ──────────────────────────────────────
+       TOPBAR DATE
+    ────────────────────────────────────── */
+    function updateTopbarDate() {
+      const el = document.getElementById('topbar-date');
+      if (!el) return;
+      const now = new Date();
+      const thMonths = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.',
+                        'ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+      el.textContent = `${now.getDate()} ${thMonths[now.getMonth()]} ${now.getFullYear() + 543}`;
+    }
+
+    /* ──────────────────────────────────────
+       INIT
+    ────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', function() {
+      loadNews();
+      updateTopbarDate();
+    });
   </script>
 
 </body>
