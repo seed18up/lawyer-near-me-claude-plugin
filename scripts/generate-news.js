@@ -2,7 +2,10 @@
 
 /**
  * Daily Legal News Generator for Lawyer Near Me (ทนายใกล้ฉัน)
- * Uses Anthropic API (claude-sonnet-4-6) to generate 2 high-drama Thai legal news stories.
+ * Uses Anthropic API (claude-sonnet-4-6) to generate 3 Thai legal news stories:
+ *   [0] drama story  → Facebook morning post
+ *   [1] drama story  → Facebook evening post
+ *   [2] general story → website display only
  * Writes output to news-data.json at the repo root.
  *
  * No npm packages required — uses Node 18+ built-in fetch().
@@ -42,27 +45,35 @@ function getTodayThai() {
 async function generateNews() {
   const today = getTodayISO();
 
-  const prompt = `สร้างข่าวกฎหมายไทย 2 เรื่อง ที่เป็นดราม่า น่าแชร์ต่อ กระทบชีวิตประจำวัน และสมจริง สำหรับวันที่ ${today}
+  const prompt = `สร้างข่าวกฎหมายไทย 3 เรื่อง สมจริง สำหรับวันที่ ${today} โดยมีโครงสร้างดังนี้:
 
-ลักษณะข่าวที่ต้องการ:
-- ต้องเป็นเรื่องที่คนทั่วไปอาจเจอได้ในชีวิต เช่น ถูกโกง, โดนเอาเปรียบ, สิทธิ์ถูกละเมิด, หนี้, แรงงาน, ซื้อบ้านโกง
-- หัวข่าวต้องสะเทือนอารมณ์ อ่านแล้วอยากแชร์ต่อ เช่น "ระวัง!", "เจอแบบนี้ทำยังไง?", "สิทธิ์คุณถูกละเมิด!", "ศาลตัดสินแล้ว!"
+เรื่องที่ 1 และ 2 — ข่าวดราม่า (สำหรับโพสต์ Facebook)
+- ต้องเป็นเรื่องที่คนทั่วไปอาจเจอได้ เช่น ถูกโกง, โดนเอาเปรียบ, สิทธิ์ถูกละเมิด, แรงงานโดนกลั่นแกล้ง, ซื้อบ้านโกง
+- หัวข่าวต้องสะเทือนอารมณ์ อ่านแล้วอยากแชร์ต่อ
 - เนื้อหาต้องมีความขัดแย้ง (ผู้เสียหาย vs นายจ้าง/บริษัท/คู่สมรส/นักต้มตุ๋น)
-- ต้องมี emotional hook — ทำให้คนรู้สึกโกรธ, กลัว, หรืออยากช่วยเหลือ
+- มี emotional hook — โกรธ, กลัว, หรืออยากช่วยเหลือ
+- ต้องมี field: drama_hook และ hashtags
 
-แต่ละเรื่องต้องมี field เหล่านี้:
+เรื่องที่ 3 — ข่าวกฎหมายทั่วไป (สำหรับเว็บไซต์)
+- ข่าวความเคลื่อนไหวกฎหมาย, คำพิพากษา, หรือการเปลี่ยนแปลงกฎระเบียบ
+- น่าสนใจ ให้ความรู้ ไม่จำเป็นต้องดราม่า
+- ไม่ต้องมี field: drama_hook และ hashtags
+
+ทุกเรื่องต้องมี field เหล่านี้:
 - category: ประเภทคดี (เช่น "คดีแรงงาน", "อสังหาริมทรัพย์", "ผู้บริโภค", "ครอบครัว", "สัญญาธุรกิจ", "คดีอาญา")
 - category_en: English slug (labor, property, consumer, family, contract, criminal)
-- title: หัวข่าวดราม่า กระชับ ดึงดูด ภาษาไทย (ไม่เกิน 80 ตัวอักษร)
-- drama_hook: ประโยคเปิดดราม่า 1 ประโยค ที่ทำให้คนหยุดอ่าน (ใช้สำหรับ Social Media)
-- what_happened: เกิดอะไรขึ้น เล่าแบบดราม่า 2-3 ประโยค มีตัวละคร มีความขัดแย้ง
-- impact: กระทบคุณอย่างไร หรือบทเรียนที่ได้ 1-2 ประโยค
-- action: ควรทำอะไรทันที ถ้าเจอแบบนี้ 1-2 ประโยค
+- title: หัวข่าว กระชับ ดึงดูด ภาษาไทย (ไม่เกิน 80 ตัวอักษร)
+- what_happened: เกิดอะไรขึ้น 2-3 ประโยค
+- impact: กระทบอย่างไร หรือบทเรียน 1-2 ประโยค
+- action: ควรทำอะไร 1-2 ประโยค
 - practice_area: สาขากฎหมาย เช่น "Civil / Labor Law"
 - urgency: "high" | "medium" | "low"
+
+เฉพาะเรื่องที่ 1 และ 2 เพิ่ม:
+- drama_hook: ประโยคเปิดดราม่า 1 ประโยค ที่ทำให้คนหยุดอ่านบน Social Media
 - hashtags: array ของ hashtag ภาษาไทย 4-5 อัน เช่น ["#สิทธิแรงงาน","#ระวังโดนโกง"]
 
-ตอบเป็น JSON array เท่านั้น ไม่มีข้อความอื่น`;
+ตอบเป็น JSON array 3 elements เท่านั้น ไม่มีข้อความอื่น`;
 
   console.log(`Calling Anthropic API for date: ${today} ...`);
 
