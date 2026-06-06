@@ -12,14 +12,14 @@ const { writeFileSync } = require('fs');
 const { join } = require('path');
 const ROOT = join(__dirname, '..');
 
-async function main() { await generateNews(); }
-main().catch(e => { console.error(e); process.exit(1); });
-
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!ANTHROPIC_API_KEY) {
   console.error('ERROR: ANTHROPIC_API_KEY environment variable is not set.');
   process.exit(1);
 }
+
+async function main() { await generateNews(); }
+main().catch(e => { console.error(e); process.exit(1); });
 
 // Format today's date in Thai (Buddhist Era)
 function getTodayISO() {
