@@ -784,6 +784,52 @@
     }
 
     /* ─────────────────────────────────────────
+       NEWS PAGINATION
+    ───────────────────────────────────────── */
+    #news-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      padding: 16px 0 4px;
+    }
+
+    .pg-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: 1.5px solid var(--navy);
+      background: var(--white);
+      color: var(--navy);
+      font-family: 'Sarabun', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+
+    .pg-btn:hover:not(:disabled) {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .pg-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .pg-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      min-width: 160px;
+      text-align: center;
+    }
+
+    /* ─────────────────────────────────────────
        HOW IT WORKS
     ───────────────────────────────────────── */
     .howit-section {
@@ -1519,6 +1565,8 @@
         <p style="text-align:center;color:#6b7280;padding:40px">กรุณาเปิดใช้งาน JavaScript เพื่อดูข่าวกฎหมาย</p>
       </noscript>
     </div>
+
+    <div id="news-pagination"></div>
   </section>
 
   <!-- ╔══════════════════════════════════════╗
@@ -1942,8 +1990,9 @@
       ]
     };
 
-    /* ── Active data store (filled by fetch or fallback) ── */
-    let NEWS_DATA = null;
+    /* ── Active data store ── */
+    let ARCHIVE = [];   // array of { date, date_th, stories }
+    let currentPage = 0;
 
     /* ──────────────────────────────────────
        RENDER NEWS CARDS
@@ -1954,7 +2003,12 @@
 
       const dateBadge = document.getElementById('news-date-badge');
       if (dateBadge) {
-        dateBadge.innerHTML = '📅 ' + (data.updated_th || data.updated || '');
+        dateBadge.innerHTML = '📅 ' + (data.date_th || data.updated_th || data.updated || '');
+      }
+
+      const sectionTitle = document.querySelector('#news .section-title');
+      if (sectionTitle) {
+        sectionTitle.textContent = currentPage === 0 ? '📰 ข่าวกฎหมายวันนี้' : '📰 ข่าวกฎหมาย';
       }
 
       const urgencyClass = { high: 'urgency-high', medium: 'urgency-medium', low: 'urgency-low' };
@@ -1998,22 +2052,60 @@
     }
 
     /* ──────────────────────────────────────
-       LOAD NEWS — fetch news-data.json then fallback
+       RENDER PAGINATION
+    ────────────────────────────────────── */
+    function renderPagination() {
+      const pg = document.getElementById('news-pagination');
+      if (!pg || ARCHIVE.length <= 1) { if (pg) pg.innerHTML = ''; return; }
+
+      const total = ARCHIVE.length;
+      const entry = ARCHIVE[currentPage];
+      const label = entry ? (entry.date_th || entry.date) : '';
+
+      pg.innerHTML = `
+        <button class="pg-btn" id="pg-prev" ${currentPage >= total - 1 ? 'disabled' : ''}>
+          ← ย้อนหลัง
+        </button>
+        <span class="pg-label">📅 ${label}</span>
+        <button class="pg-btn" id="pg-next" ${currentPage === 0 ? 'disabled' : ''}>
+          ใหม่กว่า →
+        </button>`;
+
+      document.getElementById('pg-prev').addEventListener('click', function() {
+        if (currentPage < total - 1) { currentPage++; renderNewsCards(ARCHIVE[currentPage]); renderPagination(); }
+      });
+      document.getElementById('pg-next').addEventListener('click', function() {
+        if (currentPage > 0) { currentPage--; renderNewsCards(ARCHIVE[currentPage]); renderPagination(); }
+      });
+    }
+
+    /* ──────────────────────────────────────
+       LOAD NEWS — archive first, fallback to today then seed
     ────────────────────────────────────── */
     function loadNews() {
-      fetch('./news-data.json?v=' + Date.now())
-        .then(function(r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function(data) {
-          NEWS_DATA = data;
-          renderNewsCards(NEWS_DATA);
+      fetch('./news-archive.json?v=' + Date.now())
+        .then(function(r) { if (!r.ok) throw new Error('no archive'); return r.json(); })
+        .then(function(archive) {
+          if (!Array.isArray(archive) || archive.length === 0) throw new Error('empty');
+          ARCHIVE = archive;
+          currentPage = 0;
+          renderNewsCards(ARCHIVE[0]);
+          renderPagination();
         })
         .catch(function() {
-          // Fallback: use hardcoded seed data (works on file://)
-          NEWS_DATA = SEED_DATA;
-          renderNewsCards(NEWS_DATA);
+          // Fallback: load news-data.json (no pagination)
+          fetch('./news-data.json?v=' + Date.now())
+            .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+            .then(function(data) {
+              ARCHIVE = [{ date: data.updated, date_th: data.updated_th, stories: data.stories }];
+              renderNewsCards(ARCHIVE[0]);
+              renderPagination();
+            })
+            .catch(function() {
+              ARCHIVE = [{ date: '', date_th: SEED_DATA.updated_th, stories: SEED_DATA.stories }];
+              renderNewsCards(ARCHIVE[0]);
+              renderPagination();
+            });
         });
     }
 
