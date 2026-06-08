@@ -1448,14 +1448,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 <script>
+function adjustChatForBanner(visible) {
+  var banner = document.getElementById('cookie-banner');
+  var h = visible ? (banner ? banner.offsetHeight : 80) : 0;
+  var toggle = document.getElementById('cw-toggle');
+  var panel = document.getElementById('cw-panel');
+  if (toggle) toggle.style.bottom = (28 + h) + 'px';
+  if (panel) panel.style.bottom = (100 + h) + 'px';
+}
 (function(){
   var consent = localStorage.getItem('cookie_consent');
-  if (!consent) { document.getElementById('cookie-banner').style.display = 'block'; }
+  if (!consent) {
+    document.getElementById('cookie-banner').style.display = 'block';
+    window.addEventListener('load', function(){ adjustChatForBanner(true); });
+  }
   if (consent === 'reject') { disableTracking(); }
 })();
 function cookieConsent(choice) {
   localStorage.setItem('cookie_consent', choice);
   document.getElementById('cookie-banner').style.display = 'none';
+  adjustChatForBanner(false);
   if (choice === 'reject') { disableTracking(); }
 }
 function disableTracking() {
