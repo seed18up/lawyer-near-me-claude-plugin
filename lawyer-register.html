@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมัครเป็นทนายพาร์ทเนอร์ — ทนายใกล้ฉัน</title>
+  <meta name="description" content="สมัครเป็นทนายความพาร์ทเนอร์กับทนายใกล้ฉัน รับลูกค้าใหม่ทุกวัน ขยายฐานลูกค้าได้ง่าย">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZKBV537');</script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYSB53VGB0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FYSB53VGB0');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1496615012260180');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1496615012260180&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    :root {
+      --navy: #1B3A8B;
+      --navy-dark: #122970;
+      --navy-light: #2a4fa8;
+      --red: #C0392B;
+      --gold: #F9A825;
+      --white: #fff;
+      --bg: #f4f6fb;
+      --text: #222;
+      --text-muted: #666;
+      --border: #dde3f0;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Sarabun', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-brand-icon { font-size: 22px; }
+    .nav-brand-text { font-size: 16px; font-weight: 700; color: var(--navy); }
+    .nav-back { font-size: 14px; color: var(--navy); text-decoration: none; font-weight: 600;
+      padding: 6px 14px; border: 1.5px solid var(--navy); border-radius: 8px; }
+    .nav-back:hover { background: var(--navy); color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 60%, #0d1f5e 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(249,168,37,.18);
+      border: 1px solid rgba(249,168,37,.4);
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: .5px;
+    }
+    .hero h1 { font-size: 28px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; }
+    .hero p { font-size: 16px; color: rgba(255,255,255,.82); max-width: 520px; margin: 0 auto 24px; }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-size: 24px; font-weight: 800; color: var(--gold); }
+    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 2px; }
+
+    /* ── FORM CONTAINER ── */
+    .form-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 32px 16px 60px;
+    }
+
+    /* ── SECTION CARD ── */
+    .form-section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-icon {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ── FIELD ── */
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field-row.full { grid-template-columns: 1fr; }
+    .field { margin-bottom: 16px; }
+    .field label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .field label .req { color: var(--red); margin-left: 3px; }
+    .field label .opt { color: var(--text-muted); font-weight: 400; font-size: 12px; margin-left: 4px; }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Sarabun', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color .2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(27,58,139,.1);
+    }
+    input::placeholder, textarea::placeholder { color: #aaa; }
+    textarea { resize: vertical; min-height: 90px; }
+
+    /* ── CHECKBOXES (case types) ── */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 10px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all .15s;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .checkbox-item:hover { border-color: var(--navy); background: #f0f3fb; }
+    .checkbox-item input[type="checkbox"] {
+      width: 16px; height: 16px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .checkbox-item.checked { border-color: var(--navy); background: #eef1fb; }
+
+    /* ── RADIO CARDS (service type) ── */
+    .radio-cards { display: flex; gap: 12px; flex-wrap: wrap; }
+    .radio-card {
+      flex: 1;
+      min-width: 120px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .15s;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .radio-card:hover { border-color: var(--navy); }
+    .radio-card input { display: none; }
+    .radio-card.selected { border-color: var(--navy); background: #eef1fb; color: var(--navy); }
+    .radio-card .rc-icon { font-size: 22px; display: block; margin-bottom: 5px; }
+
+    /* ── PDPA / TERMS ── */
+    .consent-box {
+      background: #f8faff;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .consent-box input[type="checkbox"] {
+      width: 18px; height: 18px;
+      margin-top: 2px;
+      accent-color: var(--navy);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .consent-box label { font-size: 14px; color: #444; line-height: 1.6; cursor: pointer; }
+    .consent-box a { color: var(--navy); font-weight: 600; }
+
+    /* ── SUBMIT ── */
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--red), #9b1616);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Sarabun', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      letter-spacing: .3px;
+    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(192,57,43,.35); }
+    .submit-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+    .submit-note { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 10px; }
+
+    /* ── SUCCESS ── */
+    #success-screen {
+      display: none;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .success-icon { font-size: 64px; margin-bottom: 20px; }
+    .success-title { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .success-body { font-size: 16px; color: var(--text-muted); max-width: 420px; margin: 0 auto 28px; line-height: 1.7; }
+    .success-back {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    @media (max-width: 540px) {
+      .field-row { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 22px; }
+      .form-section { padding: 20px 16px; }
+      .radio-cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZKBV537"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <span class="nav-brand-icon">⚖️</span>
+    <span class="nav-brand-text">ทนายใกล้ฉัน</span>
+  </a>
+  <a class="nav-back" href="for-developers.html">← กลับ</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">⚖️ สมัครพาร์ทเนอร์</div>
+  <h1>รับลูกค้าใหม่ทุกวัน<br>ไม่ต้องหาเอง</h1>
+  <p>กรอกข้อมูลใช้เวลา 3 นาที ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">1,200+</div>
+      <div class="hero-stat-label">ลูกค้าต่อเดือน</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">฿0</div>
+      <div class="hero-stat-label">ค่าสมัคร</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">77</div>
+      <div class="hero-stat-label">จังหวัดทั่วไทย</div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM WRAP -->
+<div class="form-wrap">
+
+  <!-- ── FORM ── -->
+  <form id="lawyerForm" action="https://formspree.io/f/LAWYER_FORM_ID" method="POST" novalidate>
+    <input type="hidden" name="_subject" value="[ทนายใกล้ฉัน] ทนายความสมัครพาร์ทเนอร์ใหม่">
+
+    <!-- SECTION 1: ข้อมูลส่วนตัว -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">👤</div>
+        ข้อมูลส่วนตัว
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>ชื่อ <span class="req">*</span></label>
+          <input type="text" name="first_name" placeholder="สมชาย" required>
+        </div>
+        <div class="field">
+          <label>นามสกุล <span class="req">*</span></label>
+          <input type="text" name="last_name" placeholder="ใจดี" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>เบอร์โทรศัพท์ <span class="req">*</span></label>
+          <input type="tel" name="phone" placeholder="081-234-5678" required>
+        </div>
+        <div class="field">
+          <label>อีเมล <span class="req">*</span></label>
+          <input type="email" name="email" placeholder="lawyer@email.com" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>LINE ID <span class="opt">(ไม่บังคับ)</span></label>
+        <input type="text" name="line_id" placeholder="@lawyername">
+      </div>
+    </div>
+
+    <!-- SECTION 2: ข้อมูลวิชาชีพ -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">📋</div>
+        ข้อมูลวิชาชีพ
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>เลขที่ใบอนุญาตทนายความ <span class="req">*</span></label>
+          <input type="text" name="license_number" placeholder="ต.1234/2560" required>
+        </div>
+        <div class="field">
+          <label>ปีที่ได้รับใบอนุญาต <span class="req">*</span></label>
+          <input type="number" name="license_year" placeholder="2560" min="2500" max="2569" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>ชื่อสำนักงาน/บริษัทกฎหมาย <span class="opt">(ถ้ามี)</span></label>
+        <input type="text" name="office_name" placeholder="สำนักงานกฎหมาย...">
+      </div>
+      <div class="field">
+        <label>ที่อยู่สำนักงาน <span class="opt">(ถ้ามี)</span></label>
+        <input type="text" name="office_address" placeholder="เลขที่ ถนน แขวง/ตำบล เขต/อำเภอ">
+      </div>
+    </div>
+
+    <!-- SECTION 3: ความเชี่ยวชาญ -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">⚖️</div>
+        ความเชี่ยวชาญและพื้นที่บริการ
+      </div>
+
+      <div class="field" style="margin-bottom:20px;">
+        <label>ประเภทคดีที่เชี่ยวชาญ <span class="req">*</span> <span class="opt">(เลือกได้หลายข้อ)</span></label>
+        <div class="checkbox-grid" id="caseTypeGrid">
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="คดีแรงงาน"> คดีแรงงาน</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="อสังหาริมทรัพย์"> 🏠 อสังหาริมทรัพย์</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="ครอบครัว/หย่าร้าง"> 👨‍👩‍👧 ครอบครัว/หย่าร้าง</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="ผู้บริโภค/สัญญา"> 🛒 ผู้บริโภค/สัญญา</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="คดีอาญา"> 🚨 คดีอาญา</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="คดีแพ่ง"> ⚖️ คดีแพ่ง</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="ธุรกิจ/บริษัท"> 🏢 ธุรกิจ/บริษัท</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="มรดก/พินัยกรรม"> 📜 มรดก/พินัยกรรม</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="ภาษี"> 💰 ภาษี</label>
+          <label class="checkbox-item"><input type="checkbox" name="case_types" value="ทรัพย์สินทางปัญญา"> 💡 ทรัพย์สินทางปัญญา</label>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>จังหวัดหลักที่ให้บริการ <span class="req">*</span></label>
+          <select name="primary_province" required>
+            <option value="">-- เลือกจังหวัด --</option>
+            <option>กรุงเทพมหานคร</option><option>กระบี่</option><option>กาญจนบุรี</option>
+            <option>กาฬสินธุ์</option><option>กำแพงเพชร</option><option>ขอนแก่น</option>
+            <option>จันทบุรี</option><option>ฉะเชิงเทรา</option><option>ชลบุรี</option>
+            <option>ชัยนาท</option><option>ชัยภูมิ</option><option>ชุมพร</option>
+            <option>เชียงราย</option><option>เชียงใหม่</option><option>ตรัง</option>
+            <option>ตราด</option><option>ตาก</option><option>นครนายก</option>
+            <option>นครปฐม</option><option>นครพนม</option><option>นครราชสีมา</option>
+            <option>นครศรีธรรมราช</option><option>นครสวรรค์</option><option>นนทบุรี</option>
+            <option>นราธิวาส</option><option>น่าน</option><option>บึงกาฬ</option>
+            <option>บุรีรัมย์</option><option>ปทุมธานี</option><option>ประจวบคีรีขันธ์</option>
+            <option>ปราจีนบุรี</option><option>ปัตตานี</option><option>พระนครศรีอยุธยา</option>
+            <option>พะเยา</option><option>พังงา</option><option>พัทลุง</option>
+            <option>พิจิตร</option><option>พิษณุโลก</option><option>เพชรบุรี</option>
+            <option>เพชรบูรณ์</option><option>แพร่</option><option>พระนครศรีอยุธยา</option>
+            <option>ภูเก็ต</option><option>มหาสารคาม</option><option>มุกดาหาร</option>
+            <option>แม่ฮ่องสอน</option><option>ยโสธร</option><option>ยะลา</option>
+            <option>ร้อยเอ็ด</option><option>ระนอง</option><option>ระยอง</option>
+            <option>ราชบุรี</option><option>ลพบุรี</option><option>ลำปาง</option>
+            <option>ลำพูน</option><option>เลย</option><option>ศรีสะเกษ</option>
+            <option>สกลนคร</option><option>สงขลา</option><option>สตูล</option>
+            <option>สมุทรปราการ</option><option>สมุทรสงคราม</option><option>สมุทรสาคร</option>
+            <option>สระแก้ว</option><option>สระบุรี</option><option>สิงห์บุรี</option>
+            <option>สุโขทัย</option><option>สุพรรณบุรี</option><option>สุราษฎร์ธานี</option>
+            <option>สุรินทร์</option><option>หนองคาย</option><option>หนองบัวลำภู</option>
+            <option>อ่างทอง</option><option>อำนาจเจริญ</option><option>อุดรธานี</option>
+            <option>อุตรดิตถ์</option><option>อุทัยธานี</option><option>อุบลราชธานี</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>ประสบการณ์ทั้งหมด <span class="req">*</span></label>
+          <select name="experience_years" required>
+            <option value="">-- เลือก --</option>
+            <option value="น้อยกว่า 1 ปี">น้อยกว่า 1 ปี</option>
+            <option value="1–3 ปี">1–3 ปี</option>
+            <option value="3–5 ปี">3–5 ปี</option>
+            <option value="5–10 ปี">5–10 ปี</option>
+            <option value="มากกว่า 10 ปี">มากกว่า 10 ปี</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: ค่าบริการ -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">💰</div>
+        ค่าบริการ
+      </div>
+
+      <div class="field" style="margin-bottom:20px;">
+        <label>รูปแบบการให้บริการ <span class="req">*</span></label>
+        <div class="radio-cards" id="serviceTypeCards">
+          <label class="radio-card" onclick="selectRadio(this,'service_type','ออนไลน์')">
+            <input type="radio" name="service_type" value="ออนไลน์" required>
+            <span class="rc-icon">💻</span>ออนไลน์เท่านั้น
+          </label>
+          <label class="radio-card" onclick="selectRadio(this,'service_type','ออฟไลน์')">
+            <input type="radio" name="service_type" value="ออฟไลน์">
+            <span class="rc-icon">🏢</span>ออฟไลน์เท่านั้น
+          </label>
+          <label class="radio-card" onclick="selectRadio(this,'service_type','ทั้งสองแบบ')">
+            <input type="radio" name="service_type" value="ทั้งสองแบบ">
+            <span class="rc-icon">🔄</span>ทั้งสองแบบ
+          </label>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>ค่าปรึกษาครั้งแรก <span class="req">*</span></label>
+          <select name="first_consult_fee" required>
+            <option value="">-- เลือก --</option>
+            <option value="ฟรี">ฟรี (ดึงดูดลูกค้าได้มากกว่า)</option>
+            <option value="500">500 บาท</option>
+            <option value="1000">1,000 บาท</option>
+            <option value="1500">1,500 บาท</option>
+            <option value="2000">2,000 บาท ขึ้นไป</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>ค่าจ้างต่อชั่วโมง (บาท) <span class="req">*</span></label>
+          <input type="number" name="hourly_rate" placeholder="เช่น 1500" min="0" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5: ประวัติ -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">📝</div>
+        ประวัติและประสบการณ์
+      </div>
+      <div class="field">
+        <label>ประวัติการทำงานและความเชี่ยวชาญ <span class="req">*</span></label>
+        <textarea name="bio" rows="4" placeholder="เล่าถึงประสบการณ์ คดีที่เคยรับ ความเชี่ยวชาญพิเศษ เพื่อให้ลูกค้าตัดสินใจได้ง่ายขึ้น..." required></textarea>
+      </div>
+      <div class="field">
+        <label>ประวัติการศึกษา <span class="opt">(ไม่บังคับ)</span></label>
+        <textarea name="education" rows="2" placeholder="เช่น นิติศาสตรบัณฑิต จุฬาลงกรณ์มหาวิทยาลัย ปี 2558..."></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 6: PDPA + Terms -->
+    <div class="form-section">
+      <div class="section-title">
+        <div class="section-icon">🔒</div>
+        ข้อตกลงและความยินยอม
+      </div>
+
+      <div class="consent-box">
+        <input type="checkbox" id="pdpa" name="pdpa_consent" value="ยินยอม" required>
+        <label for="pdpa">
+          ข้าพเจ้ายินยอมให้ ทนายใกล้ฉัน เก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้า
+          ตามนโยบายความเป็นส่วนตัว ภายใต้ <strong>พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</strong>
+          เพื่อวัตถุประสงค์ในการพิจารณาการเป็นพาร์ทเนอร์และการให้บริการแพลตฟอร์ม
+        </label>
+      </div>
+
+      <div class="consent-box">
+        <input type="checkbox" id="terms" name="terms_consent" value="ยินยอม" required>
+        <label for="terms">
+          ข้าพเจ้ายืนยันว่าข้อมูลที่กรอกเป็นความจริงทุกประการ และข้าพเจ้ามีใบอนุญาตทนายความ
+          ที่ถูกต้องจาก <strong>สภาทนายความแห่งประเทศไทย</strong> รับทราบว่าการให้ข้อมูลเท็จ
+          อาจถูกตัดสิทธิ์จากแพลตฟอร์ม
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">
+        ส่งใบสมัคร — ทีมงานติดต่อกลับภายใน 24 ชม. ➜
+      </button>
+      <p class="submit-note">🔒 ข้อมูลของคุณปลอดภัย · ไม่มีค่าใช้จ่ายในการสมัคร</p>
+    </div>
+
+  </form>
+
+  <!-- SUCCESS SCREEN -->
+  <div id="success-screen">
+    <div class="success-icon">🎉</div>
+    <div class="success-title">ได้รับใบสมัครแล้ว!</div>
+    <div class="success-body">
+      ทีมงานจะตรวจสอบข้อมูลและติดต่อกลับทาง<br>
+      อีเมลหรือโทรศัพท์ภายใน <strong>24 ชั่วโมง</strong><br><br>
+      หากมีคำถามเพิ่มเติม ติดต่อเราที่<br>
+      <strong>hello@lawyernearme.in.th</strong>
+    </div>
+    <a class="success-back" href="index.html">← กลับหน้าหลัก</a>
+  </div>
+
+</div><!-- /.form-wrap -->
+
+<script>
+  /* ── Radio card highlight ── */
+  function selectRadio(card, name, value) {
+    document.querySelectorAll('#serviceTypeCards .radio-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    card.querySelector('input').checked = true;
+  }
+
+  /* ── Checkbox card highlight ── */
+  document.querySelectorAll('#caseTypeGrid .checkbox-item input').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      this.closest('.checkbox-item').classList.toggle('checked', this.checked);
+    });
+  });
+
+  /* ── Form submit ── */
+  document.getElementById('lawyerForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Validate at least one case type checked
+    const caseChecked = document.querySelectorAll('input[name="case_types"]:checked');
+    if (caseChecked.length === 0) {
+      alert('กรุณาเลือกประเภทคดีที่เชี่ยวชาญอย่างน้อย 1 ข้อ');
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'กำลังส่งข้อมูล...';
+
+    try {
+      const data = new FormData(this);
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        // Track conversions
+        if (typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration');
+        if (typeof gtag !== 'undefined') gtag('event', 'sign_up', { method: 'lawyer_partner_form' });
+
+        document.getElementById('lawyerForm').style.display = 'none';
+        document.getElementById('success-screen').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'ส่งใบสมัคร — ทีมงานติดต่อกลับภายใน 24 ชม. ➜';
+      alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง หรือติดต่อ hello@lawyernearme.in.th');
+    }
+  });
+</script>
+
+</body>
+</html>
