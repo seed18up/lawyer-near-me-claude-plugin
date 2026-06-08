@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook Post Graphics</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; padding: 40px; display: flex; flex-direction: column; gap: 40px; align-items: center; font-family: 'Sarabun', sans-serif; }
+  .label { color: #aaa; font-size: 13px; margin-bottom: 8px; text-align: center; }
+
+  /* ── POST WRAPPER ── */
+  .post {
+    width: 1200px;
+    height: 630px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  /* ══════════════════════════════
+     POST 1 — แรงงาน
+  ══════════════════════════════ */
+  .post-1 {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a0a0a 50%, #2d0000 100%);
+  }
+  .post-1 .bg-circle {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(192,57,43,0.25) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    border-radius: 50%;
+  }
+  .post-1 .accent-line {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 8px;
+    background: linear-gradient(180deg, #C0392B, #e74c3c, #C0392B);
+  }
+  .post-1 .content {
+    position: absolute;
+    left: 60px; top: 50px; right: 60px; bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .post-1 .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(192,57,43,0.3);
+    border: 1px solid rgba(192,57,43,0.6);
+    color: #ff6b6b;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 30px;
+    width: fit-content;
+    letter-spacing: 1px;
+  }
+  .post-1 .headline {
+    font-size: 72px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .post-1 .headline span { color: #ff4444; }
+  .post-1 .subtext {
+    font-size: 26px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+    max-width: 750px;
+  }
+  .post-1 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .post-1 .cta {
+    background: #C0392B;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    padding: 14px 32px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+  }
+  .post-1 .brand {
+    color: rgba(255,255,255,0.5);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+  }
+  .post-1 .brand strong { color: rgba(255,255,255,0.9); display: block; font-size: 22px; }
+  .post-1 .years-badge {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  .post-1 .years-badge .num {
+    font-size: 160px;
+    font-weight: 900;
+    color: rgba(192,57,43,0.15);
+    line-height: 1;
+    letter-spacing: -8px;
+  }
+
+  /* ══════════════════════════════
+     POST 2 — บ้าน/เงิน
+  ══════════════════════════════ */
+  .post-2 {
+    background: linear-gradient(135deg, #0a0f1e 0%, #0d1a3a 50%, #1a1040 100%);
+  }
+  .post-2 .bg-money {
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.04;
+    bottom: -40px;
+    right: -20px;
+    line-height: 1;
+  }
+  .post-2 .warning-strip {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      #F9A825 0px, #F9A825 40px,
+      #1a1040 40px, #1a1040 80px
+    );
+  }
+  .post-2 .content {
+    position: absolute;
+    left: 60px; top: 60px; right: 60px; bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .post-2 .warning-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(249,168,37,0.15);
+    border: 1.5px solid rgba(249,168,37,0.5);
+    color: #F9A825;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 22px;
+    border-radius: 8px;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .post-2 .headline {
+    font-size: 66px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+  }
+  .post-2 .headline .amount {
+    color: #F9A825;
+    font-size: 80px;
+  }
+  .post-2 .headline .bad {
+    color: #ff4444;
+  }
+  .post-2 .fact-row {
+    display: flex;
+    gap: 24px;
+  }
+  .post-2 .fact {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+    flex: 1;
+  }
+  .post-2 .fact-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: #F9A825;
+  }
+  .post-2 .fact-label {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+  .post-2 .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .post-2 .cta-box {
+    background: linear-gradient(135deg, #1B3A8B, #2a4fa8);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .post-2 .cta-box .icon { font-size: 28px; }
+  .post-2 .cta-box .text { color: #fff; }
+  .post-2 .cta-box .text .small { font-size: 14px; opacity: .7; }
+  .post-2 .cta-box .text .big { font-size: 22px; font-weight: 800; }
+  .post-2 .brand {
+    color: rgba(255,255,255,0.4);
+    font-size: 18px;
+    text-align: right;
+  }
+  .post-2 .brand strong { color: rgba(255,255,255,0.8); display: block; font-size: 20px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ─────── POST 1: แรงงาน ─────── -->
+<div>
+  <div class="label">📸 POST 1 — คดีแรงงาน (screenshot ขนาด 1200×630)</div>
+  <div class="post post-1">
+    <div class="bg-circle"></div>
+    <div class="accent-line"></div>
+    <div class="years-badge"><div class="num">5</div></div>
+    <div class="content">
+      <div class="tag">🚨 เรื่องจริง · คดีแรงงาน</div>
+      <div>
+        <div class="headline">ทำงาน <span>5 ปี</span><br>ไม่เคยขาดแม้วันเดียว<br>โดนไล่ออก <span>ไม่ได้เงินสักบาท</span></div>
+      </div>
+      <div class="subtext">นายจ้างอ้าง "ผิดวินัยร้ายแรง" — ทั้งที่ไม่มีหนังสือเตือนใดๆ<br>รู้ไหม? <strong style="color:#ff9999;">คุณมีสิทธิ์ได้ค่าชดเชยตามกฎหมายเต็มจำนวน</strong></div>
+      <div class="bottom">
+        <div class="cta">⚖️ ปรึกษาทนายฟรี</div>
+        <div class="brand">
+          <strong>ทนายใกล้ฉัน</strong>
+          lawyernearme.in.th
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─────── POST 2: บ้าน/เงิน ─────── -->
+<div>
+  <div class="label">📸 POST 2 — คดีอสังหา (screenshot ขนาด 1200×630)</div>
+  <div class="post post-2">
+    <div class="bg-money">🏚️</div>
+    <div class="warning-strip"></div>
+    <div class="content">
+      <div class="warning-badge">⚠️ ระวัง · ผู้รับเหมาโกง</div>
+      <div>
+        <div class="headline">
+          จ่ายดาวน์ <span class="amount">300,000 ฿</span><br>
+          บริษัทปิดเพจ <span class="bad">หนีหายไปกับเงิน</span>
+        </div>
+      </div>
+      <div class="fact-row">
+        <div class="fact">
+          <div class="fact-num">8 เดือน</div>
+          <div class="fact-label">รอแล้วไม่มีเสาต้นเดียว</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">20+ ราย</div>
+          <div class="fact-label">ผู้เสียหายทั่วประเทศ</div>
+        </div>
+        <div class="fact">
+          <div class="fact-num">4 ล้าน+</div>
+          <div class="fact-label">มูลค่าความเสียหายรวม</div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="cta-box">
+          <div class="icon">⚖️</div>
+          <div class="text">
+            <div class="small">โดนแบบนี้ต้องรีบ →</div>
+            <div class="big">ปรึกษาทนายฟรีเลย</div>
+          </div>
+        </div>
+        <div class="brand">
+          <strong>ทนายใกล้ฉัน</strong>
+          lawyernearme.in.th
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
