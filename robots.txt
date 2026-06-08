@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fb-posts.html
+
+Sitemap: https://lawyernearme.in.th/sitemap.xml
