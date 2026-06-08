@@ -2,13 +2,9 @@
 
 /**
  * Daily Legal News Generator for Lawyer Near Me (ทนายใกล้ฉัน)
- * Uses Anthropic API (claude-sonnet-4-6) to generate 3 Thai legal news stories:
- *   [0] drama story  → Facebook morning post
- *   [1] drama story  → Facebook evening post
- *   [2] general story → website display only
- * Writes output to news-data.json at the repo root.
- *
- * No npm packages required — uses Node 18+ built-in fetch().
+ * 1. Fetches real trending headlines from Thai news RSS feeds
+ * 2. Passes them to Claude to pick the most viral + create legal drama angles
+ * 3. Writes output to news-data.json and news-archive.json
  */
 
 const { writeFileSync, readFileSync, existsSync } = require('fs');
@@ -24,9 +20,8 @@ if (!ANTHROPIC_API_KEY) {
 async function main() { await generateNews(); }
 main().catch(e => { console.error(e); process.exit(1); });
 
-// Format today's date in Thai (Buddhist Era)
 function getTodayISO() {
-  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  return new Date().toISOString().slice(0, 10);
 }
 
 function getTodayThai() {
@@ -38,40 +33,107 @@ function getTodayThai() {
   ];
   const day = now.getDate();
   const month = thaiMonths[now.getMonth()];
-  const year = now.getFullYear() + 543; // Convert to Buddhist Era
+  const year = now.getFullYear() + 543;
   return `${day} ${month} ${year}`;
+}
+
+// ── Fetch RSS with timeout ──
+async function fetchRSS(url, timeoutMs = 8000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, {
+      signal: controller.signal,
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NewsBot/1.0)' },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.text();
+  } catch (e) {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// ── Parse <title> from RSS XML (handles CDATA and plain) ──
+function parseTitles(xml) {
+  if (!xml) return [];
+  const titles = [];
+  // Match both CDATA and plain titles inside <item>
+  const itemRegex = /<item[\s\S]*?<\/item>/g;
+  let item;
+  while ((item = itemRegex.exec(xml)) !== null) {
+    const cdata = item[0].match(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/);
+    const plain = item[0].match(/<title>([\s\S]*?)<\/title>/);
+    const title = (cdata?.[1] || plain?.[1] || '').trim().replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    if (title && title.length > 5) titles.push(title);
+  }
+  return titles;
+}
+
+// ── Fetch trending headlines from Thai news sites ──
+async function fetchTrendingHeadlines() {
+  const sources = [
+    { name: 'ไทยรัฐ',  url: 'https://www.thairath.co.th/rss/news.xml' },
+    { name: 'ข่าวสด',  url: 'https://www.khaosod.co.th/feed' },
+    { name: 'มติชน',   url: 'https://www.matichon.co.th/feed' },
+  ];
+
+  console.log('Fetching trending headlines from Thai news RSS...');
+  const results = await Promise.all(sources.map(async (s) => {
+    const xml = await fetchRSS(s.url);
+    const titles = parseTitles(xml).slice(0, 15);
+    console.log(`  ${s.name}: ${titles.length} headlines`);
+    return { source: s.name, titles };
+  }));
+
+  const all = results.flatMap(r => r.titles.map(t => `[${r.source}] ${t}`));
+  console.log(`Total headlines fetched: ${all.length}`);
+  return all;
 }
 
 async function generateNews() {
   const today = getTodayISO();
 
-  const prompt = `สร้างข่าวกฎหมายไทย 3 เรื่อง สมจริง สำหรับวันที่ ${today} โดยมีโครงสร้างดังนี้:
+  // Step 1: Get real trending news
+  const headlines = await fetchTrendingHeadlines();
 
-เรื่องที่ 1 และ 2 — ข่าวดราม่า (สำหรับโพสต์ Facebook)
-- ต้องเป็นเรื่องที่คนทั่วไปอาจเจอได้ เช่น ถูกโกง, โดนเอาเปรียบ, สิทธิ์ถูกละเมิด, แรงงานโดนกลั่นแกล้ง, ซื้อบ้านโกง
-- หัวข่าวต้องสะเทือนอารมณ์ อ่านแล้วอยากแชร์ต่อ
-- เนื้อหาต้องมีความขัดแย้ง (ผู้เสียหาย vs นายจ้าง/บริษัท/คู่สมรส/นักต้มตุ๋น)
-- มี emotional hook — โกรธ, กลัว, หรืออยากช่วยเหลือ
-- ต้องมี field: drama_hook และ hashtags
+  // Step 2: Build prompt — inject real headlines as context
+  const headlineSection = headlines.length > 0
+    ? `\n\nข่าวกระแสจริงจากสื่อไทยวันนี้ (${today}):\n${headlines.slice(0, 40).map((h, i) => `${i + 1}. ${h}`).join('\n')}\n\n`
+    : '\n\n(ไม่สามารถดึงข่าวจริงได้วันนี้ — ให้สร้างจากสถานการณ์ที่เป็นกระแสในสังคมไทยปัจจุบัน)\n\n';
 
-เรื่องที่ 3 — ข่าวกฎหมายทั่วไป (สำหรับเว็บไซต์)
-- ข่าวความเคลื่อนไหวกฎหมาย, คำพิพากษา, หรือการเปลี่ยนแปลงกฎระเบียบ
-- น่าสนใจ ให้ความรู้ ไม่จำเป็นต้องดราม่า
-- ไม่ต้องมี field: drama_hook และ hashtags
+  const prompt = `คุณคือผู้เชี่ยวชาญด้านการสร้าง viral content กฎหมายสำหรับ Facebook ไทย${headlineSection}จากข่าวกระแสข้างต้น ให้ทำดังนี้:
 
-ทุกเรื่องต้องมี field เหล่านี้:
-- category: ประเภทคดี (เช่น "คดีแรงงาน", "อสังหาริมทรัพย์", "ผู้บริโภค", "ครอบครัว", "สัญญาธุรกิจ", "คดีอาญา")
+1. คัดเลือกข่าวที่มีศักยภาพ viral สูงสุด 2 เรื่อง (ดราม่า, ขัดแย้ง, คนทั่วไปเจอได้, มีมิติทางกฎหมาย)
+2. สร้าง angle กฎหมายที่ทำให้คนอยากแชร์ต่อและอยากปรึกษาทนาย
+3. สร้างข่าวกฎหมายทั่วไป 1 เรื่องจากกระแสที่น่าสนใจที่สุด
+
+ถ้าข่าวที่ดึงมาไม่มีมิติกฎหมาย ให้ใช้กระแสนั้นเป็น "แรงบันดาลใจ" และสร้างสถานการณ์ที่เกี่ยวข้องซึ่งคนทั่วไปอาจเจอได้จริง
+
+เรื่องที่ 1 และ 2 — ข่าวดราม่า (Facebook):
+- หัวข่าวต้องสะเทือนอารมณ์ อ่านแล้วอยากแชร์ทันที
+- เนื้อหามีความขัดแย้งชัดเจน (ผู้เสียหาย vs ผู้กระทำ)
+- emotional hook — โกรธ, กลัว, หรืออยากช่วยเหลือ
+- ต้องผูกกับกระแสที่คนกำลังพูดถึงในสังคมตอนนี้
+
+เรื่องที่ 3 — ข่าวกฎหมายทั่วไป (เว็บไซต์):
+- ข่าวที่ให้ความรู้ มีประโยชน์ ไม่จำเป็นต้องดราม่า
+
+ทุกเรื่องต้องมี field:
+- category: ประเภทคดี เช่น "คดีแรงงาน", "อสังหาริมทรัพย์", "ผู้บริโภค", "ครอบครัว", "สัญญาธุรกิจ", "คดีอาญา"
 - category_en: English slug (labor, property, consumer, family, contract, criminal)
-- title: หัวข่าว กระชับ ดึงดูด ภาษาไทย (ไม่เกิน 80 ตัวอักษร)
+- title: หัวข่าวภาษาไทย กระชับ ดึงดูด ไม่เกิน 80 ตัวอักษร
 - what_happened: เกิดอะไรขึ้น 2-3 ประโยค
-- impact: กระทบอย่างไร หรือบทเรียน 1-2 ประโยค
+- impact: กระทบอย่างไร 1-2 ประโยค
 - action: ควรทำอะไร 1-2 ประโยค
 - practice_area: สาขากฎหมาย เช่น "Civil / Labor Law"
 - urgency: "high" | "medium" | "low"
+- trending_angle: อธิบายสั้นๆ ว่าโยงกับกระแสอะไรในสังคมตอนนี้ (1 ประโยค)
 
 เฉพาะเรื่องที่ 1 และ 2 เพิ่ม:
-- drama_hook: ประโยคเปิดดราม่า 1 ประโยค ที่ทำให้คนหยุดอ่านบน Social Media
-- hashtags: array ของ hashtag ภาษาไทย 4-5 อัน เช่น ["#สิทธิแรงงาน","#ระวังโดนโกง"]
+- drama_hook: ประโยคเปิดดราม่า 1 ประโยค ให้คนหยุดอ่านบน Facebook
+- hashtags: array hashtag ภาษาไทย 4-5 อัน
 
 ตอบเป็น JSON array 3 elements เท่านั้น ไม่มีข้อความอื่น`;
 
@@ -89,12 +151,7 @@ async function generateNews() {
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 4096,
-        messages: [
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
+        messages: [{ role: 'user', content: prompt }],
       }),
     });
   } catch (networkError) {
@@ -123,7 +180,6 @@ async function generateNews() {
     process.exit(1);
   }
 
-  // Extract JSON array from the response (strip any accidental markdown code fences)
   const jsonMatch = rawText.match(/\[[\s\S]*\]/);
   if (!jsonMatch) {
     console.error('ERROR: Could not find a JSON array in Claude response.');
@@ -145,7 +201,7 @@ async function generateNews() {
     process.exit(1);
   }
 
-  // ── Attach a curated Unsplash image per category ──
+  // ── Attach Unsplash images per category ──
   const IMAGES = {
     property: [
       'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop&auto=format',
@@ -180,7 +236,6 @@ async function generateNews() {
   const enrichedStories = stories.map((s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
     const pool = IMAGES[en] || IMAGES.criminal;
-    // Pick first unused image; wrap around if all used
     const img = pool.find((u) => !usedImages.has(u)) || pool[0];
     usedImages.add(img);
     return { ...s, image_url: s.image_url || img };
@@ -210,9 +265,7 @@ async function generateNews() {
       archive = [];
     }
   }
-  // Remove existing entry for today (avoid duplicates on re-run)
   archive = archive.filter((entry) => entry.date !== today);
-  // Prepend today and keep 30 days
   archive = [{ date: today, date_th: output.updated_th, stories: enrichedStories }, ...archive].slice(0, 30);
   try {
     writeFileSync(archivePath, JSON.stringify(archive, null, 2), 'utf-8');
