@@ -1457,7 +1457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="nav-link" href="#howit">วิธีใช้งาน</a>
       <a class="nav-link" href="#trust">เกี่ยวกับเรา</a>
       <a class="nav-link" href="for-developers.html" style="color:var(--gold);font-weight:700;">⚖️ สำหรับทนาย/นักพัฒนา</a>
-      <a class="nav-cta" href="#cta">ปรึกษาฟรี ➜</a>
+      <a class="nav-cta" href="#" onclick="cwOpenPanel();return false;">ปรึกษาฟรี ➜</a>
     </div>
     <button class="hamburger" aria-label="เมนู">
       <span></span><span></span><span></span>
@@ -1566,7 +1566,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="lawyer-card-actions">
             <a href="contact.html" class="lawyer-btn-primary" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">📅 จองนัดเลย</a>
-            <a href="https://lin.ee/xFfxvO6" target="_blank" rel="noopener" class="lawyer-btn-outline" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">💬 ส่งข้อความ</a>
+            <a href="#" onclick="cwOpenPanel();return false;" class="lawyer-btn-outline" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;">💬 ส่งข้อความ</a>
           </div>
         </div>
 
@@ -2866,6 +2866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       textarea.focus();
       showWelcome(activeAgent);
     }
+    window.cwOpenPanel = openPanel;
 
     function closePanel() {
       isPanelOpen = false;
