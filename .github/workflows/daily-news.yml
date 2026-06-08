@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add news-data.json
+          git add news-data.json news-archive.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else

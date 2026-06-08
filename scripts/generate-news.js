@@ -11,7 +11,7 @@
  * No npm packages required — uses Node 18+ built-in fetch().
  */
 
-const { writeFileSync } = require('fs');
+const { writeFileSync, readFileSync, existsSync } = require('fs');
 const { join } = require('path');
 const ROOT = join(__dirname, '..');
 
@@ -200,6 +200,28 @@ async function generateNews() {
     process.exit(1);
   }
 
+  // ── Update news-archive.json (keep last 30 days) ──
+  const archivePath = join(ROOT, 'news-archive.json');
+  let archive = [];
+  if (existsSync(archivePath)) {
+    try {
+      archive = JSON.parse(readFileSync(archivePath, 'utf-8'));
+    } catch (_) {
+      archive = [];
+    }
+  }
+  // Remove existing entry for today (avoid duplicates on re-run)
+  archive = archive.filter((entry) => entry.date !== today);
+  // Prepend today and keep 30 days
+  archive = [{ date: today, date_th: output.updated_th, stories: enrichedStories }, ...archive].slice(0, 30);
+  try {
+    writeFileSync(archivePath, JSON.stringify(archive, null, 2), 'utf-8');
+  } catch (writeError) {
+    console.error('ERROR: Failed to write news-archive.json:', writeError.message);
+    process.exit(1);
+  }
+
   console.log(`SUCCESS: Wrote ${stories.length} stories to news-data.json`);
+  console.log(`Archive: ${archive.length} days stored in news-archive.json`);
   console.log(`Date: ${today} (${output.updated_th})`);
 }
