@@ -37,6 +37,52 @@ function getTodayThai() {
   return `${day} ${month} ${year}`;
 }
 
+// ── Generic JSON fetch with timeout ──
+async function fetchJSON(url, timeoutMs = 6000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { signal: controller.signal });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (_) {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+// ── Fetch Wikimedia Commons image URL by category ──
+const WIKIMEDIA_KEYWORDS = {
+  criminal:  'Thailand police court arrest handcuffs',
+  labor:     'Thailand workers factory employment protest',
+  property:  'Thailand house Bangkok real estate building',
+  family:    'Thailand family children couple',
+  consumer:  'online shopping fraud scam consumer',
+  contract:  'business contract signing document pen',
+};
+
+async function fetchWikimediaImage(category_en) {
+  const keywords = WIKIMEDIA_KEYWORDS[category_en] || 'Thailand court law justice';
+  const searchData = await fetchJSON(
+    `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(keywords)}&srnamespace=6&srlimit=10&format=json&origin=*`
+  );
+  if (!searchData) return null;
+
+  const hit = (searchData?.query?.search || []).find(h => /\.(jpg|jpeg|png)$/i.test(h.title));
+  if (!hit) return null;
+
+  const infoData = await fetchJSON(
+    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(hit.title)}&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*`
+  );
+  if (!infoData) return null;
+
+  const pages = Object.values(infoData?.query?.pages || {});
+  const thumbUrl = pages[0]?.imageinfo?.[0]?.thumburl;
+  console.log(`  Wikimedia image (${category_en}): ${thumbUrl ? 'found' : 'not found'}`);
+  return thumbUrl || null;
+}
+
 // ── Fetch RSS with timeout ──
 async function fetchRSS(url, timeoutMs = 8000) {
   const controller = new AbortController();
@@ -232,14 +278,25 @@ async function generateNews() {
     ],
   };
 
+  console.log('Fetching images from Wikimedia Commons...');
   const usedImages = new Set();
-  const enrichedStories = stories.map((s) => {
+  const enrichedStories = await Promise.all(stories.map(async (s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
-    const pool = IMAGES[en] || IMAGES.criminal;
-    const img = pool.find((u) => !usedImages.has(u)) || pool[0];
-    usedImages.add(img);
-    return { ...s, image_url: s.image_url || img };
-  });
+    let imageUrl = s.image_url;
+    if (!imageUrl) {
+      imageUrl = await fetchWikimediaImage(en);
+    }
+    if (!imageUrl) {
+      const pool = IMAGES[en] || IMAGES.criminal;
+      imageUrl = pool.find((u) => !usedImages.has(u)) || pool[0];
+      usedImages.add(imageUrl);
+    }
+    return {
+      ...s,
+      image_url: imageUrl,
+      article_url: 'https://lawyernearme.in.th/news.html',
+    };
+  }));
 
   const output = {
     updated: today,
