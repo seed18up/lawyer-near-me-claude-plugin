@@ -2160,7 +2160,7 @@ function disableTracking() {
             </div>
             <div class="news-card-footer">
               <span class="news-practice-tag">${s.practice_area}</span>
-              <a href="#cta" class="news-cta-link">${s.cta} →</a>
+              <a href="#" onclick="cwOpenWithTopic('${s.category}');return false;" class="news-cta-link">${s.cta} →</a>
             </div>
             </div>
           </article>`;
@@ -2952,6 +2952,12 @@ function disableTracking() {
       showWelcome(activeAgent);
     }
     window.cwOpenPanel = openPanel;
+    window.cwOpenWithTopic = function(label) {
+      openPanel();
+      setTimeout(function() {
+        sendMessage('สอบถามเรื่อง' + label + ' ช่วยแนะนำสิทธิ์และขั้นตอนทางกฎหมายด้วยครับ');
+      }, 350);
+    };
 
     function closePanel() {
       isPanelOpen = false;
