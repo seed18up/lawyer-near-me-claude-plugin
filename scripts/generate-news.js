@@ -53,12 +53,12 @@ async function fetchJSON(url, timeoutMs = 6000) {
 // ── Cloudinary: branded Thai headline image per story ──
 const CLOUDINARY_CLOUD = 'de50nluyy';
 const BG_POOLS = {
-  criminal: ['legal-bg-criminal','legal-bg-criminal-2','legal-bg-criminal-3','legal-bg-criminal-4','legal-bg-criminal-px1','legal-bg-criminal-px2','legal-bg-criminal-px3','legal-bg-criminal-px4'],
-  labor:    ['legal-bg-labor','legal-bg-labor-2','legal-bg-labor-3','legal-bg-labor-4','legal-bg-labor-5','legal-bg-labor-px1','legal-bg-labor-px2','legal-bg-labor-px3','legal-bg-labor-px4'],
-  property: ['legal-bg-property','legal-bg-property-2','legal-bg-property-3','legal-bg-property-4','legal-bg-property-px1','legal-bg-property-px2','legal-bg-property-px3','legal-bg-property-px4'],
-  family:   ['legal-bg-family','legal-bg-family-2','legal-bg-family-3','legal-bg-family-4','legal-bg-family-px1','legal-bg-family-px2','legal-bg-family-px3','legal-bg-family-px4'],
-  consumer: ['legal-bg-consumer','legal-bg-consumer-2','legal-bg-consumer-3','legal-bg-consumer-4','legal-bg-consumer-5','legal-bg-consumer-px1','legal-bg-consumer-px2','legal-bg-consumer-px3','legal-bg-consumer-px4'],
-  contract: ['legal-bg-contract','legal-bg-contract-2','legal-bg-contract-3','legal-bg-contract-4','legal-bg-contract-px1','legal-bg-contract-px2','legal-bg-contract-px3','legal-bg-contract-px4'],
+  criminal: ['legal-bg-criminal','legal-bg-criminal-2','legal-bg-criminal-3','legal-bg-criminal-4','legal-bg-criminal-px1','legal-bg-criminal-px2','legal-bg-criminal-px3','legal-bg-criminal-px4','legal-bg-criminal-px5','legal-bg-criminal-px6','legal-bg-criminal-px7','legal-bg-criminal-px8'],
+  labor:    ['legal-bg-labor','legal-bg-labor-2','legal-bg-labor-3','legal-bg-labor-4','legal-bg-labor-5','legal-bg-labor-px1','legal-bg-labor-px2','legal-bg-labor-px3','legal-bg-labor-px4','legal-bg-labor-px5','legal-bg-labor-px6','legal-bg-labor-px7','legal-bg-labor-px8'],
+  property: ['legal-bg-property','legal-bg-property-2','legal-bg-property-3','legal-bg-property-4','legal-bg-property-px1','legal-bg-property-px2','legal-bg-property-px3','legal-bg-property-px4','legal-bg-property-px5','legal-bg-property-px6','legal-bg-property-px7','legal-bg-property-px8'],
+  family:   ['legal-bg-family','legal-bg-family-2','legal-bg-family-3','legal-bg-family-4','legal-bg-family-px1','legal-bg-family-px2','legal-bg-family-px3','legal-bg-family-px4','legal-bg-family-px5','legal-bg-family-px6','legal-bg-family-px7','legal-bg-family-px8'],
+  consumer: ['legal-bg-consumer','legal-bg-consumer-2','legal-bg-consumer-3','legal-bg-consumer-4','legal-bg-consumer-5','legal-bg-consumer-px1','legal-bg-consumer-px2','legal-bg-consumer-px3','legal-bg-consumer-px4','legal-bg-consumer-px5','legal-bg-consumer-px6','legal-bg-consumer-px7','legal-bg-consumer-px8'],
+  contract: ['legal-bg-contract','legal-bg-contract-2','legal-bg-contract-3','legal-bg-contract-4','legal-bg-contract-px1','legal-bg-contract-px2','legal-bg-contract-px3','legal-bg-contract-px4','legal-bg-contract-px5','legal-bg-contract-px6','legal-bg-contract-px7','legal-bg-contract-px8'],
 };
 
 function buildCloudinaryImageUrl(title, categoryEn) {
