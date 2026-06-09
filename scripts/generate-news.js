@@ -50,35 +50,29 @@ async function fetchJSON(url, timeoutMs = 6000) {
   }
 }
 
-// ── Fetch Wikimedia Commons image URL by category ──
-const WIKIMEDIA_KEYWORDS = {
-  criminal:  'Thailand police court arrest handcuffs',
-  labor:     'Thailand workers factory employment protest',
-  property:  'Thailand house Bangkok real estate building',
-  family:    'Thailand family children couple',
-  consumer:  'online shopping fraud scam consumer',
-  contract:  'business contract signing document pen',
+// ── Cloudinary: branded Thai headline image per story ──
+const CLOUDINARY_CLOUD = 'de50nluyy';
+const BG_POOLS = {
+  criminal: ['legal-bg-criminal', 'legal-bg-criminal-2', 'legal-bg-criminal-3', 'legal-bg-criminal-4'],
+  labor:    ['legal-bg-labor', 'legal-bg-labor-2', 'legal-bg-labor-3', 'legal-bg-labor-4', 'legal-bg-labor-5'],
+  property: ['legal-bg-property', 'legal-bg-property-2', 'legal-bg-property-3', 'legal-bg-property-4'],
+  family:   ['legal-bg-family', 'legal-bg-family-2', 'legal-bg-family-3', 'legal-bg-family-4'],
+  consumer: ['legal-bg-consumer', 'legal-bg-consumer-2', 'legal-bg-consumer-3', 'legal-bg-consumer-4', 'legal-bg-consumer-5'],
+  contract: ['legal-bg-contract', 'legal-bg-contract-2', 'legal-bg-contract-3', 'legal-bg-contract-4'],
 };
 
-async function fetchWikimediaImage(category_en) {
-  const keywords = WIKIMEDIA_KEYWORDS[category_en] || 'Thailand court law justice';
-  const searchData = await fetchJSON(
-    `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(keywords)}&srnamespace=6&srlimit=10&format=json&origin=*`
-  );
-  if (!searchData) return null;
-
-  const hit = (searchData?.query?.search || []).find(h => /\.(jpg|jpeg|png)$/i.test(h.title));
-  if (!hit) return null;
-
-  const infoData = await fetchJSON(
-    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(hit.title)}&prop=imageinfo&iiprop=url&iiurlwidth=1200&format=json&origin=*`
-  );
-  if (!infoData) return null;
-
-  const pages = Object.values(infoData?.query?.pages || {});
-  const thumbUrl = pages[0]?.imageinfo?.[0]?.thumburl;
-  console.log(`  Wikimedia image (${category_en}): ${thumbUrl ? 'found' : 'not found'}`);
-  return thumbUrl || null;
+function buildCloudinaryImageUrl(title, categoryEn) {
+  const pool = BG_POOLS[categoryEn] || BG_POOLS.criminal;
+  const bg   = pool[Math.floor(Math.random() * pool.length)];
+  const display = title.length > 55 ? title.slice(0, 54) + '…' : title;
+  const encoded = encodeURIComponent(encodeURIComponent(display));
+  return [
+    `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/image/upload`,
+    'w_1200,h_630,c_fill,g_auto,q_auto:good',
+    'e_brightness:-30',
+    `l_text:Sarabun_52_bold:${encoded},co_white,g_south_west,x_60,y_80,w_1080,c_fit,e_shadow:40`,
+    bg,
+  ].join('/');
 }
 
 // ── Fetch RSS with timeout ──
@@ -245,56 +239,16 @@ async function generateNews() {
     process.exit(1);
   }
 
-  // ── Attach Unsplash images per category ──
-  const IMAGES = {
-    property: [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1570129477492-1f17d3f82f33?w=800&q=80&fit=crop&auto=format',
-    ],
-    labor: [
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&fit=crop&auto=format',
-    ],
-    consumer: [
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80&fit=crop&auto=format',
-    ],
-    criminal: [
-      'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1532938911079-1346d177168a?w=800&q=80&fit=crop&auto=format',
-    ],
-    family: [
-      'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1516534669431-49b2d45f6610?w=800&q=80&fit=crop&auto=format',
-    ],
-    contract: [
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&fit=crop&auto=format',
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80&fit=crop&auto=format',
-    ],
-  };
-
-  console.log('Fetching images from Wikimedia Commons...');
-  const usedImages = new Set();
-  const enrichedStories = await Promise.all(stories.map(async (s) => {
+  // ── Build Cloudinary branded image per story ──
+  console.log('Building Cloudinary image URLs...');
+  const enrichedStories = stories.map((s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
-    let imageUrl = s.image_url;
-    if (!imageUrl) {
-      imageUrl = await fetchWikimediaImage(en);
-    }
-    if (!imageUrl) {
-      const pool = IMAGES[en] || IMAGES.criminal;
-      imageUrl = pool.find((u) => !usedImages.has(u)) || pool[0];
-      usedImages.add(imageUrl);
-    }
     return {
       ...s,
-      image_url: imageUrl,
+      image_url: buildCloudinaryImageUrl(s.title, en),
       article_url: 'https://lawyernearme.in.th/news.html',
     };
-  }));
+  });
 
   const output = {
     updated: today,
