@@ -55,6 +55,19 @@ const CLOUDINARY_CLOUD   = 'de50nluyy';
 const CLOUDINARY_API_KEY = '188554158979891';
 const CATEGORIES         = ['criminal', 'labor', 'property', 'family', 'consumer', 'contract'];
 
+const CATEGORY_COLORS = {
+  criminal: 'C0392B',
+  labor:    'E67E22',
+  property: '27AE60',
+  family:   '2980B9',
+  consumer: '8E44AD',
+  contract: '2C3E50',
+};
+
+// Pre-double-encoded Thai static labels
+const BRAND_ENCODED = '%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599';
+const CTA_ENCODED   = '%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5';
+
 async function fetchCloudinaryBgPools() {
   const secret = process.env.CLOUDINARY_API_SECRET;
   const pools  = Object.fromEntries(CATEGORIES.map(c => [c, []]));
@@ -88,16 +101,24 @@ async function fetchCloudinaryBgPools() {
   return pools;
 }
 
-function buildCloudinaryImageUrl(title, categoryEn, bgPools) {
-  const pool = bgPools[categoryEn] || bgPools.criminal;
-  const bg   = pool[Math.floor(Math.random() * pool.length)];
-  const display = title.length > 55 ? title.slice(0, 54) + '…' : title;
-  const encoded = encodeURIComponent(encodeURIComponent(display));
+function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools) {
+  const pool       = bgPools[categoryEn] || bgPools.criminal;
+  const bg         = pool[Math.floor(Math.random() * pool.length)];
+  const display    = title.length > 55 ? title.slice(0, 54) + '…' : title;
+  const encoded    = encodeURIComponent(encodeURIComponent(display));
+  const catLabel   = ' ' + (categoryTh || 'กฎหมาย') + ' ';
+  const catEncoded = encodeURIComponent(encodeURIComponent(catLabel));
+  const catColor   = CATEGORY_COLORS[categoryEn] || '2C3E50';
   return [
     `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/image/upload`,
     'w_1200,h_630,c_fill,g_auto,q_auto:good',
-    'e_brightness:-30',
-    `l_text:Sarabun_52_bold:${encoded},co_white,g_south_west,x_60,y_80,w_1080,c_fit,e_shadow:40`,
+    'e_brightness:-15',
+    'l_lawyernearme-gradient/w_1200,h_320,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_92',
+    `l_text:Sarabun_38_bold:${BRAND_ENCODED},co_white,g_north_west,x_50,y_35,e_shadow:50`,
+    `l_text:Sarabun_28_bold:${catEncoded},co_white,b_rgb:${catColor},g_north_west,x_50,y_90`,
+    `l_text:Sarabun_68_bold:${encoded},co_white,g_south_west,x_60,y_90,w_900,c_fit,e_shadow:80`,
+    `l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30`,
+    `l_text:Sarabun_26_bold:${CTA_ENCODED},co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30`,
     bg,
   ].join('/');
 }
@@ -274,7 +295,7 @@ async function generateNews() {
     const en = (s.category_en || 'criminal').toLowerCase();
     return {
       ...s,
-      image_url: buildCloudinaryImageUrl(s.title, en, bgPools),
+      image_url: buildCloudinaryImageUrl(s.title, en, s.category || '', bgPools),
       article_url: 'https://lawyernearme.in.th/news.html',
     };
   });
