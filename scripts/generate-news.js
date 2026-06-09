@@ -21,20 +21,18 @@ async function main() { await generateNews(); }
 main().catch(e => { console.error(e); process.exit(1); });
 
 function getTodayISO() {
-  return new Date().toISOString().slice(0, 10);
+  return new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Bangkok' });
 }
 
 function getTodayThai() {
-  const now = new Date();
   const thaiMonths = [
     'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน',
     'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม',
     'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม',
   ];
-  const day = now.getDate();
-  const month = thaiMonths[now.getMonth()];
-  const year = now.getFullYear() + 543;
-  return `${day} ${month} ${year}`;
+  const bkk = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Bangkok' });
+  const [y, m, d] = bkk.split('-');
+  return `${parseInt(d)} ${thaiMonths[parseInt(m) - 1]} ${parseInt(y) + 543}`;
 }
 
 // ── Generic JSON fetch with timeout ──
