@@ -66,7 +66,7 @@ const CATEGORY_COLORS = {
 
 // Pre-double-encoded Thai static labels
 const BRAND_ENCODED = '%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599';
-const CTA_ENCODED   = '%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5';
+const CTA_ENCODED   = '%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5';
 
 async function fetchCloudinaryBgPools() {
   const secret = process.env.CLOUDINARY_API_SECRET;
@@ -113,6 +113,7 @@ function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools) {
     `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/image/upload`,
     'w_1200,h_630,c_fill,g_auto,q_auto:good',
     'e_brightness:-15',
+    'l_lawyernearme-gradient/w_1200,h_200,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_80',
     'l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_92',
     `l_text:Sarabun_38_bold:${BRAND_ENCODED},co_white,g_north_west,x_50,y_35,e_shadow:50`,
     `l_text:Sarabun_28_bold:${catEncoded},co_white,b_rgb:${catColor},g_north_west,x_50,y_90`,
