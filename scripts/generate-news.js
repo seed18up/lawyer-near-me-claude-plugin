@@ -50,19 +50,46 @@ async function fetchJSON(url, timeoutMs = 6000) {
   }
 }
 
-// ── Cloudinary: branded Thai headline image per story ──
-const CLOUDINARY_CLOUD = 'de50nluyy';
-const BG_POOLS = {
-  criminal: ['legal-bg-criminal','legal-bg-criminal-2','legal-bg-criminal-3','legal-bg-criminal-4','legal-bg-criminal-px1','legal-bg-criminal-px2','legal-bg-criminal-px3','legal-bg-criminal-px4','legal-bg-criminal-px5','legal-bg-criminal-px6','legal-bg-criminal-px7','legal-bg-criminal-px8'],
-  labor:    ['legal-bg-labor','legal-bg-labor-2','legal-bg-labor-3','legal-bg-labor-4','legal-bg-labor-5','legal-bg-labor-px1','legal-bg-labor-px2','legal-bg-labor-px3','legal-bg-labor-px4','legal-bg-labor-px5','legal-bg-labor-px6','legal-bg-labor-px7','legal-bg-labor-px8'],
-  property: ['legal-bg-property','legal-bg-property-2','legal-bg-property-3','legal-bg-property-4','legal-bg-property-px1','legal-bg-property-px2','legal-bg-property-px3','legal-bg-property-px4','legal-bg-property-px5','legal-bg-property-px6','legal-bg-property-px7','legal-bg-property-px8'],
-  family:   ['legal-bg-family','legal-bg-family-2','legal-bg-family-3','legal-bg-family-4','legal-bg-family-px1','legal-bg-family-px2','legal-bg-family-px3','legal-bg-family-px4','legal-bg-family-px5','legal-bg-family-px6','legal-bg-family-px7','legal-bg-family-px8'],
-  consumer: ['legal-bg-consumer','legal-bg-consumer-2','legal-bg-consumer-3','legal-bg-consumer-4','legal-bg-consumer-5','legal-bg-consumer-px1','legal-bg-consumer-px2','legal-bg-consumer-px3','legal-bg-consumer-px4','legal-bg-consumer-px5','legal-bg-consumer-px6','legal-bg-consumer-px7','legal-bg-consumer-px8'],
-  contract: ['legal-bg-contract','legal-bg-contract-2','legal-bg-contract-3','legal-bg-contract-4','legal-bg-contract-px1','legal-bg-contract-px2','legal-bg-contract-px3','legal-bg-contract-px4','legal-bg-contract-px5','legal-bg-contract-px6','legal-bg-contract-px7','legal-bg-contract-px8'],
-};
+// ── Cloudinary: fetch available backgrounds dynamically ──
+const CLOUDINARY_CLOUD   = 'de50nluyy';
+const CLOUDINARY_API_KEY = '188554158979891';
+const CATEGORIES         = ['criminal', 'labor', 'property', 'family', 'consumer', 'contract'];
 
-function buildCloudinaryImageUrl(title, categoryEn) {
-  const pool = BG_POOLS[categoryEn] || BG_POOLS.criminal;
+async function fetchCloudinaryBgPools() {
+  const secret = process.env.CLOUDINARY_API_SECRET;
+  const pools  = Object.fromEntries(CATEGORIES.map(c => [c, []]));
+
+  if (!secret) {
+    console.log('  CLOUDINARY_API_SECRET not set — using one fallback per category');
+    CATEGORIES.forEach(c => pools[c].push(`legal-bg-${c}`));
+    return pools;
+  }
+
+  try {
+    const auth = Buffer.from(`${CLOUDINARY_API_KEY}:${secret}`).toString('base64');
+    const url  = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/resources/image?prefix=legal-bg-&type=upload&max_results=500`;
+    const res  = await fetch(url, { headers: { Authorization: `Basic ${auth}` } });
+    if (!res.ok) throw new Error(`Cloudinary API ${res.status}`);
+    const data = await res.json();
+
+    for (const r of (data.resources || [])) {
+      const m = r.public_id.match(/^legal-bg-([a-z]+)/);
+      if (m && pools[m[1]]) pools[m[1]].push(r.public_id);
+    }
+    // ensure every category has at least one fallback
+    CATEGORIES.forEach(c => { if (!pools[c].length) pools[c].push(`legal-bg-${c}`); });
+
+    const total = Object.values(pools).flat().length;
+    console.log(`  Loaded ${total} backgrounds from Cloudinary (delete any from dashboard to remove)`);
+  } catch (e) {
+    console.log(`  Cloudinary list failed: ${e.message} — using fallback`);
+    CATEGORIES.forEach(c => { if (!pools[c].length) pools[c].push(`legal-bg-${c}`); });
+  }
+  return pools;
+}
+
+function buildCloudinaryImageUrl(title, categoryEn, bgPools) {
+  const pool = bgPools[categoryEn] || bgPools.criminal;
   const bg   = pool[Math.floor(Math.random() * pool.length)];
   const display = title.length > 55 ? title.slice(0, 54) + '…' : title;
   const encoded = encodeURIComponent(encodeURIComponent(display));
@@ -240,12 +267,14 @@ async function generateNews() {
   }
 
   // ── Build Cloudinary branded image per story ──
+  console.log('Fetching available Cloudinary backgrounds...');
+  const bgPools = await fetchCloudinaryBgPools();
   console.log('Building Cloudinary image URLs...');
   const enrichedStories = stories.map((s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
     return {
       ...s,
-      image_url: buildCloudinaryImageUrl(s.title, en),
+      image_url: buildCloudinaryImageUrl(s.title, en, bgPools),
       article_url: 'https://lawyernearme.in.th/news.html',
     };
   });

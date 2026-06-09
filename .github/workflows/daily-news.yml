@@ -26,6 +26,7 @@ jobs:
       - name: Generate daily legal news
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
         run: node scripts/generate-news.js
 
       - name: Configure git
