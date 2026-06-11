@@ -2010,11 +2010,11 @@ function disableTracking() {
     };
 
     const CATEGORY_CTA = {
-      property:  'ปรึกษาทนายอสังหาฯ',
-      labor:     'ปรึกษาทนายแรงงาน',
-      consumer:  'ปรึกษาทนายผู้บริโภค',
-      family:    'ปรึกษาทนายครอบครัว',
-      contract:  'ปรึกษาทนายสัญญา',
+      property:  'ปรึกษาคดีอสังหาฯ',
+      labor:     'ปรึกษาคดีแรงงาน',
+      consumer:  'ปรึกษาคดีผู้บริโภค',
+      family:    'ปรึกษาคดีครอบครัว',
+      contract:  'ปรึกษาคดีสัญญา',
       criminal:  'ปรึกษาคดีอาญา',
     };
 
@@ -2073,7 +2073,7 @@ function disableTracking() {
         impact:         s.impact  || '',
         action:         s.action  || '',
         practice_area:  s.practice_area || s.category,
-        cta:            s.cta || CATEGORY_CTA[en] || 'ปรึกษาทนาย',
+        cta:            s.cta || CATEGORY_CTA[en] || 'ปรึกษาฟรี',
         image_url:      pickImage(s, en),
       };
     }
