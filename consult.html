@@ -41,23 +41,13 @@
     .card-wrap { max-width: 620px; margin: -24px auto 48px; padding: 0 16px; }
     .card { background: var(--white); border-radius: 16px; box-shadow: 0 4px 24px rgba(27,58,139,.10); overflow: hidden; }
 
-    /* METHOD TABS */
-    .method-tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
-    .method-tab {
-      padding: 18px 12px; text-align: center; cursor: pointer;
-      border: none; background: none; font-family: 'Sarabun', sans-serif;
-      font-size: .95rem; font-weight: 600; color: var(--muted);
-      transition: background .2s, color .2s;
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-    }
-    .method-tab .tab-icon { font-size: 1.5rem; }
-    .method-tab .tab-label { font-size: .78rem; font-weight: 400; opacity: .8; }
-    .method-tab.active { color: var(--navy); background: #f5f8ff; position: relative; }
-    .method-tab.active::after { content: ''; position: absolute; bottom: -1px; left: 15%; right: 15%; height: 3px; background: var(--gold); border-radius: 2px; }
-
     /* PANELS */
-    .panel { padding: 28px 28px 32px; display: none; }
-    .panel.active { display: block; }
+    .panel { padding: 28px 28px 32px; }
+
+    /* SECTION DIVIDER */
+    .or-divider { display: flex; align-items: center; gap: 16px; padding: 0 28px; margin: 4px 0; }
+    .or-divider::before, .or-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .or-divider-text { color: var(--muted); font-size: .85rem; font-weight: 600; white-space: nowrap; background: var(--white); padding: 0 4px; }
 
     /* GOOGLE SIGN-IN */
     .signin-icon { font-size: 2.5rem; text-align: center; margin-bottom: 12px; }
@@ -159,22 +149,8 @@
 <div class="card-wrap">
   <div class="card">
 
-    <!-- TABS -->
-    <div class="method-tabs">
-      <button class="method-tab active" id="tab-google" onclick="switchTab('google')">
-        <span class="tab-icon">🔵</span>
-        ลงชื่อด้วย Google
-        <span class="tab-label">เร็วกว่า — ไม่ต้องพิมพ์ชื่อ</span>
-      </button>
-      <button class="method-tab" id="tab-manual" onclick="switchTab('manual')">
-        <span class="tab-icon">📝</span>
-        กรอกแบบฟอร์ม
-        <span class="tab-label">ไม่ต้อง Login</span>
-      </button>
-    </div>
-
     <!-- PANEL: GOOGLE -->
-    <div class="panel active" id="panel-google">
+    <div class="panel" id="panel-google">
 
       <!-- Step: Sign in -->
       <div id="google-signin-step">
@@ -249,6 +225,9 @@
         </div>
       </div>
     </div>
+
+    <!-- DIVIDER -->
+    <div class="or-divider"><span class="or-divider-text">หรือกรอกข้อมูลด้วยตัวเอง</span></div>
 
     <!-- PANEL: MANUAL FORM -->
     <div class="panel" id="panel-manual">
@@ -338,15 +317,6 @@
     <span class="badge">💬 ฟรี ไม่มีค่าใช้จ่าย</span>
   </div>
 </div>
-
-<script>
-  function switchTab(tab) {
-    document.getElementById('tab-google').classList.toggle('active', tab === 'google');
-    document.getElementById('tab-manual').classList.toggle('active', tab === 'manual');
-    document.getElementById('panel-google').classList.toggle('active', tab === 'google');
-    document.getElementById('panel-manual').classList.toggle('active', tab === 'manual');
-  }
-</script>
 
 <script type="module">
   import { initializeApp }          from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js';
