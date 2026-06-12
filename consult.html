@@ -359,6 +359,7 @@
       document.getElementById('user-photo').src         = user.photoURL || '';
       document.getElementById('google-signin-step').style.display = 'none';
       document.getElementById('google-form-step').style.display   = 'block';
+      if (typeof gtag !== 'undefined') gtag('event', 'consult_google_login', { event_category: 'consult' });
     } else {
       document.getElementById('google-signin-step').style.display = 'block';
       document.getElementById('google-form-step').style.display   = 'none';
@@ -366,6 +367,8 @@
   });
 
   document.getElementById('btn-google-signin').addEventListener('click', async () => {
+    if (typeof gtag !== 'undefined') gtag('event', 'consult_google_start', { event_category: 'consult' });
+    if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', { content_name: 'google_signin' });
     try { await signInWithPopup(auth, provider); }
     catch { alert('เข้าสู่ระบบไม่สำเร็จ กรุณาลองใหม่ครับ'); }
   });
@@ -397,6 +400,15 @@
       alert('เกิดข้อผิดพลาด กรุณาลองใหม่ครับ');
       btn.disabled = false; btn.textContent = 'ส่งคำปรึกษา — ฟรี ไม่มีค่าใช้จ่าย';
     }
+  });
+
+  // ── Manual form first interaction ─────────────────
+  let manualStartTracked = false;
+  document.getElementById('manual-form').addEventListener('focusin', () => {
+    if (manualStartTracked) return;
+    manualStartTracked = true;
+    if (typeof gtag !== 'undefined') gtag('event', 'consult_manual_start', { event_category: 'consult' });
+    if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', { content_name: 'manual_form' });
   });
 
   // ── Manual form submit ────────────────────────────
