@@ -23,6 +23,14 @@
     if (typeof fbq === 'function') fbq('consent', 'grant');
   }
 
+  function adjustChatbot(bannerHeight) {
+    var offset = bannerHeight + 28;
+    var toggle = document.getElementById('cw-toggle');
+    var panel  = document.getElementById('cw-panel');
+    if (toggle) toggle.style.bottom = offset + 'px';
+    if (panel)  panel.style.bottom  = (offset + 72) + 'px';
+  }
+
   function showBanner() {
     var d = document.createElement('div');
     d.id = 'lnm-consent';
@@ -50,6 +58,7 @@
         'ยอมรับทั้งหมด</button>' +
       '</div>';
     document.body.appendChild(d);
+    adjustChatbot(d.offsetHeight);
   }
 
   window.lnmAcceptCookies = function () {
@@ -57,12 +66,14 @@
     grantAll();
     var el = document.getElementById('lnm-consent');
     if (el) el.remove();
+    adjustChatbot(0);
   };
 
   window.lnmRejectCookies = function () {
     set('denied');
     var el = document.getElementById('lnm-consent');
     if (el) el.remove();
+    adjustChatbot(0);
   };
 
   var consent = get();
