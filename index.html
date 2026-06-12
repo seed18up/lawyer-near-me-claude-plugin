@@ -2819,6 +2819,8 @@ function disableTracking() {
     let isPanelOpen    = false;
     let isStreaming    = false;
     let welcomeShown   = {}; // agentId → bool
+    let userMessageCount = 0;
+    let ctaShown         = false;
 
     /* ─────────────────────────────────────────
        DOM REFS
@@ -2914,6 +2916,25 @@ function disableTracking() {
       bubble.style.color = 'var(--red)';
     }
 
+    function showCallbackCTA() {
+      if (ctaShown) return;
+      ctaShown = true;
+      const row = document.createElement('div');
+      row.className = 'cw-msg-agent';
+      row.innerHTML =
+        '<div class="cw-msg-agent-avatar">' + activeAgent.avatar + '</div>' +
+        '<div class="cw-msg-agent-wrap">' +
+          '<div class="cw-msg-agent-name">' + activeAgent.name + '</div>' +
+          '<div style="background:#f0f4ff;border:1.5px solid #c7d3f5;border-radius:12px;padding:14px 16px;margin-top:4px;">' +
+            '<div style="font-size:14px;font-weight:700;color:#1B3A8B;margin-bottom:6px;">📞 ต้องการให้ทนายโทรกลับไหม?</div>' +
+            '<div style="font-size:13px;color:#555;margin-bottom:12px;line-height:1.5;">ฟรี ไม่มีค่าใช้จ่าย · ทนายความโทรกลับภายใน 24 ชั่วโมง</div>' +
+            '<a href="consult.html" style="display:block;text-align:center;background:#1B3A8B;color:#fff;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">จองนัดโทรกลับ →</a>' +
+          '</div>' +
+        '</div>';
+      messagesEl.appendChild(row);
+      scrollBottom();
+    }
+
     /* ─────────────────────────────────────────
        WELCOME MESSAGE
     ───────────────────────────────────────── */
@@ -2982,6 +3003,8 @@ function disableTracking() {
       typingAvatar.textContent = activeAgent.avatar;
       // Reset history when switching agent
       messageHistory = [];
+      userMessageCount = 0;
+      ctaShown = false;
       // Clear messages
       const rows = messagesEl.querySelectorAll('.cw-msg-user, .cw-msg-agent:not(#cw-typing)');
       rows.forEach(function (r) { r.remove(); });
@@ -3048,6 +3071,7 @@ function disableTracking() {
 
       // Add user bubble
       appendUserBubble(text);
+      userMessageCount++;
 
       // Update history
       messageHistory.push({ role: 'user', content: text });
@@ -3095,6 +3119,9 @@ function disableTracking() {
               setInputDisabled(false);
               textarea.focus();
               scrollBottom();
+              if (userMessageCount >= 2 && !ctaShown) {
+                setTimeout(showCallbackCTA, 800);
+              }
               return;
             }
 
