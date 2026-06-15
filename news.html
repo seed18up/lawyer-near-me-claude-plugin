@@ -79,6 +79,8 @@
     .card-action { font-size: 13px; font-weight: 700; color: var(--navy); background: #eef2ff; padding: 8px 12px; border-radius: 8px; margin-bottom: 14px; }
     .card-hashtags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
     .hashtag { font-size: 12px; color: var(--navy); opacity: .7; }
+    .card-dika { font-size: 12px; color: #6b4f00; background: #fff8e1; border: 1px solid rgba(249,168,37,.35); padding: 6px 10px; border-radius: 6px; margin-bottom: 10px; line-height: 1.5; }
+    .card-dika a { color: var(--navy); font-weight: 700; text-decoration: underline; }
     .card-footer { display: flex; gap: 10px; }
     .btn-consult { flex: 1; background: var(--navy); color: var(--white); text-align: center; padding: 10px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; }
     .btn-consult:hover { background: var(--navy-deep); }
@@ -265,6 +267,10 @@ function renderCard(story) {
     ? `<div class="card-hashtags">${story.hashtags.map(h => `<span class="hashtag">${h.startsWith('#') ? h : '#'+h}</span>`).join('')}</div>`
     : '';
 
+  const dikaHtml = story.dika?.length
+    ? `<div class="card-dika">📋 ฎีกาที่เกี่ยวข้อง: ${story.dika.map(d => `<a href="dika/#dika-${d.num.replace('/','-')}">${d.num}</a> — ${d.issue}`).join(' · ')}</div>`
+    : '';
+
   const dramaHook = story.drama_hook
     ? `<div class="card-trending">💬 ${story.drama_hook}</div>`
     : story.trending_angle
@@ -284,6 +290,7 @@ function renderCard(story) {
         <div class="card-what">${story.what_happened}</div>
         ${story.action ? `<div class="card-action">✅ ${story.action}</div>` : ''}
         ${hashtagsHtml}
+        ${dikaHtml}
         <div class="card-footer">
           <a class="btn-consult" href="#" onclick="cwOpenWithTopic('${story.category||en}');return false;">📅 ปรึกษาทนาย</a>
         </div>
