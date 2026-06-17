@@ -125,7 +125,9 @@ function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools, usedBgs
   const fresh      = pool.filter(bg => !usedBgs.has(bg));
   const candidates = fresh.length > 0 ? fresh : pool;
   const bg         = candidates[Math.floor(Math.random() * candidates.length)];
-  const display    = title.length > 55 ? title.slice(0, 54) + '…' : title;
+  const raw        = title.length > 55 ? title.slice(0, 54) + '…' : title;
+  // Replace straight quotes — encodeURIComponent leaves them unencoded, breaking CSS url('')
+  const display    = raw.replace(/'/g, '’').replace(/"/g, '“');
   const encoded    = encodeURIComponent(encodeURIComponent(display));
   const catLabel   = ' ' + (categoryTh || 'กฎหมาย') + ' ';
   const catEncoded = encodeURIComponent(encodeURIComponent(catLabel));

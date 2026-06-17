@@ -2137,7 +2137,7 @@ function disableTracking() {
       container.innerHTML = stories.map(function(s) {
         return `
           <article class="news-card">
-            <div class="news-card-img" style="background-image:url('${s.image_url}')">
+            <div class="news-card-img" style="background-image:url('${(s.image_url||'').replace(/'/g,'%27')}')">
               <div class="news-card-img-badges">
                 <span class="news-category-badge ${s.category_style}">${s.category}</span>
                 <span class="urgency-dot ${urgencyClass[s.urgency] || 'urgency-low'}"
