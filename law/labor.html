@@ -153,6 +153,11 @@
     .law-meta-badge { font-size: 12px; font-weight: 700; background: #e8f5e9; color: #2e7d32; padding: 4px 12px; border-radius: 12px; }
     .law-meta-text { font-size: 13px; color: var(--text-muted); }
 
+    /* FILTER */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .filter-tag { padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1.5px solid var(--gray-200); background: var(--white); color: var(--text-muted); cursor: pointer; transition: all .15s; }
+    .filter-tag:hover, .filter-tag.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
     /* CARD GRID */
     .law-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 
@@ -167,16 +172,30 @@
       display: flex; flex-direction: column; gap: 10px;
     }
     .law-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .law-card.hidden { display: none; }
 
-    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .card-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
     .section-badge {
       font-size: 11px; font-weight: 800; letter-spacing: .3px;
       background: var(--navy-light); color: var(--navy);
-      padding: 4px 10px; border-radius: var(--radius-sm); flex-shrink: 0;
+      padding: 4px 10px; border-radius: var(--radius-sm);
       white-space: nowrap;
     }
-    .card-title { font-size: 15px; font-weight: 700; color: var(--text-main); line-height: 1.35; flex: 1; }
+    .chapter-badge {
+      font-size: 11px; font-weight: 600;
+      background: var(--gray-100); color: var(--text-muted);
+      padding: 4px 10px; border-radius: var(--radius-sm);
+      white-space: nowrap;
+    }
+    .card-title { font-size: 15px; font-weight: 700; color: var(--text-main); line-height: 1.35; }
     .card-summary { font-size: 14px; color: var(--text-muted); line-height: 1.7; flex: 1; }
+
+    /* LAW TEXT COLLAPSIBLE */
+    .card-text-toggle { font-size: 12px; font-weight: 600; color: var(--navy); cursor: pointer; display: inline-flex; align-items: center; gap: 4px; background: none; border: none; padding: 0; }
+    .card-text-toggle:hover { text-decoration: underline; }
+    .card-text-body { display: none; font-size: 13px; color: var(--text-main); background: var(--gray-100); border-left: 3px solid var(--navy-light); padding: 12px 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.75; margin-top: 4px; }
+    .card-text-body.open { display: block; }
 
     /* KEYWORDS */
     .card-keywords { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -309,7 +328,12 @@
 
     <div class="law-meta">
       <span class="law-meta-badge">⚒️ แรงงาน</span>
-      <span class="law-meta-text">พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541 (และที่แก้ไขเพิ่มเติม)</span>
+      <span class="law-meta-text">พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541 แก้ไขเพิ่มเติม (ฉบับที่ 9) พ.ศ. 2568</span>
+    </div>
+
+    <!-- FILTER BY หมวด -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-tag active" data-chapter="all">ทั้งหมด</button>
     </div>
 
     <div class="law-grid" id="law-grid">
@@ -396,9 +420,11 @@
 
 <script>
   var allSections = [];
+  var activeChapter = 'all';
   var grid = document.getElementById('law-grid');
   var noResult = document.getElementById('no-result');
   var countEl = document.getElementById('result-count');
+  var filterBar = document.getElementById('filter-bar');
 
   function renderCard(s) {
     var dikaHtml = '';
@@ -409,16 +435,27 @@
       }).join('');
       dikaHtml = '<div class="card-dika-links">' + links + '</div>';
     }
-    var kwHtml = s.keywords.map(function(k) {
+    var kwHtml = (s.keywords || []).map(function(k) {
       return '<span class="kw-tag">' + k + '</span>';
     }).join('');
+    var textHtml = s.text
+      ? '<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button>'
+        + '<div class="card-text-body">' + s.text + '</div>'
+      : '';
+    var chapterLabel = s.chapter_title ? 'หมวด ' + s.chapter + ' — ' + s.chapter_title : '';
 
-    return '<div class="law-card" id="' + s.id + '" data-search="' + (s.section + ' ' + s.title + ' ' + s.summary + ' ' + s.keywords.join(' ')).toLowerCase() + '">'
+    return '<div class="law-card" id="' + s.id + '"'
+      + ' data-chapter="' + (s.chapter || '') + '"'
+      + ' data-search="' + (s.section + ' ' + s.title + ' ' + s.summary + ' ' + (s.keywords||[]).join(' ') + ' ' + chapterLabel).toLowerCase() + '">'
       + '<div class="card-top">'
+      + '<div class="card-badges">'
       + '<span class="section-badge">มาตรา ' + s.section + '</span>'
-      + '<div class="card-title">' + s.title + '</div>'
+      + (s.chapter_title ? '<span class="chapter-badge">หมวด ' + s.chapter + '</span>' : '')
       + '</div>'
+      + '</div>'
+      + '<div class="card-title">' + s.title + '</div>'
       + '<div class="card-summary">' + s.summary + '</div>'
+      + textHtml
       + '<div class="card-keywords">' + kwHtml + '</div>'
       + '<div class="card-footer">'
       + '<span class="card-law-name">⚖️ พ.ร.บ.คุ้มครองแรงงาน 2541</span>'
@@ -427,27 +464,58 @@
       + '</div>';
   }
 
+  function toggleText(btn) {
+    var body = btn.nextElementSibling;
+    var open = body.classList.toggle('open');
+    btn.textContent = open ? '📄 ซ่อนข้อความกฎหมาย ▴' : '📄 ดูข้อความกฎหมาย ▾';
+  }
+
+  function applyFilter() {
+    var q = document.getElementById('law-search').value.toLowerCase().trim();
+    var cards = grid.querySelectorAll('.law-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+      var chMatch = activeChapter === 'all' || card.getAttribute('data-chapter') === String(activeChapter);
+      var qMatch = !q || card.getAttribute('data-search').includes(q);
+      var show = chMatch && qMatch;
+      card.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    countEl.textContent = visible;
+    noResult.style.display = (visible === 0) ? 'block' : 'none';
+  }
+
   fetch('./labor.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       allSections = data.sections;
       grid.innerHTML = allSections.map(renderCard).join('');
       countEl.textContent = allSections.length;
+
+      // Build chapter filter buttons from data
+      var seen = {};
+      (data.chapters || []).forEach(function(ch) {
+        if (!seen[ch.num]) {
+          seen[ch.num] = true;
+          var btn = document.createElement('button');
+          btn.className = 'filter-tag';
+          btn.setAttribute('data-chapter', ch.num);
+          btn.textContent = 'หมวด ' + ch.num + ' — ' + ch.title;
+          filterBar.appendChild(btn);
+        }
+      });
+
+      filterBar.addEventListener('click', function(e) {
+        var btn = e.target.closest('.filter-tag');
+        if (!btn) return;
+        filterBar.querySelectorAll('.filter-tag').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeChapter = btn.getAttribute('data-chapter');
+        applyFilter();
+      });
     });
 
-  document.getElementById('law-search').addEventListener('input', function() {
-    var q = this.value.toLowerCase().trim();
-    var cards = grid.querySelectorAll('.law-card');
-    var visible = 0;
-    cards.forEach(function(card) {
-      var text = card.getAttribute('data-search');
-      var show = !q || text.includes(q);
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-    countEl.textContent = visible;
-    noResult.style.display = (q && visible === 0) ? 'block' : 'none';
-  });
+  document.getElementById('law-search').addEventListener('input', applyFilter);
 </script>
 
 </body>
