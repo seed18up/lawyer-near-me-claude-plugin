@@ -70,9 +70,7 @@ const CTA_ENCODED   = '%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2
 
 async function fetchCloudinaryBgPools() {
   const secret = process.env.CLOUDINARY_API_SECRET;
-  // 'abstract' pool = safe backgrounds for negative/dramatic stories (no identifiable people)
-  const allKeys = [...CATEGORIES, 'abstract'];
-  const pools   = Object.fromEntries(allKeys.map(c => [c, []]));
+  const pools  = Object.fromEntries(CATEGORIES.map(c => [c, []]));
 
   if (!secret) {
     console.log('  CLOUDINARY_API_SECRET not set — using one fallback per category');
@@ -89,13 +87,12 @@ async function fetchCloudinaryBgPools() {
 
     for (const r of (data.resources || [])) {
       const m = r.public_id.match(/^legal-bg-([a-z]+)/);
-      if (m && pools[m[1]] !== undefined) pools[m[1]].push(r.public_id);
+      if (m && pools[m[1]]) pools[m[1]].push(r.public_id);
     }
-    // ensure every category has at least one fallback (abstract has no hard fallback — handled in buildCloudinaryImageUrl)
     CATEGORIES.forEach(c => { if (!pools[c].length) pools[c].push(`legal-bg-${c}`); });
 
     const total = Object.values(pools).flat().length;
-    console.log(`  Loaded ${total} backgrounds from Cloudinary — abstract pool: ${pools.abstract.length} images`);
+    console.log(`  Loaded ${total} backgrounds from Cloudinary`);
   } catch (e) {
     console.log(`  Cloudinary list failed: ${e.message} — using fallback`);
     CATEGORIES.forEach(c => { if (!pools[c].length) pools[c].push(`legal-bg-${c}`); });
@@ -122,14 +119,11 @@ function getRecentlyUsedBgs(archive, days = 14) {
   return used;
 }
 
-function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools, usedBgs = new Set(), isNegative = false) {
-  // Negative/dramatic stories use abstract pool (no identifiable people); fall back to category pool if empty
-  const abstractPool  = bgPools.abstract || [];
-  const categoryPool  = bgPools[categoryEn] || bgPools.criminal;
-  const basePool      = (isNegative && abstractPool.length > 0) ? abstractPool : categoryPool;
-  const fresh         = basePool.filter(bg => !usedBgs.has(bg));
-  const candidates    = fresh.length > 0 ? fresh : basePool;
-  const bg            = candidates[Math.floor(Math.random() * candidates.length)];
+function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools, usedBgs = new Set()) {
+  const pool       = bgPools[categoryEn] || bgPools.criminal;
+  const fresh      = pool.filter(bg => !usedBgs.has(bg));
+  const candidates = fresh.length > 0 ? fresh : pool;
+  const bg         = candidates[Math.floor(Math.random() * candidates.length)];
   const raw           = title.length > 55 ? title.slice(0, 54) + '…' : title;
   // Replace straight quotes — encodeURIComponent leaves them unencoded, breaking CSS url('')
   const display       = raw.replace(/'/g, '’').replace(/"/g, '“');
@@ -333,9 +327,7 @@ async function generateNews() {
   const enrichedStories = stories.map((s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
     const combinedUsed = new Set([...recentlyUsed, ...usedThisBatch]);
-    // drama_hook marks story as negative/dramatic — use abstract backgrounds to avoid associating real people's photos with bad news
-    const isNegative = Boolean(s.drama_hook);
-    const image_url = buildCloudinaryImageUrl(s.title, en, s.category || '', bgPools, combinedUsed, isNegative);
+    const image_url = buildCloudinaryImageUrl(s.title, en, s.category || '', bgPools, combinedUsed);
     usedThisBatch.add(extractBgId(image_url));
     return {
       ...s,
