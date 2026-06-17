@@ -2227,6 +2227,31 @@ function disableTracking() {
     }
 
     /* ──────────────────────────────────────
+       TICKER — auto-populate from past days
+    ────────────────────────────────────── */
+    function loadTicker() {
+      const CAT_EMOJI = { criminal:'⚖️', labor:'👷', family:'👨‍👩‍👧', consumer:'🛒', property:'🏠', contract:'📋' };
+      const today = new Date().toISOString().slice(0, 10);
+      fetch('./news-archive.json?v=' + Date.now())
+        .then(function(r) { if (!r.ok) throw new Error('fetch'); return r.json(); })
+        .then(function(archive) {
+          const past = archive
+            .filter(function(d) { return d.date !== today; })
+            .flatMap(function(d) { return d.stories || []; })
+            .slice(0, 10);
+          if (past.length === 0) return;
+          const items = past.map(function(s) {
+            const em = CAT_EMOJI[(s.category_en || '').toLowerCase()] || '📰';
+            return '<span class="ticker-item">' + em + ' ' + s.title + '</span>'
+                 + '<span class="ticker-sep">•</span>';
+          }).join('');
+          const track = document.getElementById('ticker-track');
+          if (track) track.innerHTML = items + items; // duplicate for seamless loop
+        })
+        .catch(function() { /* keep static fallback */ });
+    }
+
+    /* ──────────────────────────────────────
        TOPBAR DATE
     ────────────────────────────────────── */
     function updateTopbarDate() {
@@ -2244,6 +2269,7 @@ function disableTracking() {
     document.addEventListener('DOMContentLoaded', function() {
       loadNews();
       updateTopbarDate();
+      loadTicker();
     });
   </script>
 
