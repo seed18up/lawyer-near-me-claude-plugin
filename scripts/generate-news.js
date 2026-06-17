@@ -135,6 +135,7 @@ function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools, usedBgs
   return [
     `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/image/upload`,
     'w_1200,h_630,c_fill,g_auto,q_auto:good',
+    'e_blur_faces:2000',
     'e_brightness:-15',
     'l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60',
     'l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78',
