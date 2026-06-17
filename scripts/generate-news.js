@@ -217,6 +217,7 @@ async function generateNews() {
 1. คัดเลือกข่าวที่มีศักยภาพ viral สูงสุด 2 เรื่อง (ดราม่า, ขัดแย้ง, คนทั่วไปเจอได้, มีมิติทางกฎหมาย)
 2. สร้าง angle กฎหมายที่ทำให้คนอยากแชร์ต่อและอยากปรึกษาทนาย
 3. สร้างข่าวกฎหมายทั่วไป 1 เรื่องจากกระแสที่น่าสนใจที่สุด
+4. คัดเลือกข่าวที่มีมิติกฎหมายอีก 7 เรื่อง สำหรับแสดงใน ticker ข่าวด่วน ให้หลากหลาย category
 
 ถ้าข่าวที่ดึงมาไม่มีมิติกฎหมาย ให้ใช้กระแสนั้นเป็น "แรงบันดาลใจ" และสร้างสถานการณ์ที่เกี่ยวข้องซึ่งคนทั่วไปอาจเจอได้จริง
 
@@ -229,7 +230,7 @@ async function generateNews() {
 เรื่องที่ 3 — ข่าวกฎหมายทั่วไป (เว็บไซต์):
 - ข่าวที่ให้ความรู้ มีประโยชน์ ไม่จำเป็นต้องดราม่า
 
-ทุกเรื่องต้องมี field:
+เรื่องที่ 1-3 ต้องมี field:
 - category: ประเภทคดี เช่น "คดีแรงงาน", "อสังหาริมทรัพย์", "ผู้บริโภค", "ครอบครัว", "สัญญาธุรกิจ", "คดีอาญา"
 - category_en: English slug (labor, property, consumer, family, contract, criminal)
 - title: หัวข่าวภาษาไทย กระชับ ดึงดูด ไม่เกิน 80 ตัวอักษร
@@ -244,7 +245,11 @@ async function generateNews() {
 - drama_hook: ประโยคเปิดดราม่า 1 ประโยค ให้คนหยุดอ่านบน Facebook
 - hashtags: array hashtag ภาษาไทย 4-5 อัน
 
-ตอบเป็น JSON array 3 elements เท่านั้น ไม่มีข้อความอื่น`;
+เรื่องที่ 4-10 — ข่าวด่วน ticker (กระชับ ไม่ต้องละเอียด):
+- มีเพียง: category, category_en, title (ไม่เกิน 60 ตัวอักษร), trending_angle (1 ประโยคสั้น), urgency
+- ห้ามซ้ำ category กับเรื่องที่ 1-3 มากเกินไป ให้หลากหลาย
+
+ตอบเป็น JSON array 10 elements เท่านั้น ไม่มีข้อความอื่น`;
 
   console.log(`Calling Anthropic API for date: ${today} ...`);
 
@@ -259,7 +264,7 @@ async function generateNews() {
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 4096,
+        max_tokens: 6000,
         messages: [{ role: 'user', content: prompt }],
       }),
     });

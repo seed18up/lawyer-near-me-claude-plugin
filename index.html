@@ -2131,7 +2131,8 @@ function disableTracking() {
       const urgencyClass = { high: 'urgency-high', medium: 'urgency-medium', low: 'urgency-low' };
       const urgencyLabel = { high: 'สำคัญมาก', medium: 'น่าติดตาม', low: 'ทั่วไป' };
 
-      const stories = (data.stories || []).map(normalizeStory);
+      // Only show first 3 stories as main cards; stories[3+] are reserved for the ticker
+      const stories = (data.stories || []).slice(0, 3).map(normalizeStory);
 
       container.innerHTML = stories.map(function(s) {
         return `
@@ -2232,21 +2233,33 @@ function disableTracking() {
     function loadTicker() {
       const CAT_EMOJI = { criminal:'⚖️', labor:'👷', family:'👨‍👩‍👧', consumer:'🛒', property:'🏠', contract:'📋' };
       const today = new Date().toISOString().slice(0, 10);
+
+      function buildTickerHTML(tickerStories) {
+        const items = tickerStories.map(function(s) {
+          const em = CAT_EMOJI[(s.category_en || '').toLowerCase()] || '📰';
+          return '<span class="ticker-item">' + em + ' ' + s.title + '</span>'
+               + '<span class="ticker-sep">•</span>';
+        }).join('');
+        const track = document.getElementById('ticker-track');
+        if (track && items) track.innerHTML = items + items; // duplicate for seamless loop
+      }
+
       fetch('./news-archive.json?v=' + Date.now())
         .then(function(r) { if (!r.ok) throw new Error('fetch'); return r.json(); })
         .then(function(archive) {
+          // Prefer today's ticker stories (index 3–9) — fresh, not shown in main cards
+          const todayEntry = archive.find(function(d) { return d.date === today; });
+          const todayTicker = todayEntry ? (todayEntry.stories || []).slice(3) : [];
+          if (todayTicker.length >= 3) {
+            buildTickerHTML(todayTicker);
+            return;
+          }
+          // Fallback: past days' stories (old behaviour)
           const past = archive
             .filter(function(d) { return d.date !== today; })
             .flatMap(function(d) { return d.stories || []; })
             .slice(0, 10);
-          if (past.length === 0) return;
-          const items = past.map(function(s) {
-            const em = CAT_EMOJI[(s.category_en || '').toLowerCase()] || '📰';
-            return '<span class="ticker-item">' + em + ' ' + s.title + '</span>'
-                 + '<span class="ticker-sep">•</span>';
-          }).join('');
-          const track = document.getElementById('ticker-track');
-          if (track) track.innerHTML = items + items; // duplicate for seamless loop
+          if (past.length > 0) buildTickerHTML(past);
         })
         .catch(function() { /* keep static fallback */ });
     }
