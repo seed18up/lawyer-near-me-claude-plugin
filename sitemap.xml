@@ -71,9 +71,64 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lawyernearme.in.th/law/labor.html</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://lawyernearme.in.th/law/labor/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=0</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=5</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/labor/chapter.html?c=11</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/family/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/family/chapter.html?c=1</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/family/chapter.html?c=2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/family/chapter.html?c=3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lawyernearme.in.th/law/family/chapter.html?c=4</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawyernearme.in.th/for-developers.html</loc>
