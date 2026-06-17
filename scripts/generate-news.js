@@ -101,9 +101,30 @@ async function fetchCloudinaryBgPools() {
   return pools;
 }
 
-function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools) {
+function extractBgId(imageUrl) {
+  if (!imageUrl) return null;
+  return imageUrl.split('/').pop() || null;
+}
+
+function getRecentlyUsedBgs(archive, days = 14) {
+  const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+  const used = new Set();
+  for (const entry of archive) {
+    if (new Date(entry.date).getTime() >= cutoff) {
+      for (const s of (entry.stories || [])) {
+        const id = extractBgId(s.image_url);
+        if (id) used.add(id);
+      }
+    }
+  }
+  return used;
+}
+
+function buildCloudinaryImageUrl(title, categoryEn, categoryTh, bgPools, usedBgs = new Set()) {
   const pool       = bgPools[categoryEn] || bgPools.criminal;
-  const bg         = pool[Math.floor(Math.random() * pool.length)];
+  const fresh      = pool.filter(bg => !usedBgs.has(bg));
+  const candidates = fresh.length > 0 ? fresh : pool;
+  const bg         = candidates[Math.floor(Math.random() * candidates.length)];
   const display    = title.length > 55 ? title.slice(0, 54) + '…' : title;
   const encoded    = encodeURIComponent(encodeURIComponent(display));
   const catLabel   = ' ' + (categoryTh || 'กฎหมาย') + ' ';
@@ -288,15 +309,28 @@ async function generateNews() {
     process.exit(1);
   }
 
+  // ── Load archive early to know which backgrounds were used recently ──
+  const archivePath = join(ROOT, 'news-archive.json');
+  let archive = [];
+  if (existsSync(archivePath)) {
+    try { archive = JSON.parse(readFileSync(archivePath, 'utf-8')); } catch (_) { archive = []; }
+  }
+  const recentlyUsed = getRecentlyUsedBgs(archive, 14);
+  if (recentlyUsed.size) console.log(`  Excluding ${recentlyUsed.size} recently used backgrounds (last 14 days)`);
+
   // ── Build Cloudinary branded image per story ──
   console.log('Fetching available Cloudinary backgrounds...');
   const bgPools = await fetchCloudinaryBgPools();
   console.log('Building Cloudinary image URLs...');
+  const usedThisBatch = new Set();
   const enrichedStories = stories.map((s) => {
     const en = (s.category_en || 'criminal').toLowerCase();
+    const combinedUsed = new Set([...recentlyUsed, ...usedThisBatch]);
+    const image_url = buildCloudinaryImageUrl(s.title, en, s.category || '', bgPools, combinedUsed);
+    usedThisBatch.add(extractBgId(image_url));
     return {
       ...s,
-      image_url: buildCloudinaryImageUrl(s.title, en, s.category || '', bgPools),
+      image_url,
       article_url: 'https://lawyernearme.in.th/news.html',
     };
   });
@@ -316,15 +350,6 @@ async function generateNews() {
   }
 
   // ── Update news-archive.json (keep last 30 days) ──
-  const archivePath = join(ROOT, 'news-archive.json');
-  let archive = [];
-  if (existsSync(archivePath)) {
-    try {
-      archive = JSON.parse(readFileSync(archivePath, 'utf-8'));
-    } catch (_) {
-      archive = [];
-    }
-  }
   archive = archive.filter((entry) => entry.date !== today);
   archive = [{ date: today, date_th: output.updated_th, stories: enrichedStories }, ...archive].slice(0, 30);
   try {
