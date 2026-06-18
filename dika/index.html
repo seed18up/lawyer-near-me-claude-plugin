@@ -299,129 +299,21 @@
   <div class="dika-inner">
 
     <div class="section-label">Case Law Database</div>
-    <div class="section-title">คำพิพากษาทั้งหมด</div>
+    <div class="section-title" id="dikaCount">คำพิพากษาทั้งหมด</div>
+
+    <!-- SEARCH -->
+    <div style="margin-bottom:20px;position:relative;max-width:400px;">
+      <input type="text" id="dikaSearch" placeholder="ค้นหาฎีกา เช่น เลิกจ้าง หย่า ฉ้อโกง..." autocomplete="off" style="width:100%;padding:12px 40px 12px 16px;border-radius:10px;border:1.5px solid var(--gray-200);font-family:var(--font);font-size:14px;outline:none;transition:border-color .2s;">
+      <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none;">🔍</span>
+    </div>
 
     <!-- FILTER -->
-    <div class="filter-tags">
-      <button class="filter-tag active" data-filter="all">ทั้งหมด</button>
-      <button class="filter-tag" data-filter="labour">⚒️ แรงงาน</button>
-      <button class="filter-tag" data-filter="family">👨‍👩‍👧 ครอบครัว</button>
-      <button class="filter-tag" data-filter="consumer">🛒 ผู้บริโภค</button>
-      <button class="filter-tag" data-filter="civil">⚖️ แพ่ง/ค้ำประกัน</button>
-    </div>
+    <div class="filter-tags" id="filterTags"></div>
 
     <!-- DIKA GRID -->
-    <div class="dika-grid" id="dikaGrid">
+    <div class="dika-grid" id="dikaGrid"></div>
 
-      <!-- ===== แรงงาน ===== -->
-      <div class="dika-card" id="dika-7213-2546" data-cat="labour">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 7213/2546</span>
-          <span class="dika-cat-badge labour">⚒️ แรงงาน</span>
-        </div>
-        <div class="dika-issue">เลิกจ้างไม่เป็นธรรม — ศาลกำหนดค่าเสียหายได้ตามสมควร</div>
-        <div class="dika-summary">ศาลฎีกาวินิจฉัยว่าการเลิกจ้างที่ไม่มีเหตุสมควรเป็นการเลิกจ้างที่ไม่เป็นธรรม ศาลแรงงานมีอำนาจกำหนดค่าเสียหายโดยคำนึงถึงอายุลูกจ้าง ระยะเวลาทำงาน และความเดือดร้อนที่ได้รับ แม้ลูกจ้างจะมีส่วนผิดบ้างก็ตาม</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ พ.ร.บ.จัดตั้งศาลแรงงานฯ มาตรา 49</span>
-          <a class="dika-ref-link" href="../blog/wrongful-termination.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <div class="dika-card" id="dika-3598-2561" data-cat="labour">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 3598/2561</span>
-          <span class="dika-cat-badge labour">⚒️ แรงงาน</span>
-        </div>
-        <div class="dika-issue">สัญญาจ้างแรงงาน — ข้อตกลงห้ามแข่งขันมีผลผูกพัน</div>
-        <div class="dika-summary">กฎหมายไม่ได้กำหนดให้สัญญาจ้างแรงงานต้องทำเป็นหนังสือ สัญญาที่ HR ลงนามแทนบริษัทมีผลผูกพัน ข้อตกลงห้ามทำงานกับคู่แข่งสำหรับผู้บริหารที่เข้าถึงข้อมูลลับภายใน 2 ปี ไม่ขัดต่อกฎหมาย</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ ป.พ.พ. ว่าด้วยสัญญา</span>
-          <a class="dika-ref-link" href="../blog/wrongful-termination.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <!-- ===== ครอบครัว ===== -->
-      <div class="dika-card" id="dika-6388-2550" data-cat="family">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 6388/2550</span>
-          <span class="dika-cat-badge family">👨‍👩‍👧 ครอบครัว</span>
-        </div>
-        <div class="dika-issue">บันทึกท้ายทะเบียนหย่า — ผูกพันเป็นสัญญาแบ่งสินสมรส</div>
-        <div class="dika-summary">ข้อตกลงแบ่งทรัพย์สินที่ระบุท้ายทะเบียนการหย่ามีผลเป็นสัญญาแบ่งสินสมรสผูกพันคู่กรณีทั้งสองฝ่าย ต้องปฏิบัติตามข้อตกลงนั้น แม้ภายหลังจะเปลี่ยนใจก็ไม่อาจยกเลิกได้โดยฝ่ายเดียว</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ ป.พ.พ. มาตรา 1532, 1533</span>
-          <a class="dika-ref-link" href="../blog/divorce.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <div class="dika-card" id="dika-6155-2540" data-cat="family">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 6155/2540</span>
-          <span class="dika-cat-badge family">👨‍👩‍👧 ครอบครัว</span>
-        </div>
-        <div class="dika-issue">เขตอำนาจศาลในคดีอำนาจปกครองบุตรหลังหย่า</div>
-        <div class="dika-summary">ในคดีพิพาทเรื่องอำนาจปกครองบุตรที่มีบันทึกข้อตกลงไว้ท้ายทะเบียนการหย่า ศาลที่มีเขตอำนาจคือศาลในท้องที่ที่จดทะเบียนหย่า ตามบทบัญญัติว่าด้วยอำนาจปกครองบุตร</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ ป.พ.พ. มาตรา 1520, 1566</span>
-          <a class="dika-ref-link" href="../blog/divorce.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <!-- ===== ผู้บริโภค ===== -->
-      <div class="dika-card" id="dika-1808-2561" data-cat="consumer">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 1808/2561</span>
-          <span class="dika-cat-badge consumer">🛒 ผู้บริโภค</span>
-        </div>
-        <div class="dika-issue">ผู้ประกอบการปิดบังข้อเท็จจริง — ถือเป็นโฆษณาไม่เป็นธรรม</div>
-        <div class="dika-summary">การที่ผู้ประกอบการอสังหาริมทรัพย์ปิดบังข้อเท็จจริงสำคัญเกี่ยวกับทรัพย์ถือเป็นการโฆษณาที่ไม่เป็นธรรม ก่อให้เกิดความเสียหายแก่ผู้บริโภคโดยตรง รวมถึงดอกเบี้ยจำนอง ค่าธรรมเนียมโอน และค่าประกัน</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ พ.ร.บ.คุ้มครองผู้บริโภค มาตรา 22, 41</span>
-          <a class="dika-ref-link" href="../blog/consumer-rights.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <div class="dika-card" id="dika-1625-2563" data-cat="consumer">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 1625/2563</span>
-          <span class="dika-cat-badge consumer">🛒 ผู้บริโภค</span>
-        </div>
-        <div class="dika-issue">มาตรฐานสุจริตของผู้ประกอบธุรกิจต่อผู้บริโภค</div>
-        <div class="dika-summary">ผู้ประกอบธุรกิจมีหน้าที่ต้องปฏิบัติต่อผู้บริโภคด้วยมาตรฐานความสุจริตที่สูงกว่าบุคคลทั่วไป การใช้สิทธิต่ำกว่ามาตรฐานนี้ถือเป็นการละเมิดหลักการคุ้มครองผู้บริโภคและก่อให้เกิดความรับผิด</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ พ.ร.บ.วิธีพิจารณาคดีผู้บริโภค พ.ศ. 2551</span>
-          <a class="dika-ref-link" href="../blog/consumer-rights.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <!-- ===== แพ่ง/ค้ำประกัน ===== -->
-      <div class="dika-card" id="dika-4479-2561" data-cat="civil">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 4479/2561</span>
-          <span class="dika-cat-badge civil">⚖️ แพ่ง/ค้ำประกัน</span>
-        </div>
-        <div class="dika-issue">สัญญาค้ำประกันที่มีเงื่อนไข — ไม่สมบูรณ์ตาม ป.พ.พ.</div>
-        <div class="dika-summary">สัญญาที่ผู้ค้ำประกันรับผิดเฉพาะ "เมื่อลูกหนี้ไม่ชำระ" และมีเงื่อนไขที่ทำให้ความรับผิดไม่แน่นอน ไม่มีลักษณะเป็นสัญญาค้ำประกันที่สมบูรณ์ตาม ป.พ.พ. มาตรา 680</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ ป.พ.พ. มาตรา 680</span>
-          <a class="dika-ref-link" href="../blog/loan-guarantee.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-      <div class="dika-card" id="dika-8136-2542" data-cat="civil">
-        <div class="dika-card-top">
-          <span class="dika-num">ฎีกาที่ 8136/2542</span>
-          <span class="dika-cat-badge civil">⚖️ แพ่ง/ค้ำประกัน</span>
-        </div>
-        <div class="dika-issue">เจ้าหนี้ฟ้องผู้ค้ำประกันได้ทันทีเมื่อลูกหนี้ผิดนัด</div>
-        <div class="dika-summary">เมื่อลูกหนี้ผิดนัด เจ้าหนี้มีอำนาจฟ้องผู้ค้ำประกันได้ทันที โดยไม่ต้องเรียกให้ลูกหนี้ชำระก่อน เว้นแต่ผู้ค้ำประกันจะยกข้อต่อสู้ตามสิทธิของตนตามมาตรา 688-689</div>
-        <div class="dika-card-footer">
-          <span class="dika-law">⚖️ ป.พ.พ. มาตรา 686, 688, 689</span>
-          <a class="dika-ref-link" href="../blog/loan-guarantee.html">📄 ดูบทความ →</a>
-        </div>
-      </div>
-
-    </div>
+    <div id="noResult" style="display:none;text-align:center;padding:56px 0;color:var(--text-muted);font-size:15px;">ไม่พบฎีกาที่ค้นหา</div>
 
     <!-- DISCLAIMER -->
     <div class="dika-disclaimer">
@@ -531,20 +423,63 @@
   })();
 
   // Filter functionality
-  document.querySelectorAll('.filter-tag').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-tag').forEach(function(b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      document.querySelectorAll('.dika-card').forEach(function(card) {
-        if (filter === 'all' || card.getAttribute('data-cat') === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
+  var allDika = [];
+  var currentFilter = 'all';
+  var currentSearch = '';
+
+  function renderCard(d) {
+    return '<div class="dika-card" id="' + d.id + '" data-cat="' + d.category + '" data-search="' + (d.num + ' ' + d.summary + ' ' + d.section_title + ' ' + d.category_label + ' ' + d.law).toLowerCase() + '">'
+      + '<div class="dika-card-top">'
+      + '<span class="dika-num">ฎีกาที่ ' + d.num + '</span>'
+      + '<span class="dika-cat-badge" style="background:var(--navy-light);color:var(--navy);">' + d.category_emoji + ' ' + d.category_label + '</span>'
+      + '</div>'
+      + '<div class="dika-issue">มาตรา ' + d.section + ' — ' + d.section_title + '</div>'
+      + '<div class="dika-summary">' + (d.summary || 'ดูรายละเอียดที่ deka.in.th') + '</div>'
+      + '<div class="dika-card-footer">'
+      + '<span class="dika-law">⚖️ ' + d.law.substring(0, 50) + '</span>'
+      + '<a class="dika-ref-link" href="' + d.deka_url + '" target="_blank">📄 ดูฎีกาเต็ม →</a>'
+      + '</div></div>';
+  }
+
+  function applyFilters() {
+    var grid = document.getElementById('dikaGrid');
+    var q = currentSearch.toLowerCase();
+    var filtered = allDika.filter(function(d) {
+      if (currentFilter !== 'all' && d.category !== currentFilter) return false;
+      if (q && !(d.num + ' ' + d.summary + ' ' + d.section_title + ' ' + d.category_label + ' ' + d.law).toLowerCase().includes(q)) return false;
+      return true;
+    });
+    grid.innerHTML = filtered.slice(0, 100).map(renderCard).join('');
+    document.getElementById('dikaCount').textContent = 'พบ ' + filtered.length + ' จาก ' + allDika.length + ' ฎีกา';
+    document.getElementById('noResult').style.display = filtered.length === 0 ? 'block' : 'none';
+  }
+
+  function buildFilters() {
+    var cats = {};
+    allDika.forEach(function(d) { cats[d.category] = { label: d.category_label, emoji: d.category_emoji, count: (cats[d.category] ? cats[d.category].count : 0) + 1 }; });
+    var html = '<button class="filter-tag active" data-filter="all">ทั้งหมด (' + allDika.length + ')</button>';
+    var sorted = Object.keys(cats).sort(function(a, b) { return cats[b].count - cats[a].count; });
+    sorted.forEach(function(k) { html += '<button class="filter-tag" data-filter="' + k + '">' + cats[k].emoji + ' ' + cats[k].label + ' (' + cats[k].count + ')</button>'; });
+    document.getElementById('filterTags').innerHTML = html;
+    document.querySelectorAll('.filter-tag').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-tag').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        applyFilters();
       });
     });
+  }
+
+  fetch('./dika.json').then(function(r) { return r.json(); }).then(function(data) {
+    allDika = data.dika;
+    buildFilters();
+    applyFilters();
+    var hash = window.location.hash;
+    if (hash) { var el = document.getElementById(hash.substring(1)); if (el) { el.scrollIntoView({behavior:'smooth',block:'center'}); el.style.boxShadow='0 0 0 3px var(--gold)'; } }
   });
+
+  document.getElementById('dikaSearch').addEventListener('input', function() { currentSearch = this.value.trim(); applyFilters(); });
 </script>
 
 </body>
