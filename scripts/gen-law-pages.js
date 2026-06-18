@@ -17,6 +17,11 @@ const categories = [
   { dir: 'law/ppc/loans', json: 'loans.json', emoji: '💳', cta: 'กู้ยืม/ค้ำประกัน', depth: 3 },
   { dir: 'law/ppc/property', json: 'property.json', emoji: '🏠', cta: 'ทรัพย์สิน/ที่ดิน', depth: 3 },
   { dir: 'law/ppc/sales', json: 'sales.json', emoji: '🛒', cta: 'ซื้อขาย/เช่า', depth: 3 },
+  { dir: 'law/computer-crime', json: 'computer-crime.json', emoji: '💻', cta: 'คอมพิวเตอร์/ออนไลน์', depth: 2 },
+  { dir: 'law/consumer-protection', json: 'consumer-protection.json', emoji: '🛡️', cta: 'คุ้มครองผู้บริโภค', depth: 2 },
+  { dir: 'law/traffic', json: 'traffic.json', emoji: '🚗', cta: 'จราจร/ขับรถ', depth: 2 },
+  { dir: 'law/narcotics', json: 'narcotics.json', emoji: '🚫', cta: 'ยาเสพติด', depth: 2 },
+  { dir: 'law/debt-collection', json: 'debt-collection.json', emoji: '📞', cta: 'ทวงถามหนี้', depth: 2 },
 ];
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
