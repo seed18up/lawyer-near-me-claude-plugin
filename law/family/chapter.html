@@ -8,23 +8,13 @@
 <script>window.location.replace('../ppc/family/chapter.html' + window.location.search);</script>
 
 <!-- Chat Widget -->
+<link rel="stylesheet" href="../../../chat-widget.css">
+<div id="chat-widget-container"></div>
 <script>
-(function(){
-  var x=new XMLHttpRequest();
-  x.open("GET","../../../chat-widget.html",true);
-  x.onload=function(){
-    if(x.status!==200)return;
-    var t=x.responseText;
-    var p=new DOMParser().parseFromString(t,"text/html");
-    var st=p.querySelector("style");
-    if(st){var ns=document.createElement("style");ns.textContent=st.textContent;document.head.appendChild(ns)}
-    var w=p.getElementById("chat-widget");
-    if(w){document.body.appendChild(document.adoptNode(w))}
-    var parts=t.split("<"+"script>");
-    if(parts.length>1){var sc=parts[1].split("<"+"/scr"+"ipt>")[0];var js=document.createElement("script");js.textContent=sc;document.body.appendChild(js)}
-  };
-  x.send();
-})();
+fetch("../../../chat-widget-html.html").then(function(r){return r.text()}).then(function(h){
+  document.getElementById("chat-widget-container").innerHTML=h;
+  var s=document.createElement("script");s.src="../../../chat-widget.js";document.body.appendChild(s);
+});
 </script>
 </body>
 </html>

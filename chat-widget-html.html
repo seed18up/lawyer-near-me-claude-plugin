@@ -1,0 +1,84 @@
+  <div id="chat-widget">
+
+    <!-- Toggle Button -->
+    <button id="cw-toggle" aria-label="เปิด/ปิด Legal Chat" aria-expanded="false">
+      <span id="cw-toggle-label">⚖️ ปรึกษาฟรี</span>
+      <div id="cw-toggle-btn">
+        <span id="cw-toggle-icon">⚖️</span>
+        <div id="cw-badge" aria-hidden="true">1</div>
+      </div>
+    </button>
+
+    <!-- Chat Panel -->
+    <div id="cw-panel" role="dialog" aria-label="Legal Chatbot" aria-hidden="true">
+
+      <!-- Header -->
+      <div id="cw-header">
+        <div id="cw-header-top">
+          <div id="cw-agent-avatar">👩‍⚖️</div>
+          <div id="cw-agent-info">
+            <div id="cw-agent-name">ดร.วรรณา สิทธิชัย</div>
+            <div id="cw-agent-title">ที่ปรึกษากฎหมายหลัก</div>
+            <div id="cw-agent-status">🟢 ออนไลน์</div>
+          </div>
+          <button id="cw-close-btn" aria-label="ปิด">✕</button>
+        </div>
+
+        <!-- Agent selector tabs -->
+        <div id="cw-tabs" role="tablist">
+          <button class="cw-tab cw-tab-active" data-agent="legal-advisor" role="tab" aria-selected="true">ที่ปรึกษา</button>
+          <button class="cw-tab" data-agent="compliance" role="tab" aria-selected="false">PDPA</button>
+          <button class="cw-tab" data-agent="contract" role="tab" aria-selected="false">สัญญา</button>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div id="cw-messages" role="log" aria-live="polite">
+
+        <!-- AI Disclaimer -->
+        <div style="margin:8px 10px 12px;padding:10px 12px;background:#fff8e1;border-radius:8px;border-left:3px solid #F9A825;font-size:12px;color:#666;line-height:1.5;">
+          ⚠️ <strong style="color:#b8860b;">AI นี้ไม่ใช่ทนายความ</strong> — ข้อมูลทั้งหมดเพื่อการศึกษาเท่านั้น ไม่ใช่คำปรึกษาทางกฎหมาย กรุณาอย่าพิมพ์ข้อมูลส่วนตัวที่ sensitive ข้อความถูกประมวลผลโดย AI (Anthropic)
+        </div>
+
+        <!-- Typing indicator (hidden by default) -->
+        <div id="cw-typing" class="cw-msg-agent" aria-hidden="true">
+          <div class="cw-msg-agent-avatar" id="cw-typing-avatar">👩‍⚖️</div>
+          <div class="cw-msg-agent-wrap">
+            <div class="cw-bubble">
+              <span class="cw-dot"></span>
+              <span class="cw-dot"></span>
+              <span class="cw-dot"></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Topic Chips -->
+      <div id="cw-chips-wrap" aria-label="หัวข้อยอดนิยม">
+        <button class="cw-chip" data-topic="อสังหาฯ">🏠 อสังหาฯ</button>
+        <button class="cw-chip" data-topic="แรงงาน">👷 แรงงาน</button>
+        <button class="cw-chip" data-topic="สัญญา">📋 สัญญา</button>
+        <button class="cw-chip" data-topic="ผู้บริโภค">🛒 ผู้บริโภค</button>
+        <button class="cw-chip" data-topic="ครอบครัว">👨‍👩‍👧 ครอบครัว</button>
+        <button class="cw-chip" data-topic="ทั่วไป">⚖️ ทั่วไป</button>
+      </div>
+
+      <!-- Input Area -->
+      <div id="cw-input-area">
+        <textarea
+          id="cw-textarea"
+          rows="1"
+          placeholder="พิมพ์คำถามของคุณ..."
+          aria-label="พิมพ์คำถาม"
+        ></textarea>
+        <button id="cw-send-btn" aria-label="ส่งข้อความ">➤</button>
+      </div>
+
+      <!-- Footer Disclaimer -->
+      <div id="cw-footer">
+        ข้อมูลเบื้องต้นเท่านั้น ไม่ใช่คำปรึกษาทางกฎหมาย
+      </div>
+
+    </div><!-- /#cw-panel -->
+  </div><!-- /#chat-widget -->
