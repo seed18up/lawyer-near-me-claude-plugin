@@ -181,7 +181,7 @@ document.getElementById("law-search").addEventListener("input",function(){doSear
 
 <!-- Chat Widget -->
 <script>
-fetch("../../../chat-widget.html").then(function(r){return r.text()}).then(function(h){var d=document.createElement("div");d.innerHTML=h;document.body.appendChild(d);var scripts=d.querySelectorAll("script");scripts.forEach(function(s){var ns=document.createElement("script");ns.textContent=s.textContent;document.body.appendChild(ns)})});
+fetch("../../../chat-widget.html").then(function(r){return r.text()}).then(function(h){var d=document.createElement("div");d.innerHTML=h;var styles=d.querySelectorAll("style");styles.forEach(function(s){document.head.appendChild(s.cloneNode(true))});var scripts=d.querySelectorAll("script");var container=document.createElement("div");d.querySelectorAll("#chat-widget").forEach(function(w){container.appendChild(w)});document.body.appendChild(container);scripts.forEach(function(s){var ns=document.createElement("script");ns.textContent=s.textContent;document.body.appendChild(ns)})});
 </script>
 </body>
 </html>
