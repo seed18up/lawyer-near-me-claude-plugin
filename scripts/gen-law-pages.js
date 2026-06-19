@@ -24,6 +24,8 @@ const categories = [
   { dir: 'law/debt-collection', json: 'debt-collection.json', emoji: '📞', cta: 'ทวงถามหนี้', depth: 2 },
   { dir: 'law/social-security', json: 'social-security.json', emoji: '🏥', cta: 'ประกันสังคม', depth: 2 },
   { dir: 'law/labor-relations', json: 'labor-relations.json', emoji: '✊', cta: 'แรงงานสัมพันธ์/สหภาพ', depth: 2 },
+  { dir: 'law/cheque', json: 'cheque.json', emoji: '💸', cta: 'เช็ค/เช็คเด้ง', depth: 2 },
+  { dir: 'law/condo', json: 'condo.json', emoji: '🏢', cta: 'คอนโด/อาคารชุด', depth: 2 },
 ];
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
