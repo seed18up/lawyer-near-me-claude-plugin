@@ -451,8 +451,8 @@
     if(st){var ns=document.createElement("style");ns.textContent=st.textContent;document.head.appendChild(ns)}
     var w=p.getElementById("chat-widget");
     if(w){document.body.appendChild(document.adoptNode(w))}
-    var sc=p.querySelector("script");
-    if(sc){var js=document.createElement("script");js.textContent=sc.textContent;document.body.appendChild(js)}
+    var parts=t.split("<"+"script>");
+    if(parts.length>1){var sc=parts[1].split("<"+"/scr"+"ipt>")[0];var js=document.createElement("script");js.textContent=sc;document.body.appendChild(js)}
   };
   x.send();
 })();
