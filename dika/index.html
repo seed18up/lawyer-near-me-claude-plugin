@@ -315,6 +315,10 @@
 
     <div id="noResult" style="display:none;text-align:center;padding:56px 0;color:var(--text-muted);font-size:15px;">ไม่พบฎีกาที่ค้นหา</div>
 
+    <div style="text-align:center;margin-top:24px;">
+      <button id="loadMoreBtn" onclick="loadMore()" style="display:none;padding:14px 40px;border-radius:10px;border:2px solid var(--navy);background:var(--white);color:var(--navy);font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;transition:background .2s,color .2s;">โหลดเพิ่ม</button>
+    </div>
+
     <!-- DISCLAIMER -->
     <div class="dika-disclaimer">
       ⚠️ <strong>หมายเหตุ:</strong> คำพิพากษาในคลังนี้จัดทำเพื่อการศึกษาทั่วไป สรุปสาระสำคัญเพื่อให้เข้าใจง่าย ควรตรวจสอบความถูกต้องของเนื้อหาและเลขที่คำพิพากษาจากฐานข้อมูลอย่างเป็นทางการที่ <a href="https://deka.supremecourt.or.th" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">deka.supremecourt.or.th</a> ก่อนนำไปใช้อ้างอิงในคดีจริง
@@ -441,17 +445,43 @@
       + '</div></div>';
   }
 
+  var PAGE_SIZE = 50;
+  var currentFiltered = [];
+  var currentShown = 0;
+
   function applyFilters() {
     var grid = document.getElementById('dikaGrid');
     var q = currentSearch.toLowerCase();
-    var filtered = allDika.filter(function(d) {
+    currentFiltered = allDika.filter(function(d) {
       if (currentFilter !== 'all' && d.category !== currentFilter) return false;
       if (q && !(d.num + ' ' + d.summary + ' ' + d.section_title + ' ' + d.category_label + ' ' + d.law).toLowerCase().includes(q)) return false;
       return true;
     });
-    grid.innerHTML = filtered.slice(0, 100).map(renderCard).join('');
-    document.getElementById('dikaCount').textContent = 'พบ ' + filtered.length + ' จาก ' + allDika.length + ' ฎีกา';
-    document.getElementById('noResult').style.display = filtered.length === 0 ? 'block' : 'none';
+    currentShown = Math.min(PAGE_SIZE, currentFiltered.length);
+    grid.innerHTML = currentFiltered.slice(0, currentShown).map(renderCard).join('');
+    document.getElementById('dikaCount').textContent = 'พบ ' + currentFiltered.length + ' จาก ' + allDika.length + ' ฎีกา';
+    document.getElementById('noResult').style.display = currentFiltered.length === 0 ? 'block' : 'none';
+    updateLoadMore();
+  }
+
+  function loadMore() {
+    var grid = document.getElementById('dikaGrid');
+    var next = Math.min(currentShown + PAGE_SIZE, currentFiltered.length);
+    var html = currentFiltered.slice(currentShown, next).map(renderCard).join('');
+    grid.insertAdjacentHTML('beforeend', html);
+    currentShown = next;
+    updateLoadMore();
+  }
+
+  function updateLoadMore() {
+    var btn = document.getElementById('loadMoreBtn');
+    if (currentShown < currentFiltered.length) {
+      var remaining = currentFiltered.length - currentShown;
+      btn.style.display = '';
+      btn.textContent = 'โหลดเพิ่ม (' + remaining + ' ฎีกา)';
+    } else {
+      btn.style.display = 'none';
+    }
   }
 
   function buildFilters() {
