@@ -474,9 +474,27 @@
   fetch('./dika.json').then(function(r) { return r.json(); }).then(function(data) {
     allDika = data.dika;
     buildFilters();
-    applyFilters();
     var hash = window.location.hash;
-    if (hash) { var el = document.getElementById(hash.substring(1)); if (el) { el.scrollIntoView({behavior:'smooth',block:'center'}); el.style.boxShadow='0 0 0 3px var(--gold)'; } }
+    if (hash) {
+      var targetId = hash.substring(1);
+      var targetDika = allDika.find(function(d) { return d.id === targetId; });
+      if (targetDika) {
+        currentFilter = 'all';
+        currentSearch = '';
+        var grid = document.getElementById('dikaGrid');
+        grid.innerHTML = allDika.map(renderCard).join('');
+        document.getElementById('dikaCount').textContent = allDika.length + ' ฎีกา';
+        document.getElementById('noResult').style.display = 'none';
+        setTimeout(function() {
+          var el = document.getElementById(targetId);
+          if (el) { el.scrollIntoView({behavior:'smooth',block:'center'}); el.style.boxShadow='0 0 0 3px var(--gold)'; el.style.transition='box-shadow .3s'; }
+        }, 100);
+      } else {
+        applyFilters();
+      }
+    } else {
+      applyFilters();
+    }
   });
 
   document.getElementById('dikaSearch').addEventListener('input', function() { currentSearch = this.value.trim(); applyFilters(); });
