@@ -181,7 +181,21 @@ document.getElementById("law-search").addEventListener("input",function(){doSear
 
 <!-- Chat Widget -->
 <script>
-fetch("../../../chat-widget.html").then(function(r){return r.text()}).then(function(h){var d=document.createElement("div");d.innerHTML=h;var styles=d.querySelectorAll("style");styles.forEach(function(s){document.head.appendChild(s.cloneNode(true))});var scripts=d.querySelectorAll("script");var container=document.createElement("div");d.querySelectorAll("#chat-widget").forEach(function(w){container.appendChild(w)});document.body.appendChild(container);scripts.forEach(function(s){var ns=document.createElement("script");ns.textContent=s.textContent;document.body.appendChild(ns)})});
+(function(){
+  var x=new XMLHttpRequest();
+  x.open("GET","../../../chat-widget.html",true);
+  x.onload=function(){
+    if(x.status!==200)return;
+    var t=x.responseText;
+    var sm=t.match(/<style>([sS]*?)</style>/);
+    if(sm){var s=document.createElement("style");s.textContent=sm[1];document.head.appendChild(s)}
+    var hm=t.match(/<div id="chat-widget">[sS]*?</div><!-- /#chat-widget -->/);
+    if(hm){var d=document.createElement("div");d.innerHTML=hm[0];document.body.appendChild(d)}
+    var jm=t.match(/<script>([sS]*?)</scr/);
+    if(jm){var j=document.createElement("script");j.textContent=jm[1];document.body.appendChild(j)}
+  };
+  x.send();
+})();
 </script>
 </body>
 </html>
