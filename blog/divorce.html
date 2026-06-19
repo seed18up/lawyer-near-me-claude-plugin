@@ -859,5 +859,24 @@
   })();
 </script>
 
+
+<!-- Chat Widget -->
+<script>
+(function(){
+  var x=new XMLHttpRequest();
+  x.open("GET","../chat-widget.html",true);
+  x.onload=function(){
+    if(x.status!==200)return;
+    var t=x.responseText;
+    var sm=t.match(/<style>([\s\S]*?)<\/style>/);
+    if(sm){var s=document.createElement("style");s.textContent=sm[1];document.head.appendChild(s)}
+    var hm=t.match(/<div id="chat-widget">[\s\S]*?<\/div><!-- \/#chat-widget -->/);
+    if(hm){var d=document.createElement("div");d.innerHTML=hm[0];document.body.appendChild(d)}
+    var jm=t.match(/<script>([\s\S]*?)<\/scr/);
+    if(jm){var j=document.createElement("script");j.textContent=jm[1];document.body.appendChild(j)}
+  };
+  x.send();
+})();
+</script>
 </body>
 </html>
