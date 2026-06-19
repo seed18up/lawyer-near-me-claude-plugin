@@ -8,5 +8,10 @@
 </head>
 <body>
 <script>window.location.replace('../ppc/family/');</script>
+
+<!-- Chat Widget -->
+<script>
+fetch("../../chat-widget.html").then(function(r){return r.text()}).then(function(h){var d=document.createElement("div");d.innerHTML=h;document.body.appendChild(d);var scripts=d.querySelectorAll("script");scripts.forEach(function(s){var ns=document.createElement("script");ns.textContent=s.textContent;document.body.appendChild(ns)})});
+</script>
 </body>
 </html>

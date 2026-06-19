@@ -178,5 +178,10 @@ function doSearch(q){if(!q){showAll();return}tocView.style.display="none";search
 fetch("./debt-collection.json").then(function(r){return r.json()}).then(function(data){var countMap={};data.sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});var grid=document.getElementById("chapter-grid");var html="";data.chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">หมวด '+ch.num+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});grid.innerHTML=html;lawGrid.innerHTML=data.sections.map(renderCard).join("")});
 document.getElementById("law-search").addEventListener("input",function(){doSearch(this.value.trim())});
 </script>
+
+<!-- Chat Widget -->
+<script>
+fetch("../../chat-widget.html").then(function(r){return r.text()}).then(function(h){var d=document.createElement("div");d.innerHTML=h;document.body.appendChild(d);var scripts=d.querySelectorAll("script");scripts.forEach(function(s){var ns=document.createElement("script");ns.textContent=s.textContent;document.body.appendChild(ns)})});
+</script>
 </body>
 </html>
