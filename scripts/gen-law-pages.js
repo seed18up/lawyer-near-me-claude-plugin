@@ -22,6 +22,8 @@ const categories = [
   { dir: 'law/traffic', json: 'traffic.json', emoji: '🚗', cta: 'จราจร/ขับรถ', depth: 2 },
   { dir: 'law/narcotics', json: 'narcotics.json', emoji: '🚫', cta: 'ยาเสพติด', depth: 2 },
   { dir: 'law/debt-collection', json: 'debt-collection.json', emoji: '📞', cta: 'ทวงถามหนี้', depth: 2 },
+  { dir: 'law/social-security', json: 'social-security.json', emoji: '🏥', cta: 'ประกันสังคม', depth: 2 },
+  { dir: 'law/labor-relations', json: 'labor-relations.json', emoji: '✊', cta: 'แรงงานสัมพันธ์/สหภาพ', depth: 2 },
 ];
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
