@@ -425,12 +425,12 @@
 
 
 <!-- Chat Widget -->
-<link rel="stylesheet" href="../../../chat-widget.css">
+<link rel="stylesheet" href="../../chat-widget.css">
 <div id="chat-widget-container"></div>
 <script>
-fetch("../../../chat-widget-html.html").then(function(r){return r.text()}).then(function(h){
+fetch("../../chat-widget-html.html").then(function(r){return r.text()}).then(function(h){
   document.getElementById("chat-widget-container").innerHTML=h;
-  var s=document.createElement("script");s.src="../../../chat-widget.js";document.body.appendChild(s);
+  var s=document.createElement("script");s.src="../../chat-widget.js";document.body.appendChild(s);
 });
 </script>
 </body>
