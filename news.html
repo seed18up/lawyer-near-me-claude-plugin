@@ -531,16 +531,17 @@ loadNews();
 <script>
 (function(){
   var x=new XMLHttpRequest();
-  x.open("GET","./chat-widget.html",true);
+  x.open("GET","../chat-widget.html",true);
   x.onload=function(){
     if(x.status!==200)return;
     var t=x.responseText;
-    var sm=t.match(/<style>([sS]*?)<\/style>/);
-    if(sm){var s=document.createElement("style");s.textContent=sm[1];document.head.appendChild(s)}
-    var hm=t.match(/<div id="chat-widget">[sS]*?<\/div><!-- /#chat-widget -->/);
-    if(hm){var d=document.createElement("div");d.innerHTML=hm[0];document.body.appendChild(d)}
-    var jm=t.match(/<script>([sS]*?)<\/scr/);
-    if(jm){var j=document.createElement("script");j.textContent=jm[1];document.body.appendChild(j)}
+    var p=new DOMParser().parseFromString(t,"text/html");
+    var st=p.querySelector("style");
+    if(st){var ns=document.createElement("style");ns.textContent=st.textContent;document.head.appendChild(ns)}
+    var w=p.getElementById("chat-widget");
+    if(w){document.body.appendChild(document.adoptNode(w))}
+    var sc=p.querySelector("script");
+    if(sc){var js=document.createElement("script");js.textContent=sc.textContent;document.body.appendChild(js)}
   };
   x.send();
 })();
