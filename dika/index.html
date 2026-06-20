@@ -459,7 +459,7 @@
     });
     currentShown = Math.min(PAGE_SIZE, currentFiltered.length);
     grid.innerHTML = currentFiltered.slice(0, currentShown).map(renderCard).join('');
-    document.getElementById('dikaCount').textContent = 'พบ ' + currentFiltered.length + ' จาก ' + allDika.length + ' ฎีกา';
+    document.getElementById('dikaCount').textContent = currentFilter !== 'all' || currentSearch ? 'พบ ' + currentFiltered.length + ' ฎีกา' : 'คำพิพากษาทั้งหมด';
     document.getElementById('noResult').style.display = currentFiltered.length === 0 ? 'block' : 'none';
     updateLoadMore();
   }
