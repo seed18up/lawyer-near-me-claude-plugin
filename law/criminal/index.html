@@ -262,9 +262,16 @@
   var resultCount = document.getElementById('result-count');
   var searchTitle = document.getElementById('search-title');
 
-  function chLabel(num) { return num === 0 ? 'ภาค 1' : 'ลักษณะ ' + num; }
+  function chLabel(num) {
+    if (window._crChapters) {
+      var ch = window._crChapters.find(function(c) { return c.num === num; });
+      if (ch && ch.label) return ch.label;
+    }
+    return 'ลักษณะ ' + num;
+  }
 
   function buildToc(chapters, countMap) {
+    window._crChapters = chapters;
     var grid = document.getElementById('chapter-grid');
     var html = '';
     chapters.forEach(function(ch) {

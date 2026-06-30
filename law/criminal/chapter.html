@@ -221,10 +221,14 @@
   </div>
 </footer>
 <script>
-  function chLabel(num) { return num === 0 ? 'ภาค 1' : 'ลักษณะ ' + num; }
+  function chLabel(num) {
+    if (!window._crChapters) return 'ลักษณะ ' + num;
+    var ch = window._crChapters.find(function(c) { return c.num === num; });
+    return ch && ch.label ? ch.label : 'ลักษณะ ' + num;
+  }
 
   var chapterNum = parseInt(new URLSearchParams(window.location.search).get('c'), 10);
-  if (isNaN(chapterNum)) chapterNum = 12;
+  if (isNaN(chapterNum)) chapterNum = 4;
   var grid = document.getElementById('law-grid');
   var noResult = document.getElementById('no-result');
   var countEl = document.getElementById('result-count');
@@ -271,6 +275,7 @@
   fetch('./criminal.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
+      window._crChapters = data.chapters;
       var chInfo = data.chapters.find(function(c) { return c.num === chapterNum; });
       var label = chLabel(chapterNum);
       var title = chInfo ? label + ' — ' + chInfo.title : label;
