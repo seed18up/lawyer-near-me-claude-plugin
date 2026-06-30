@@ -70,6 +70,7 @@
     .chapter-nav-toc { font-size: 13px; font-weight: 600; color: var(--text-muted); background: var(--gray-100); border: 1.5px solid var(--gray-200); padding: 8px 16px; border-radius: var(--radius-sm); transition: color .15s; }
     .chapter-nav-toc:hover { color: var(--navy); }
     .law-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .subchapter-header { grid-column: 1/-1; padding: 10px 16px; background: #f0f4ff; border-left: 4px solid var(--red,#c0392b); border-radius: 6px; font-weight: 700; font-size: 14px; color: #2c3e50; margin-top: 8px; }
     .law-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 20px 22px; box-shadow: var(--shadow-sm); transition: box-shadow .2s, transform .2s; display: flex; flex-direction: column; gap: 10px; }
     .law-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
     .law-card.hidden { display: none; }
@@ -293,7 +294,26 @@
         grid.innerHTML = '<div class="empty-chapter" style="grid-column:1/-1;"><h2>🚧 ยังไม่มีข้อมูลในลักษณะนี้</h2><p>ทีมกำลังรวบรวมมาตราใน' + title + '<br>กลับมาติดตามได้เร็วๆ นี้</p></div>';
         countEl.textContent = 0;
       } else {
-        grid.innerHTML = sections.map(renderCard).join('');
+        var hasSubchapters = chInfo && chInfo.subchapters && chInfo.subchapters.length > 0;
+        if (hasSubchapters) {
+          var html = '';
+          var lastSub = null;
+          sections.slice().sort(function(a, b) {
+            var na = parseFloat(a.section.toString().replace('/', '.')), nb = parseFloat(b.section.toString().replace('/', '.'));
+            var sa = (a.subchapter || 0), sb = (b.subchapter || 0);
+            return sa !== sb ? sa - sb : na - nb;
+          }).forEach(function(s) {
+            if (s.subchapter && s.subchapter !== lastSub) {
+              lastSub = s.subchapter;
+              var sub = chInfo.subchapters.find(function(x) { return x.num === s.subchapter; });
+              if (sub) html += '<div class="subchapter-header">หมวด ' + sub.num + ' — ' + sub.title + '</div>';
+            }
+            html += renderCard(s);
+          });
+          grid.innerHTML = html;
+        } else {
+          grid.innerHTML = sections.map(renderCard).join('');
+        }
         countEl.textContent = sections.length;
       }
 
