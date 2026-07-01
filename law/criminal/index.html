@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -110,6 +110,8 @@
     .card-text-toggle { font-size: 12px; font-weight: 600; color: var(--red); cursor: pointer; display: inline-flex; align-items: center; gap: 4px; background: none; border: none; padding: 0; }
     .card-text-toggle:hover { text-decoration: underline; }
     .card-text-body { display: none; font-size: 13px; color: var(--text-main); background: var(--gray-100); border-left: 3px solid #fdecea; padding: 12px 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; line-height: 1.75; margin-top: 4px; }
+    .card-text-body p { margin-bottom: 10px; }
+    .card-text-body p:last-child { margin-bottom: 0; }
     .card-text-body.open { display: block; }
     .card-keywords { display: flex; flex-wrap: wrap; gap: 6px; }
     .kw-tag { font-size: 11px; font-weight: 600; background: var(--gray-100); color: var(--text-muted); padding: 2px 8px; border-radius: 10px; }
@@ -305,7 +307,7 @@
       dikaHtml = '<div class="card-dika-links">' + links + '</div>';
     }
     var kwHtml = (s.keywords||[]).map(function(k) { return '<span class="kw-tag">' + k + '</span>'; }).join('');
-    var textHtml = s.text ? '<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">' + s.text.replace(/\n/g,'<br>') + '</div>' : '';
+    var textHtml = s.text ? '<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">' + '<p>' + s.text.replace(/\n/g,'</p><p>') + '</p>' + '</div>' : '';
     return '<div class="law-card" data-search="' + (s.section + ' ' + s.title + ' ' + s.summary + ' ' + (s.keywords||[]).join(' ')).toLowerCase() + '">'
       + '<div class="card-badges"><span class="section-badge">มาตรา ' + s.section + '</span><span class="chapter-badge">' + chLabel(s.chapter) + '</span></div>'
       + '<div class="card-title">' + s.title + '</div>'
