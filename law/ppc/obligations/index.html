@@ -131,7 +131,7 @@
     <p class="subtitle" id="hero-sub">นิติกรรม สัญญา หนี้ ละเมิด</p>
     <div class="hero-meta">
       <span class="hero-tag" id="hero-tag-sec">452 มาตรา</span>
-      <span class="hero-tag" id="hero-tag-ch">9 หมวด</span>
+      <span class="hero-tag" id="hero-tag-ch">10 ลักษณะ</span>
     </div>
   </div>
   <div class="hero-right">
@@ -140,7 +140,7 @@
   </div>
 </div></section>
 <section class="law-section"><div class="law-inner">
-  <div id="toc-view"><div class="section-title">เลือกหมวดที่ต้องการ</div><div class="chapter-grid" id="chapter-grid"></div></div>
+  <div id="toc-view"><div class="section-title">เลือกลักษณะที่ต้องการ</div><div class="chapter-grid" id="chapter-grid"></div></div>
   <div id="search-view" style="display:none"><div class="section-title" id="search-title">ผลการค้นหา</div></div>
   <div class="law-grid" id="law-grid" style="display:none"></div>
   <div class="no-result" id="no-result">ไม่พบมาตราที่ค้นหา ลองใช้คำอื่น</div>
@@ -168,25 +168,27 @@
 </div></div></footer>
 <script>
 var tocView=document.getElementById("toc-view"),searchView=document.getElementById("search-view"),lawGrid=document.getElementById("law-grid"),noResult=document.getElementById("no-result"),resultInfo=document.getElementById("result-info"),resultCount=document.getElementById("result-count"),searchTitle=document.getElementById("search-title");
-function renderCard(s){var chLabel="หมวด "+s.chapter;var kwHtml=(s.keywords||[]).map(function(k){return'<span class="kw-tag">'+k+"</span>"}).join("");var textHtml=s.text?'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">'+'<p>'+s.text.replace(/\n/g,'</p><p>')+'</p>'+"</div>":"";var dikaHtml="";if(s.dika&&s.dika.length){dikaHtml='<div class="card-dika-links">'+s.dika.map(function(num){var p=num.split("/");return'<a class="dika-link" href="../../../dika/#dika-'+p[0]+"-"+p[1]+'" target="_blank">\uD83D\uDCCB \u0E0E\u0E35\u0E01\u0E32 '+num+"</a>"}).join("")+"</div>"}return'<div class="law-card" data-ch="'+s.chapter+'" data-search="'+((s.section+" "+s.title+" "+s.summary+" "+(s.keywords||[]).join(" ")+" "+s.chapter_title).toLowerCase())+'">'+'<div class="card-badges"><span class="section-badge">มาตรา '+s.section+'</span><span class="chapter-badge">'+chLabel+" — "+(s.chapter_title||"")+'</span></div>'+'<div class="card-title">'+s.title+'</div><div class="card-summary">'+s.summary+"</div>"+textHtml+'<div class="card-keywords">'+kwHtml+'</div>'+dikaHtml+'<div class="card-footer"><span class="card-law-name">⚖️ นิติกรรม สัญญา หนี้ ละเมิด</span></div></div>'}
+function renderCard(s){var chObj=chaptersData.find(function(c){return c.num===s.chapter;});var chLabel=chObj?(chObj.laksana+" — "+chObj.title):(s.chapter_title||("ลักษณะ "+s.chapter));var kwHtml=(s.keywords||[]).map(function(k){return'<span class="kw-tag">'+k+"</span>"}).join("");var textHtml=s.text?'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">'+'<p>'+s.text.replace(/\n/g,'</p><p>')+'</p>'+"</div>":"";var dikaHtml="";if(s.dika&&s.dika.length){dikaHtml='<div class="card-dika-links">'+s.dika.map(function(num){var p=num.split("/");return'<a class="dika-link" href="../../../dika/#dika-'+p[0]+"-"+p[1]+'" target="_blank">\uD83D\uDCCB \u0E0E\u0E35\u0E01\u0E32 '+num+"</a>"}).join("")+"</div>"}return'<div class="law-card" data-ch="'+s.chapter+'" data-search="'+((s.section+" "+s.title+" "+s.summary+" "+(s.keywords||[]).join(" ")+" "+s.chapter_title).toLowerCase())+'">'+'<div class="card-badges"><span class="section-badge">มาตรา '+s.section+'</span><span class="chapter-badge">'+chLabel+'</span></div>'+'<div class="card-title">'+s.title+'</div><div class="card-summary">'+s.summary+"</div>"+textHtml+'<div class="card-keywords">'+kwHtml+'</div>'+dikaHtml+'<div class="card-footer"><span class="card-law-name">⚖️ นิติกรรม สัญญา หนี้ ละเมิด</span></div></div>'}
 function toggleText(btn){var body=btn.nextElementSibling;var open=body.classList.toggle("open");btn.textContent=open?"📄 ซ่อนข้อความกฎหมาย ▴":"📄 ดูข้อความกฎหมาย ▾"}
 function showAll(){tocView.style.display="";searchView.style.display="none";resultInfo.style.display="none";lawGrid.style.display="none";lawGrid.querySelectorAll(".law-card").forEach(function(c){c.classList.remove("hidden")});noResult.style.display="none"}
 function filterByChapter(ch){lawGrid.style.display="";
-lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
+lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;var chInfo=chaptersData.find(function(c){return c.num===ch;});var chLabel=chInfo?(chInfo.laksana+" — "+chInfo.title):("ลักษณะ "+ch);searchTitle.innerHTML=chLabel+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
 function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";lawGrid.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
-var BOOK_CHAPTERS={1:[1,2,3,4,5,6],2:[7,8,9]};
-var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บุคคล นิติบุคคล ทรัพย์ นิติกรรม อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"บทเบ็ดเสร็จทั่วไป สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้"}};
+var BOOK_CHAPTERS={1:[1,2,3,4,5],2:[6,7,8,9,10]};
+var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บทเบ็ดเสร็จทั่วไป บุคคล นิติบุคคล นิติกรรม อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"หนี้ สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้"}};
+var chaptersData=[];
 var bookParam=parseInt(new URLSearchParams(location.search).get("book"))||0;
 if(bookParam&&BOOK_META[bookParam]){var m=BOOK_META[bookParam];document.getElementById("hero-title").textContent=m.title;document.getElementById("hero-sub").textContent=m.sub;document.getElementById("hero-eyebrow").textContent=m.eye;document.title=m.title+" | ทนายใกล้ฉัน";}
 fetch("./obligations.json").then(function(r){return r.json()}).then(function(data){
   var allowedCh=bookParam&&BOOK_CHAPTERS[bookParam]?BOOK_CHAPTERS[bookParam]:null;
   var chapters=allowedCh?data.chapters.filter(function(c){return allowedCh.indexOf(c.num)>-1}):data.chapters;
   var sections=allowedCh?data.sections.filter(function(s){return allowedCh.indexOf(s.chapter)>-1}):data.sections;
+  chaptersData=data.chapters;
   var countMap={};sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});
   document.getElementById("hero-tag-sec").textContent=sections.length+" มาตรา";
-  document.getElementById("hero-tag-ch").textContent=chapters.length+" หมวด";
+  document.getElementById("hero-tag-ch").textContent=chapters.length+" ลักษณะ";
   var grid=document.getElementById("chapter-grid");var html="";
-  chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">หมวด '+ch.num+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});
+  chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">'+ch.laksana+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});
   grid.innerHTML=html;lawGrid.innerHTML=sections.map(renderCard).join("");
 });
 document.getElementById("law-search").addEventListener("input",function(){doSearch(this.value.trim())});
