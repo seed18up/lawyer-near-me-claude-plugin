@@ -126,13 +126,12 @@
 </div></div>
 <section class="page-hero"><div class="hero-inner">
   <div class="hero-left">
-    <div class="eyebrow">📜 นิติกรรม สัญญา หนี้ ละเมิด</div>
-    <h1>ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1–2</h1>
-    <p class="subtitle">นิติกรรม สัญญา หนี้ ละเมิด</p>
+    <div class="eyebrow" id="hero-eyebrow">📜 นิติกรรม สัญญา หนี้ ละเมิด</div>
+    <h1 id="hero-title">ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1–2</h1>
+    <p class="subtitle" id="hero-sub">นิติกรรม สัญญา หนี้ ละเมิด</p>
     <div class="hero-meta">
-      <span class="hero-tag">452 มาตรา</span>
-      <span class="hero-tag">5 หมวด</span>
-      <span class="hero-tag">64
+      <span class="hero-tag" id="hero-tag-sec">452 มาตรา</span>
+      <span class="hero-tag" id="hero-tag-ch">9 หมวด</span>
     </div>
   </div>
   <div class="hero-right">
@@ -175,7 +174,21 @@ function showAll(){tocView.style.display="";searchView.style.display="none";resu
 function filterByChapter(ch){lawGrid.style.display="";
 lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
 function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";lawGrid.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
-fetch("./obligations.json").then(function(r){return r.json()}).then(function(data){var countMap={};data.sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});var grid=document.getElementById("chapter-grid");var html="";data.chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">หมวด '+ch.num+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});grid.innerHTML=html;lawGrid.innerHTML=data.sections.map(renderCard).join("")});
+var BOOK_CHAPTERS={1:[1,2,3,4,5,6],2:[7,8,9]};
+var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บุคคล นิติบุคคล ทรัพย์ นิติกรรม อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"บทเบ็ดเสร็จทั่วไป สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้"}};
+var bookParam=parseInt(new URLSearchParams(location.search).get("book"))||0;
+if(bookParam&&BOOK_META[bookParam]){var m=BOOK_META[bookParam];document.getElementById("hero-title").textContent=m.title;document.getElementById("hero-sub").textContent=m.sub;document.getElementById("hero-eyebrow").textContent=m.eye;document.title=m.title+" | ทนายใกล้ฉัน";}
+fetch("./obligations.json").then(function(r){return r.json()}).then(function(data){
+  var allowedCh=bookParam&&BOOK_CHAPTERS[bookParam]?BOOK_CHAPTERS[bookParam]:null;
+  var chapters=allowedCh?data.chapters.filter(function(c){return allowedCh.indexOf(c.num)>-1}):data.chapters;
+  var sections=allowedCh?data.sections.filter(function(s){return allowedCh.indexOf(s.chapter)>-1}):data.sections;
+  var countMap={};sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});
+  document.getElementById("hero-tag-sec").textContent=sections.length+" มาตรา";
+  document.getElementById("hero-tag-ch").textContent=chapters.length+" หมวด";
+  var grid=document.getElementById("chapter-grid");var html="";
+  chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">หมวด '+ch.num+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});
+  grid.innerHTML=html;lawGrid.innerHTML=sections.map(renderCard).join("");
+});
 document.getElementById("law-search").addEventListener("input",function(){doSearch(this.value.trim())});
 </script>
 
