@@ -174,7 +174,7 @@ function showAll(){tocView.style.display="";searchView.style.display="none";resu
 function filterByChapter(ch){lawGrid.style.display="";
 lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;var chInfo=chaptersData.find(function(c){return c.num===ch;});var chLabel=chInfo?(chInfo.laksana+" — "+chInfo.title):("ลักษณะ "+ch);searchTitle.innerHTML=chLabel+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
 function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";lawGrid.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
-var BOOK_CHAPTERS={1:[1,2,3,4,5],2:[6,7,8,9,10]};
+var BOOK_CHAPTERS={1:[1,2,3,4,5,6],2:[7,8,9,10,11]};
 var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บทเบ็ดเสร็จทั่วไป บุคคล นิติบุคคล นิติกรรม อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"หนี้ สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้"}};
 var chaptersData=[];
 var bookParam=parseInt(new URLSearchParams(location.search).get("book"))||0;
