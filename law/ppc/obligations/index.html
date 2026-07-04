@@ -127,7 +127,7 @@
 <div class="breadcrumb"><div class="breadcrumb-inner">
   <a href="../../../index.html">หน้าหลัก</a><span class="breadcrumb-sep">›</span>
   <a href="../../index.html">คลังกฎหมาย</a><span class="breadcrumb-sep">›</span>
-  <span>นิติกรรม สัญญา หนี้ ละเมิด</span>
+  <span id="bc-last">นิติกรรม สัญญา หนี้ ละเมิด</span>
 </div></div>
 <section class="page-hero"><div class="hero-inner">
   <div class="hero-left">
@@ -180,10 +180,10 @@ function filterByChapter(chs){if(!Array.isArray(chs))chs=[chs];lawGrid.style.dis
 lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",chs.indexOf(parseInt(card.getAttribute("data-ch")))===-1)});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;var labels=chs.map(function(ch){var c=chaptersData.find(function(x){return x.num===ch;});return c?(c.laksana+" — "+c.title):("ลักษณะ "+ch);});searchTitle.innerHTML=labels.join(" + ")+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
 function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";lawGrid.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
 var BOOK_CHAPTERS={1:[1,2,3,4,5,6,7],2:[8,9,10,11,12]};
-var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บทเบ็ดเสร็จทั่วไป บุคคล นิติบุคคล นิติกรรม ระยะเวลา อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"หนี้ สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้"}};
+var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 1 หลักทั่วไป",sub:"บทเบ็ดเสร็จทั่วไป บุคคล นิติบุคคล นิติกรรม ระยะเวลา อายุความ",eye:"📜 บรรพ 1 หลักทั่วไป",bc:"ป.พ.พ. บรรพ 1 หลักทั่วไป"},2:{title:"ประมวลกฎหมายแพ่งและพาณิชย์ บรรพ 2 หนี้",sub:"หนี้ สัญญา จัดการงานนอกสั่ง ลาภมิควรได้ ละเมิด",eye:"📜 บรรพ 2 หนี้",bc:"ป.พ.พ. บรรพ 2 หนี้"}};
 var chaptersData=[];
 var bookParam=parseInt(new URLSearchParams(location.search).get("book"))||0;
-if(bookParam&&BOOK_META[bookParam]){var m=BOOK_META[bookParam];document.getElementById("hero-title").textContent=m.title;document.getElementById("hero-sub").textContent=m.sub;document.getElementById("hero-eyebrow").textContent=m.eye;document.title=m.title+" | ทนายใกล้ฉัน";}
+if(bookParam&&BOOK_META[bookParam]){var m=BOOK_META[bookParam];document.getElementById("hero-title").textContent=m.title;document.getElementById("hero-sub").textContent=m.sub;document.getElementById("hero-eyebrow").textContent=m.eye;document.title=m.title+" | ทนายใกล้ฉัน";document.getElementById("bc-last").textContent=m.bc;}
 fetch("./obligations.json?v=4").then(function(r){return r.json()}).then(function(data){
   var allowedCh=bookParam&&BOOK_CHAPTERS[bookParam]?BOOK_CHAPTERS[bookParam]:null;
   var chapters=allowedCh?data.chapters.filter(function(c){return allowedCh.indexOf(c.num)>-1}):data.chapters;
