@@ -184,7 +184,7 @@ var BOOK_META={1:{title:"ประมวลกฎหมายแพ่งแล�
 var chaptersData=[];
 var bookParam=parseInt(new URLSearchParams(location.search).get("book"))||0;
 if(bookParam&&BOOK_META[bookParam]){var m=BOOK_META[bookParam];document.getElementById("hero-title").textContent=m.title;document.getElementById("hero-sub").textContent=m.sub;document.getElementById("hero-eyebrow").textContent=m.eye;document.title=m.title+" | ทนายใกล้ฉัน";}
-fetch("./obligations.json?v=2").then(function(r){return r.json()}).then(function(data){
+fetch("./obligations.json?v=3").then(function(r){return r.json()}).then(function(data){
   var allowedCh=bookParam&&BOOK_CHAPTERS[bookParam]?BOOK_CHAPTERS[bookParam]:null;
   var chapters=allowedCh?data.chapters.filter(function(c){return allowedCh.indexOf(c.num)>-1}):data.chapters;
   var sections=allowedCh?data.sections.filter(function(s){return allowedCh.indexOf(s.chapter)>-1}):data.sections;
