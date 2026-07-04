@@ -275,7 +275,7 @@
     noResult.style.display = (visible === 0) ? 'block' : 'none';
   }
 
-  fetch('./criminal.json')
+  fetch('./criminal.json?v=2')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       window._crChapters = data.chapters;
