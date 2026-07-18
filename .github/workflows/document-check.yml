@@ -1,0 +1,45 @@
+name: Master Board — AI Document Pre-Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_url:
+        description: 'Direct download URL for the PDF report'
+        required: true
+      item_id:
+        description: 'Task_Step_Tracking item ID to update'
+        required: true
+      callback_url:
+        description: 'Power Automate HTTP-trigger URL to report results back to'
+        required: true
+      client_code:
+        description: 'ClientCode of the Job'
+        required: true
+      accounting_period:
+        description: 'AccountingPeriod of the Job, format YYYY-MM'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  document-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run document check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FILE_URL: ${{ github.event.inputs.file_url }}
+          ITEM_ID: ${{ github.event.inputs.item_id }}
+          CALLBACK_URL: ${{ github.event.inputs.callback_url }}
+          CLIENT_CODE: ${{ github.event.inputs.client_code }}
+          ACCOUNTING_PERIOD: ${{ github.event.inputs.accounting_period }}
+        run: node scripts/document-check.js
