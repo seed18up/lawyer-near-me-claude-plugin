@@ -10,13 +10,13 @@
  */
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const FILE_URL = process.env.FILE_URL;
+const FILE_CONTENT_BASE64 = process.env.FILE_CONTENT_BASE64;
 const ITEM_ID = process.env.ITEM_ID;
 const CALLBACK_URL = process.env.CALLBACK_URL;
 const CLIENT_CODE = process.env.CLIENT_CODE;
 const ACCOUNTING_PERIOD = process.env.ACCOUNTING_PERIOD; // "YYYY-MM"
 
-for (const [name, val] of Object.entries({ ANTHROPIC_API_KEY, FILE_URL, ITEM_ID, CALLBACK_URL, CLIENT_CODE, ACCOUNTING_PERIOD })) {
+for (const [name, val] of Object.entries({ ANTHROPIC_API_KEY, FILE_CONTENT_BASE64, ITEM_ID, CALLBACK_URL, CLIENT_CODE, ACCOUNTING_PERIOD })) {
   if (!val) {
     console.error(`ERROR: missing required input/env ${name}`);
     process.exit(1);
@@ -24,8 +24,7 @@ for (const [name, val] of Object.entries({ ANTHROPIC_API_KEY, FILE_URL, ITEM_ID,
 }
 
 async function main() {
-  const pdfBase64 = await downloadPdfAsBase64(FILE_URL);
-  const rows = await extractRowsWithClaude(pdfBase64);
+  const rows = await extractRowsWithClaude(FILE_CONTENT_BASE64);
   const issues = validateRows(rows, ACCOUNTING_PERIOD);
 
   const result = {
@@ -45,14 +44,6 @@ main().catch((e) => {
   console.error(e);
   process.exit(1);
 });
-
-// ── Download the PDF and return base64 ──────────────────────────────────────
-async function downloadPdfAsBase64(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`Failed to download PDF: ${res.status} ${res.statusText}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  return buf.toString('base64');
-}
 
 // ── Ask Claude to extract structured rows from the PDF ──────────────────────
 async function extractRowsWithClaude(pdfBase64) {

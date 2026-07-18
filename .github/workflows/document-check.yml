@@ -3,8 +3,8 @@ name: Master Board — AI Document Pre-Check
 on:
   workflow_dispatch:
     inputs:
-      file_url:
-        description: 'Direct download URL for the PDF report'
+      file_content_base64:
+        description: 'Base64-encoded PDF content'
         required: true
       item_id:
         description: 'Task_Step_Tracking item ID to update'
@@ -37,7 +37,7 @@ jobs:
       - name: Run document check
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          FILE_URL: ${{ github.event.inputs.file_url }}
+          FILE_CONTENT_BASE64: ${{ github.event.inputs.file_content_base64 }}
           ITEM_ID: ${{ github.event.inputs.item_id }}
           CALLBACK_URL: ${{ github.event.inputs.callback_url }}
           CLIENT_CODE: ${{ github.event.inputs.client_code }}
