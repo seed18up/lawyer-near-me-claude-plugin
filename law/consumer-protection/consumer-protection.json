@@ -4,7 +4,7 @@
     "amended": "แก้ไขเพิ่มเติมฉบับที่ 4 พ.ศ. 2562",
     "short": "พ.ร.บ.คุ้มครองผู้บริโภค — สิทธิผู้บริโภค โฆษณาเท็จ ฉลาก สัญญา",
     "category": "consumer-protection",
-    "total_sections": 141,
+    "total_sections": 132,
     "source": "ราชกิจจานุเบกษา",
     "note": "ควรตรวจสอบข้อความเต็มจากราชกิจจานุเบกษาหรือ krisdika.go.th"
   },
@@ -503,18 +503,6 @@
       ]
     },
     {
-      "id": "cp-28-4",
-      "section": "28/4",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "และ พระราชบัญญัติปุ๋ย พ.ศ. ๒๕๑๘",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
       "id": "cp-29",
       "section": "29",
       "chapter": null,
@@ -807,18 +795,6 @@
       "dika_details": []
     },
     {
-      "id": "cp-29-737",
-      "section": "29/737",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "ในกรณีที่ผู้ประกอบธุรกิจพบหรือได้รับแจ้งตาม",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
       "id": "cp-29-838",
       "section": "29/838",
       "chapter": null,
@@ -999,6 +975,18 @@
       "dika_details": []
     },
     {
+      "id": "cp-35",
+      "section": "35",
+      "chapter": null,
+      "chapter_title": null,
+      "title": "",
+      "text": "สัตต ต้องระวางโทษจาคุกไม่เกินหนึ่งปี หรือปรับไม่เกินสองแสนบาท หรือทั้งจาทั้งปรับ",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
       "id": "consu-35bis",
       "section": "35 ทวิ",
       "chapter": 4,
@@ -1051,18 +1039,6 @@
           "summary": "แม้โจทก์จะลงลายมือชื่อในสัญญาเช่าซื้อที่สำนักงานโจทก์ซึ่งตั้งอยู่ที่กรุงเทพมหานครก่อนแล้วจึงส่งสัญญาเช่าซื้อให้จำเลยที่ 1 ลงลายมือชื่อในฐานะผู้เช่าซื้อที่จังหวั"
         }
       ]
-    },
-    {
-      "id": "cp-35",
-      "section": "35",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "สัตต ต้องระวางโทษจาคุกไม่เกินหนึ่งปี หรือปรับไม่เกินสองแสนบาท หรือทั้งจาทั้งปรับ",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
     },
     {
       "id": "cp-36",
@@ -1135,18 +1111,6 @@
       "chapter_title": null,
       "title": "",
       "text": "เพิ่มโดยพระราชบัญญัติคุ้มครองผู้บริโภค (ฉบับที่ ๔) พ.ศ. ๒๕๖๒ ๖๓",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-39-162",
-      "section": "39/162",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "นอกจากคณะกรรมการมีอานาจดาเนินคดีตาม",
       "summary": "",
       "keywords": [],
       "dika": [],
@@ -1478,48 +1442,12 @@
       "dika_details": []
     },
     {
-      "id": "cp-56-278",
-      "section": "56/278",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "ผู้ประกอบธุรกิจผู้ใดไม่ปฏิบัติตาม",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-56-379",
-      "section": "56/379",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "ผู้ประกอบธุรกิจผู้ใดไม่ปฏิบัติตาม",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
       "id": "cp-56-480",
       "section": "56/480",
       "chapter": null,
       "chapter_title": null,
       "title": "",
       "text": "ผู้ประกอบธุรกิจผู้ใดไม่ปฏิบัติตามคาสั่งของคณะกรรมการว่าด้วย ความปลอดภัยตาม",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-56-581",
-      "section": "56/581",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "ผู้ประกอบธุรกิจผู้ใดไม่ปฏิบัติตาม",
       "summary": "",
       "keywords": [],
       "dika": [],
@@ -1616,30 +1544,6 @@
       "chapter_title": null,
       "title": "",
       "text": "ขัดหรือแย้งต่อรัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช ๒๕๕๐",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-74",
-      "section": "74",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "พระราชบัญญัติการประกอบกิจการ โทรคมนาคม พ.ศ. ๒๕๔๔",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-78",
-      "section": "78",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "พระราชบัญญัติสถานบริการ พ.ศ. ๒๕๐๙",
       "summary": "",
       "keywords": [],
       "dika": [],
@@ -1808,18 +1712,6 @@
       "chapter_title": null,
       "title": "",
       "text": "ผู้ใดฝ่าฝืนหรือไม่ปฏิบัติตามคาสั่งของคณะกรรมการว่าด้วยการโฆษณา ซึ่งสั่งตาม",
-      "summary": "",
-      "keywords": [],
-      "dika": [],
-      "dika_details": []
-    },
-    {
-      "id": "cp-5272",
-      "section": "5272",
-      "chapter": null,
-      "chapter_title": null,
-      "title": "",
-      "text": "ผู้ใดขายสินค้าที่ควบคุมฉลากตาม",
       "summary": "",
       "keywords": [],
       "dika": [],
