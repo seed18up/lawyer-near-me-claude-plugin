@@ -31,6 +31,7 @@ const categories = [
   { dir: 'law/ppc/family', json: 'family.json', emoji: '👨‍👩‍👧', cta: 'ครอบครัว/สมรส/หย่า', depth: 3 },
   { dir: 'law/ppc/agency', json: 'agency.json', emoji: '🤝', cta: 'ตัวแทน/นายหน้า/ประกัน', depth: 3 },
   { dir: 'law/ppc/company', json: 'company.json', emoji: '🏢', cta: 'หุ้นส่วน/บริษัท', depth: 3 },
+  { dir: 'law/land', json: 'land.json', emoji: '🏞️', cta: 'โฉนด/ที่ดิน/ครอบครองปรปักษ์', depth: 2 },
 ];
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -125,8 +126,8 @@ function buildPage(cat, data) {
   h += '    .card-text-body{display:none;font-size:13px;color:var(--text-main);background:var(--gray-100);border-left:3px solid var(--navy-light);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-top:4px}\n';
   h += '    .card-text-body.open{display:block}\n';
   h += '    .law-para{text-indent:2em;margin:0 0 5px;line-height:1.85;font-size:13px} .law-para:last-child{margin-bottom:0}\n';
-  h += '    .law-sub{text-indent:0;padding-left:2em;margin:6px 0 2px;line-height:1.85;font-size:13px;font-weight:500}\n';
-  h += '    .law-sub-cont{text-indent:2em;padding-left:2em;margin:0 0 4px;line-height:1.85;font-size:13px}\n';
+  h += '    .law-sub{text-indent:2em;padding-left:0;margin:10px 0 4px;line-height:1.85;font-size:13px}\n';
+  h += '    .law-sub-cont{text-indent:0;padding-left:0;margin:0 0 4px;line-height:1.85;font-size:13px}\n';
   h += '    .card-keywords{display:flex;flex-wrap:wrap;gap:6px}\n';
   h += '    .kw-tag{font-size:11px;font-weight:600;background:var(--gray-100);color:var(--text-muted);padding:2px 8px;border-radius:10px}\n';
   h += '    .card-footer{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid var(--gray-200);margin-top:auto}\n';
