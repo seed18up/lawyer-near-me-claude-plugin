@@ -24,9 +24,11 @@ const categories = [
   { dir: 'law/narcotics', json: 'narcotics.json', emoji: '🚫', cta: 'ยาเสพติด', depth: 2 },
   { dir: 'law/debt-collection', json: 'debt-collection.json', emoji: '📞', cta: 'ทวงถามหนี้', depth: 2 },
   { dir: 'law/social-security', json: 'social-security.json', emoji: '🏥', cta: 'ประกันสังคม', depth: 2 },
+  { dir: 'law/labor', json: 'labor.json', emoji: '👷', cta: 'แรงงาน/ค่าจ้าง', depth: 2 },
   { dir: 'law/labor-relations', json: 'labor-relations.json', emoji: '✊', cta: 'แรงงานสัมพันธ์/สหภาพ', depth: 2 },
   { dir: 'law/cheque', json: 'cheque.json', emoji: '💸', cta: 'เช็ค/เช็คเด้ง', depth: 2 },
   { dir: 'law/condo', json: 'condo.json', emoji: '🏢', cta: 'คอนโด/อาคารชุด', depth: 2 },
+  { dir: 'law/ppc/family', json: 'family.json', emoji: '👨‍👩‍👧', cta: 'ครอบครัว/สมรส/หย่า', depth: 3 },
   { dir: 'law/ppc/agency', json: 'agency.json', emoji: '🤝', cta: 'ตัวแทน/นายหน้า/ประกัน', depth: 3 },
   { dir: 'law/ppc/company', json: 'company.json', emoji: '🏢', cta: 'หุ้นส่วน/บริษัท', depth: 3 },
 ];
