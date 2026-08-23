@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -77,7 +77,7 @@
     .card-summary{font-size:14px;color:var(--text-muted);line-height:1.7;flex:1}
     .card-text-toggle{font-size:12px;font-weight:600;color:var(--navy);cursor:pointer;display:inline-flex;align-items:center;gap:4px;background:none;border:none;padding:0}
     .card-text-toggle:hover{text-decoration:underline}
-    .card-text-body{display:none;font-size:13px;color:var(--text-main);background:var(--gray-100);border-left:3px solid var(--navy-light);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;line-height:1.75;margin-top:4px}.card-text-body p{margin-bottom:6px;text-indent:2em}.card-text-body p:last-child{margin-bottom:0}
+    .card-text-body{display:none;font-size:13px;color:var(--text-main);background:var(--gray-100);border-left:3px solid var(--navy-light);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;line-height:1.75;margin-top:4px}
     .card-text-body.open{display:block}
     .card-keywords{display:flex;flex-wrap:wrap;gap:6px}
     .kw-tag{font-size:11px;font-weight:600;background:var(--gray-100);color:var(--text-muted);padding:2px 8px;border-radius:10px}
@@ -99,10 +99,6 @@
     .footer-copy{font-size:12px;color:rgba(255,255,255,.35)} .footer-disclaimer{font-size:11px;color:rgba(255,255,255,.3);max-width:500px;text-align:right;line-height:1.5}
     @media(max-width:900px){.chapter-grid{grid-template-columns:repeat(2,1fr)} .hero-inner{flex-direction:column} .search-wrap{width:100%} .result-info{text-align:left}}
     @media(max-width:680px){.chapter-grid{grid-template-columns:1fr} .law-grid{grid-template-columns:1fr} .page-hero h1{font-size:22px} .footer-top{grid-template-columns:1fr 1fr} .cta-banner{flex-direction:column}}
-  
-    .card-dika-links{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .dika-link{font-size:12px;font-weight:700;color:var(--navy);background:#fff8e1;border:1px solid rgba(249,168,37,.35);padding:2px 8px;border-radius:10px;transition:background .15s;text-decoration:none}
-    .dika-link:hover{background:#ffe082}
   </style>
 </head>
 <body>
@@ -130,9 +126,9 @@
     <h1>ประมวลกฎหมายยาเสพติด พ.ศ. 2564</h1>
     <p class="subtitle">ครอบครอง จำหน่าย บำบัด โทษ 5 ประเภท</p>
     <div class="hero-meta">
-      <span class="hero-tag">205 มาตรา</span>
-      <span class="hero-tag">5 หมวด</span>
-      <span class="hero-tag">16
+      <span class="hero-tag">186 มาตรา</span>
+      <span class="hero-tag">9 หมวด</span>
+      <span class="hero-tag">186 มาตราสำคัญ</span>
     </div>
   </div>
   <div class="hero-right">
@@ -143,7 +139,7 @@
 <section class="law-section"><div class="law-inner">
   <div id="toc-view"><div class="section-title">เลือกหมวดที่ต้องการ</div><div class="chapter-grid" id="chapter-grid"></div></div>
   <div id="search-view" style="display:none"><div class="section-title" id="search-title">ผลการค้นหา</div></div>
-  <div class="law-grid" id="law-grid" style="display:none"></div>
+  <div class="law-grid" id="law-grid"></div>
   <div class="no-result" id="no-result">ไม่พบมาตราที่ค้นหา ลองใช้คำอื่น</div>
   <div class="law-disclaimer">⚠️ <strong>หมายเหตุ:</strong> เนื้อหานี้จัดทำเพื่อการศึกษาทั่วไป ไม่ใช่ข้อความกฎหมายฉบับเต็ม ควรตรวจสอบจากราชกิจจานุเบกษาหรือปรึกษาทนายความก่อนนำไปใช้อ้างอิงในคดีจริง</div>
 </div></section>
@@ -151,7 +147,7 @@
   <div class="cta-banner"><div class="cta-banner-text">
     <h2>มีปัญหาเรื่องยาเสพติด? ปรึกษาทนายได้เลย</h2>
     <p>ค้นหาทนายความที่เชี่ยวชาญ เปรียบเทียบโปรไฟล์ และนัดปรึกษาได้ทันที</p>
-  </div><a class="cta-btn" href="javascript:void(0)" onclick="var t=document.getElementById('cw-toggle');if(t)t.click()">ปรึกษาฟรี ➜</a></div>
+  </div><a class="cta-btn" href="../../consult.html">ปรึกษาฟรี ➜</a></div>
 </div></section>
 <footer><div class="footer-inner"><div class="footer-top">
   <div><div class="footer-brand-name"><div class="footer-brand-icon">⚖️</div>ทนายใกล้ฉัน</div>
@@ -169,24 +165,13 @@
 </div></div></footer>
 <script>
 var tocView=document.getElementById("toc-view"),searchView=document.getElementById("search-view"),lawGrid=document.getElementById("law-grid"),noResult=document.getElementById("no-result"),resultInfo=document.getElementById("result-info"),resultCount=document.getElementById("result-count"),searchTitle=document.getElementById("search-title");
-function renderCard(s){var chLabel="หมวด "+s.chapter;var kwHtml=(s.keywords||[]).map(function(k){return'<span class="kw-tag">'+k+"</span>"}).join("");var textHtml=s.text?'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">'+'<p>'+s.text.replace(/\n/g,'</p><p>')+'</p>'+"</div>":"";var dikaHtml="";if(s.dika&&s.dika.length){dikaHtml='<div class="card-dika-links">'+s.dika.map(function(num){var p=num.split("/");return'<a class="dika-link" href="../../dika/#dika-'+p[0]+"-"+p[1]+'" target="_blank">\uD83D\uDCCB \u0E0E\u0E35\u0E01\u0E32 '+num+"</a>"}).join("")+"</div>"}return'<div class="law-card" data-ch="'+s.chapter+'" data-search="'+((s.section+" "+s.title+" "+s.summary+" "+(s.keywords||[]).join(" ")+" "+s.chapter_title).toLowerCase())+'">'+'<div class="card-badges"><span class="section-badge">มาตรา '+s.section+'</span><span class="chapter-badge">'+chLabel+" — "+(s.chapter_title||"")+'</span></div>'+'<div class="card-title">'+s.title+'</div><div class="card-summary">'+s.summary+"</div>"+textHtml+'<div class="card-keywords">'+kwHtml+'</div>'+dikaHtml+'<div class="card-footer"><span class="card-law-name">⚖️ ประมวลกฎหมายยาเสพติด</span></div></div>'}
+function renderCard(s){var chLabel="หมวด "+s.chapter;var kwHtml=(s.keywords||[]).map(function(k){return'<span class="kw-tag">'+k+"</span>"}).join("");var textHtml=s.text?'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">'+s.text.replace(/\n/g,"<br>")+"</div>":"";return'<div class="law-card" data-ch="'+s.chapter+'" data-search="'+((s.section+" "+s.title+" "+s.summary+" "+(s.keywords||[]).join(" ")+" "+s.chapter_title).toLowerCase())+'">'+'<div class="card-badges"><span class="section-badge">มาตรา '+s.section+'</span><span class="chapter-badge">'+chLabel+" — "+(s.chapter_title||"")+'</span></div>'+'<div class="card-title">'+s.title+'</div><div class="card-summary">'+s.summary+"</div>"+textHtml+'<div class="card-keywords">'+kwHtml+'</div><div class="card-footer"><span class="card-law-name">⚖️ ประมวลกฎหมายยาเสพติด</span></div></div>'}
 function toggleText(btn){var body=btn.nextElementSibling;var open=body.classList.toggle("open");btn.textContent=open?"📄 ซ่อนข้อความกฎหมาย ▴":"📄 ดูข้อความกฎหมาย ▾"}
-function showAll(){tocView.style.display="";searchView.style.display="none";resultInfo.style.display="none";lawGrid.style.display="none";lawGrid.querySelectorAll(".law-card").forEach(function(c){c.classList.remove("hidden")});noResult.style.display="none"}
-function filterByChapter(ch){lawGrid.style.display="";
-lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
-function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";lawGrid.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
+function showAll(){tocView.style.display="";searchView.style.display="none";resultInfo.style.display="none";lawGrid.querySelectorAll(".law-card").forEach(function(c){c.classList.remove("hidden")});noResult.style.display="none"}
+function filterByChapter(ch){lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>'}
+function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \""+q+"\"";noResult.style.display=(v===0)?"block":"none"}
 fetch("./narcotics.json").then(function(r){return r.json()}).then(function(data){var countMap={};data.sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});var grid=document.getElementById("chapter-grid");var html="";data.chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+='<div class="ch-card" onclick="filterByChapter('+ch.num+')">'+'<div class="ch-num">หมวด '+ch.num+'</div><div class="ch-title">'+ch.title+'</div><div class="ch-range">มาตรา '+ch.range+'</div><span class="ch-badge">'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+'</span></div>'});grid.innerHTML=html;lawGrid.innerHTML=data.sections.map(renderCard).join("")});
 document.getElementById("law-search").addEventListener("input",function(){doSearch(this.value.trim())});
-</script>
-
-<!-- Chat Widget -->
-<link rel="stylesheet" href="../../chat-widget.css">
-<div id="chat-widget-container"></div>
-<script>
-fetch("../../chat-widget-html.html").then(function(r){return r.text()}).then(function(h){
-  document.getElementById("chat-widget-container").innerHTML=h;
-  var s=document.createElement("script");s.src="../../chat-widget.js";document.body.appendChild(s);
-});
 </script>
 </body>
 </html>
