@@ -27,6 +27,8 @@ const categories = [
   { dir: 'law/labor-relations', json: 'labor-relations.json', emoji: '✊', cta: 'แรงงานสัมพันธ์/สหภาพ', depth: 2 },
   { dir: 'law/cheque', json: 'cheque.json', emoji: '💸', cta: 'เช็ค/เช็คเด้ง', depth: 2 },
   { dir: 'law/condo', json: 'condo.json', emoji: '🏢', cta: 'คอนโด/อาคารชุด', depth: 2 },
+  { dir: 'law/ppc/agency', json: 'agency.json', emoji: '🤝', cta: 'ตัวแทน/นายหน้า/ประกัน', depth: 3 },
+  { dir: 'law/ppc/company', json: 'company.json', emoji: '🏢', cta: 'หุ้นส่วน/บริษัท', depth: 3 },
 ];
 
 function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -183,7 +185,7 @@ function buildPage(cat, data) {
   h += '<section class="law-section"><div class="law-inner">\n';
   h += '  <div id="toc-view"><div class="section-title">เลือกหมวดที่ต้องการ</div><div class="chapter-grid" id="chapter-grid"></div></div>\n';
   h += '  <div id="search-view" style="display:none"><div class="section-title" id="search-title">ผลการค้นหา</div></div>\n';
-  h += '  <div class="law-grid" id="law-grid"></div>\n';
+  h += '  <div class="law-grid" id="law-grid" style="display:none"></div>\n';
   h += '  <div class="no-result" id="no-result">ไม่พบมาตราที่ค้นหา ลองใช้คำอื่น</div>\n';
   h += '  <div class="law-disclaimer">⚠️ <strong>หมายเหตุ:</strong> เนื้อหานี้จัดทำเพื่อการศึกษาทั่วไป ไม่ใช่ข้อความกฎหมายฉบับเต็ม ควรตรวจสอบจากราชกิจจานุเบกษาหรือปรึกษาทนายความก่อนนำไปใช้อ้างอิงในคดีจริง</div>\n';
   h += '</div></section>\n';
@@ -222,9 +224,9 @@ function buildPage(cat, data) {
   h += '\'<div class="card-title">\'+s.title+\'</div><div class="card-summary">\'+s.summary+"</div>"+textHtml+';
   h += '\'<div class="card-keywords">\'+kwHtml+\'</div><div class="card-footer"><span class="card-law-name">⚖️ ' + esc(shortName) + '</span></div></div>\'}\n';
   h += 'function toggleText(btn){var body=btn.nextElementSibling;var open=body.classList.toggle("open");btn.textContent=open?"📄 ซ่อนข้อความกฎหมาย ▴":"📄 ดูข้อความกฎหมาย ▾"}\n';
-  h += 'function showAll(){tocView.style.display="";searchView.style.display="none";resultInfo.style.display="none";lawGrid.querySelectorAll(".law-card").forEach(function(c){c.classList.remove("hidden")});noResult.style.display="none"}\n';
-  h += 'function filterByChapter(ch){lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+\' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>\'}\n';
-  h += 'function doSearch(q){if(!q){showAll();return}tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \\""+q+"\\"";noResult.style.display=(v===0)?"block":"none"}\n';
+  h += 'function showAll(){tocView.style.display="";searchView.style.display="none";resultInfo.style.display="none";lawGrid.style.display="none";lawGrid.querySelectorAll(".law-card").forEach(function(c){c.classList.remove("hidden")});noResult.style.display="none"}\n';
+  h += 'function filterByChapter(ch){lawGrid.style.display="";lawGrid.querySelectorAll(".law-card").forEach(function(card){card.classList.toggle("hidden",card.getAttribute("data-ch")!==String(ch))});tocView.style.display="none";searchView.style.display="";noResult.style.display="none";var v=lawGrid.querySelectorAll(".law-card:not(.hidden)").length;resultInfo.style.display="";resultCount.textContent=v;searchTitle.innerHTML="หมวด "+ch+\' <a href="javascript:showAll()" style="font-size:13px;color:var(--navy);margin-left:12px;">← ดูทั้งหมด</a>\'}\n';
+  h += 'function doSearch(q){if(!q){showAll();return}lawGrid.style.display="";tocView.style.display="none";searchView.style.display="";resultInfo.style.display="";var cards=lawGrid.querySelectorAll(".law-card");var v=0;cards.forEach(function(card){var match=card.getAttribute("data-search").includes(q.toLowerCase());card.classList.toggle("hidden",!match);if(match)v++});resultCount.textContent=v;searchTitle.textContent="ผลการค้นหา \\""+q+"\\"";noResult.style.display=(v===0)?"block":"none"}\n';
   h += 'fetch("./' + cat.json + '").then(function(r){return r.json()}).then(function(data){var countMap={};data.sections.forEach(function(s){countMap[s.chapter]=(countMap[s.chapter]||0)+1});var grid=document.getElementById("chapter-grid");var html="";data.chapters.forEach(function(ch){var count=countMap[ch.num]||0;html+=\'<div class="ch-card" onclick="filterByChapter(\'+ch.num+\')">\'+\'<div class="ch-num">หมวด \'+ch.num+\'</div><div class="ch-title">\'+ch.title+\'</div><div class="ch-range">มาตรา \'+ch.range+\'</div><span class="ch-badge">\'+(count>0?"✓ "+count+" มาตรา":"เร็วๆ นี้")+\'</span></div>\'});grid.innerHTML=html;lawGrid.innerHTML=data.sections.map(renderCard).join("")});\n';
   h += 'document.getElementById("law-search").addEventListener("input",function(){doSearch(this.value.trim())});\n';
   h += '</script>\n</body>\n</html>';
