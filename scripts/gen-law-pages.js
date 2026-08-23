@@ -124,7 +124,7 @@ function buildPage(cat, data) {
   h += '    .card-text-toggle:hover{text-decoration:underline}\n';
   h += '    .card-text-body{display:none;font-size:13px;color:var(--text-main);background:var(--gray-100);border-left:3px solid var(--navy-light);padding:12px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-top:4px}\n';
   h += '    .card-text-body.open{display:block}\n';
-  h += '    .law-para{text-indent:2em;margin:0 0 6px;line-height:1.85;font-size:13px} .law-para:last-child{margin-bottom:0}\n';
+  h += '    .law-para{text-indent:2em;margin:0 0 5px;line-height:1.85;font-size:13px} .law-para:last-child{margin-bottom:0} .law-sub{text-indent:0;padding-left:1.5em;margin-left:.5em}\n';
   h += '    .card-keywords{display:flex;flex-wrap:wrap;gap:6px}\n';
   h += '    .kw-tag{font-size:11px;font-weight:600;background:var(--gray-100);color:var(--text-muted);padding:2px 8px;border-radius:10px}\n';
   h += '    .card-footer{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid var(--gray-200);margin-top:auto}\n';
@@ -221,7 +221,8 @@ function buildPage(cat, data) {
   h += '<script>\n';
   h += 'var tocView=document.getElementById("toc-view"),searchView=document.getElementById("search-view"),lawGrid=document.getElementById("law-grid"),noResult=document.getElementById("no-result"),resultInfo=document.getElementById("result-info"),resultCount=document.getElementById("result-count"),searchTitle=document.getElementById("search-title");\n';
   h += 'function renderCard(s){var chLabel="หมวด "+s.chapter;var kwHtml=(s.keywords||[]).map(function(k){return\'<span class="kw-tag">\'+k+"</span>"}).join("");';
-  h += 'var textHtml=s.text?\'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body"><p class="law-para">\'+s.text.split("\\n").join(\'</p><p class="law-para">\')+\'</p></div>\':"";';
+  h += 'function fmtText(raw){var lines=raw.split("\\n");var paras=[];var cur="";for(var i=0;i<lines.length;i++){var ln=lines[i].trim();if(!ln)continue;var startsNew=/^\\(/.test(ln)||/^[ก-ฮ]/.test(ln)&&i>0&&/[ๆ,.]\\s*$/.test(lines[i-1].trim());if(startsNew&&cur){paras.push(cur);cur=ln;}else if(cur){cur+=" "+ln;}else{cur=ln;}}if(cur)paras.push(cur);return paras.map(function(p){var cls=/^\\(/.test(p)?"law-para law-sub":"law-para";return\'<p class="\'+cls+\'">\'+p+\'</p>\';}).join("");}';
+  h += 'var textHtml=s.text?\'<button class="card-text-toggle" onclick="toggleText(this)">📄 ดูข้อความกฎหมาย ▾</button><div class="card-text-body">\'+fmtText(s.text)+\'</div>\':"";';
   h += 'return\'<div class="law-card" data-ch="\'+s.chapter+\'" data-search="\'+((s.section+" "+s.title+" "+s.summary+" "+(s.keywords||[]).join(" ")+" "+s.chapter_title).toLowerCase())+\'">\'+';
   h += '\'<div class="card-badges"><span class="section-badge">มาตรา \'+s.section+\'</span><span class="chapter-badge">\'+chLabel+" — "+(s.chapter_title||"")+\'</span></div>\'+';
   h += '\'<div class="card-title">\'+s.title+\'</div><div class="card-summary">\'+s.summary+"</div>"+textHtml+';
