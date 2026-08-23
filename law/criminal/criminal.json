@@ -4,7 +4,11 @@
     "abbr": "ป.อ.",
     "en": "Penal Code",
     "total_sections": 390,
-    "last_updated": "2026-06-17"
+    "last_updated": "2026-06-17",
+    "short": "ป.อ. กฎหมายอาญา — ลักทรัพย์ ฉ้อโกง ทำร้ายร่างกาย ฆาตกรรม โทษจำคุก",
+    "category": "criminal",
+    "source": "ราชกิจจานุเบกษา",
+    "note": "ควรตรวจสอบข้อความเต็มจากราชกิจจานุเบกษาหรือ krisdika.go.th"
   },
   "chapters": [
     {

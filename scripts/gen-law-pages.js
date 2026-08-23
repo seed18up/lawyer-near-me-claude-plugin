@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const categories = [
-  { dir: 'law/criminal-procedure', json: 'criminal-procedure.json', emoji: '⚖️', cta: 'คดีอาญา', depth: 2 },
+  { dir: 'law/criminal', json: 'criminal.json', emoji: '⚖️', cta: 'คดีอาญา/โทษ', depth: 2 },
+  { dir: 'law/criminal-procedure', json: 'criminal-procedure.json', emoji: '📋', cta: 'วิ.อาญา', depth: 2 },
   { dir: 'law/administrative', json: 'administrative.json', emoji: '🏛️', cta: 'ปกครอง', depth: 2 },
   { dir: 'law/civil-procedure', json: 'civil-procedure.json', emoji: '📑', cta: 'คดีแพ่ง', depth: 2 },
   { dir: 'law/bankruptcy', json: 'bankruptcy.json', emoji: '💰', cta: 'ล้มละลาย/ฟื้นฟูกิจการ', depth: 2 },
