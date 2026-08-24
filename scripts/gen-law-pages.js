@@ -37,6 +37,7 @@ const categories = [
   { dir: 'law/patent', json: 'patent.json', emoji: '💡', cta: 'สิทธิบัตร/อนุสิทธิบัตร/การประดิษฐ์', depth: 2 },
   { dir: 'law/trademark', json: 'trademark.json', emoji: '™️', cta: 'เครื่องหมายการค้า/Brand/Logo', depth: 2 },
   { dir: 'law/trade-secrets', json: 'trade-secrets.json', emoji: '🔒', cta: 'ความลับทางการค้า/ข้อมูลธุรกิจ', depth: 2 },
+  { dir: 'law/bankruptcy-court', json: 'bankruptcy-court.json', emoji: '🏛️', cta: 'ศาลล้มละลาย/คดีฟื้นฟูกิจการ', depth: 2 },
   { dir: 'law/maritime-transport', json: 'maritime-transport.json', emoji: '🚢', cta: 'รับขนของทางทะเล/Bill of Lading', depth: 2 },
   { dir: 'law/ip-court', json: 'ip-court.json', emoji: '⚖️', cta: 'ศาลทรัพย์สินทางปัญญา/พาณิชย์', depth: 2 },
   { dir: 'law/constitutional-court-procedure', json: 'constitutional-court-procedure.json', emoji: '📜', cta: 'วิธีพิจารณาคดีรัฐธรรมนูญ', depth: 2 },
