@@ -8,7 +8,7 @@ const categories = [
   { dir: 'law/civil-procedure', json: 'civil-procedure.json', emoji: '📑', cta: 'คดีแพ่ง', depth: 2 },
   { dir: 'law/bankruptcy', json: 'bankruptcy.json', emoji: '💰', cta: 'ล้มละลาย/ฟื้นฟูกิจการ', depth: 2 },
   { dir: 'law/tax', json: 'tax.json', emoji: '🧾', cta: 'ภาษี', depth: 2 },
-  { dir: 'law/intellectual-property', json: 'intellectual-property.json', emoji: '💡', cta: 'ทรัพย์สินทางปัญญา', depth: 2 },
+  // intellectual-property.json hidden — replaced by separate patent/trademark/copyright files
   { dir: 'law/pdpa', json: 'pdpa.json', emoji: '🔐', cta: 'PDPA/ข้อมูลส่วนบุคคล', depth: 2 },
   { dir: 'law/constitution', json: 'constitution.json', emoji: '📜', cta: 'รัฐธรรมนูญ', depth: 2 },
   { dir: 'law/court-organization', json: 'court-organization.json', emoji: '🏛️', cta: 'ศาลยุติธรรม', depth: 2 },
