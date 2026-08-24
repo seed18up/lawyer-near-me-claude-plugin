@@ -33,6 +33,7 @@ const categories = [
   { dir: 'law/magistrate-court', json: 'magistrate-court.json', emoji: '🏛️', cta: 'ศาลแขวง/คดีอาญาเล็กน้อย', depth: 2 },
   { dir: 'law/prosecutor', json: 'prosecutor.json', emoji: '👔', cta: 'อัยการ/ฟ้องคดี/สั่งไม่ฟ้อง', depth: 2 },
   { dir: 'law/administrative-court', json: 'administrative-court.json', emoji: '🏛️', cta: 'ศาลปกครอง/ฟ้องหน่วยงานรัฐ', depth: 2 },
+  { dir: 'law/copyright', json: 'copyright.json', emoji: '©️', cta: 'ลิขสิทธิ์/Software/งานสร้างสรรค์', depth: 2 },
   { dir: 'law/maritime-transport', json: 'maritime-transport.json', emoji: '🚢', cta: 'รับขนของทางทะเล/Bill of Lading', depth: 2 },
   { dir: 'law/ip-court', json: 'ip-court.json', emoji: '⚖️', cta: 'ศาลทรัพย์สินทางปัญญา/พาณิชย์', depth: 2 },
   { dir: 'law/constitutional-court-procedure', json: 'constitutional-court-procedure.json', emoji: '📜', cta: 'วิธีพิจารณาคดีรัฐธรรมนูญ', depth: 2 },
