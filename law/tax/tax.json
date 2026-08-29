@@ -42,7 +42,7 @@
   ],
   "sections": [
     {
-      "id": 1,
+      "id": "tax-1",
       "section": "1",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "tax-2",
       "section": "2",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "tax-3",
       "section": "3",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "tax-4",
       "section": "4",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "tax-5",
       "section": "5",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "tax-6",
       "section": "6",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "tax-7",
       "section": "7",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "tax-8",
       "section": "8",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -283,7 +283,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "tax-9",
       "section": "9",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "tax-10",
       "section": "10",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -337,7 +337,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "tax-11",
       "section": "11",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -367,7 +367,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "tax-12",
       "section": "12",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -398,7 +398,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "tax-13",
       "section": "13",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -430,7 +430,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "tax-14",
       "section": "14",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -458,7 +458,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "tax-15",
       "section": "15",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -486,7 +486,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "tax-16",
       "section": "16",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -515,7 +515,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "tax-17",
       "section": "17",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -546,7 +546,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "tax-18",
       "section": "18",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -577,7 +577,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "tax-19",
       "section": "19",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -609,7 +609,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "tax-20",
       "section": "20",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -635,7 +635,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "tax-21",
       "section": "21",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -665,7 +665,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "tax-22",
       "section": "22",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -694,7 +694,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "tax-23",
       "section": "23",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -724,7 +724,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "tax-24",
       "section": "24",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -753,7 +753,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "tax-25",
       "section": "25",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -783,7 +783,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "tax-26",
       "section": "26",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -813,7 +813,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "tax-27",
       "section": "27",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -842,7 +842,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "tax-28",
       "section": "28",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -875,7 +875,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "tax-28/4",
       "section": "28/4",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -907,7 +907,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "tax-29",
       "section": "29",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -937,7 +937,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "tax-30",
       "section": "30",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -967,7 +967,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "tax-31",
       "section": "31",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -997,7 +997,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": "tax-32",
       "section": "32",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1026,7 +1026,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": "tax-33",
       "section": "33",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1056,7 +1056,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": "tax-34",
       "section": "34",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1085,7 +1085,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": "tax-35",
       "section": "35",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1114,7 +1114,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": "tax-36",
       "section": "36",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1144,7 +1144,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": "tax-37",
       "section": "37",
       "chapter": 1,
       "chapter_title": "บททั่วไป",
@@ -1175,7 +1175,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": "tax-38",
       "section": "38",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1199,7 +1199,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": "tax-39",
       "section": "39",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1234,7 +1234,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": "tax-40",
       "section": "40",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1271,7 +1271,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": "tax-41",
       "section": "41",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1299,7 +1299,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": "tax-42",
       "section": "42",
       "chapter": 1,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1328,7 +1328,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": "tax-43",
       "section": "43",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1357,7 +1357,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": "tax-44",
       "section": "44",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1386,7 +1386,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": "tax-45",
       "section": "45",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1414,7 +1414,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": "tax-46",
       "section": "46",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1443,7 +1443,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": "tax-47",
       "section": "47",
       "chapter": 1,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1474,7 +1474,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": "tax-48",
       "section": "48",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1511,7 +1511,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": "tax-49",
       "section": "49",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1541,7 +1541,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": "tax-50",
       "section": "50",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1577,7 +1577,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": "tax-51",
       "section": "51",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1605,7 +1605,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": "tax-52",
       "section": "52",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1635,7 +1635,7 @@
       ]
     },
     {
-      "id": 54,
+      "id": "tax-53",
       "section": "53",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1665,7 +1665,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": "tax-54",
       "section": "54",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1695,7 +1695,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": "tax-55",
       "section": "55",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1725,7 +1725,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": "tax-56",
       "section": "56",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1762,7 +1762,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": "tax-57",
       "section": "57",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1792,7 +1792,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": "tax-58",
       "section": "58",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1823,7 +1823,7 @@
       ]
     },
     {
-      "id": 60,
+      "id": "tax-59",
       "section": "59",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1852,7 +1852,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": "tax-60",
       "section": "60",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1880,7 +1880,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": "tax-61",
       "section": "61",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1910,7 +1910,7 @@
       ]
     },
     {
-      "id": 63,
+      "id": "tax-62",
       "section": "62",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1941,7 +1941,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": "tax-63",
       "section": "63",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1969,7 +1969,7 @@
       ]
     },
     {
-      "id": 65,
+      "id": "tax-64",
       "section": "64",
       "chapter": 2,
       "chapter_title": "ภาษีเงินได้บุคคลธรรมดา",
@@ -1998,7 +1998,7 @@
       ]
     },
     {
-      "id": 66,
+      "id": "tax-65",
       "section": "65",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2035,7 +2035,7 @@
       ]
     },
     {
-      "id": 67,
+      "id": "tax-66",
       "section": "66",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2066,7 +2066,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": "tax-67",
       "section": "67",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2096,7 +2096,7 @@
       ]
     },
     {
-      "id": 69,
+      "id": "tax-68",
       "section": "68",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2127,7 +2127,7 @@
       ]
     },
     {
-      "id": 70,
+      "id": "tax-69",
       "section": "69",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2156,7 +2156,7 @@
       ]
     },
     {
-      "id": 71,
+      "id": "tax-70",
       "section": "70",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2185,7 +2185,7 @@
       ]
     },
     {
-      "id": 72,
+      "id": "tax-71",
       "section": "71",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2215,7 +2215,7 @@
       ]
     },
     {
-      "id": 73,
+      "id": "tax-72",
       "section": "72",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2246,7 +2246,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": "tax-73",
       "section": "73",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2276,7 +2276,7 @@
       ]
     },
     {
-      "id": 75,
+      "id": "tax-74",
       "section": "74",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2306,7 +2306,7 @@
       ]
     },
     {
-      "id": 76,
+      "id": "tax-75",
       "section": "75",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2337,7 +2337,7 @@
       ]
     },
     {
-      "id": 77,
+      "id": "tax-76",
       "section": "76",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -2365,7 +2365,7 @@
       ]
     },
     {
-      "id": 78,
+      "id": "tax-77",
       "section": "77",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2402,7 +2402,7 @@
       ]
     },
     {
-      "id": 79,
+      "id": "tax-77/1",
       "section": "77/1",
       "chapter": 2,
       "chapter_title": "ภาษีมูลค่าเพิ่ม",
@@ -2431,7 +2431,7 @@
       ]
     },
     {
-      "id": 80,
+      "id": "tax-77/2",
       "section": "77/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2462,7 +2462,7 @@
       ]
     },
     {
-      "id": 81,
+      "id": "tax-77/3",
       "section": "77/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2491,7 +2491,7 @@
       ]
     },
     {
-      "id": 82,
+      "id": "tax-77/4",
       "section": "77/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2510,7 +2510,7 @@
       "dika_details": []
     },
     {
-      "id": 83,
+      "id": "tax-77/5",
       "section": "77/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2541,7 +2541,7 @@
       ]
     },
     {
-      "id": 84,
+      "id": "tax-78",
       "section": "78",
       "chapter": 5,
       "chapter_title": "ภาษีมูลค่าเพิ่ม",
@@ -2569,7 +2569,7 @@
       ]
     },
     {
-      "id": 85,
+      "id": "tax-78/1",
       "section": "78/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2593,7 +2593,7 @@
       ]
     },
     {
-      "id": 86,
+      "id": "tax-78/2",
       "section": "78/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2624,7 +2624,7 @@
       ]
     },
     {
-      "id": 87,
+      "id": "tax-78/3",
       "section": "78/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2651,7 +2651,7 @@
       ]
     },
     {
-      "id": 88,
+      "id": "tax-79",
       "section": "79",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2680,7 +2680,7 @@
       ]
     },
     {
-      "id": 89,
+      "id": "tax-79/1",
       "section": "79/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2711,7 +2711,7 @@
       ]
     },
     {
-      "id": 90,
+      "id": "tax-79/2",
       "section": "79/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2742,7 +2742,7 @@
       ]
     },
     {
-      "id": 91,
+      "id": "tax-79/3",
       "section": "79/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2772,7 +2772,7 @@
       ]
     },
     {
-      "id": 92,
+      "id": "tax-79/4",
       "section": "79/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2803,7 +2803,7 @@
       ]
     },
     {
-      "id": 93,
+      "id": "tax-79/5",
       "section": "79/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2834,7 +2834,7 @@
       ]
     },
     {
-      "id": 94,
+      "id": "tax-79/6",
       "section": "79/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2853,7 +2853,7 @@
       "dika_details": []
     },
     {
-      "id": 95,
+      "id": "tax-79/7",
       "section": "79/7",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2871,7 +2871,7 @@
       "dika_details": []
     },
     {
-      "id": 96,
+      "id": "tax-80",
       "section": "80",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2908,7 +2908,7 @@
       ]
     },
     {
-      "id": 97,
+      "id": "tax-80/1",
       "section": "80/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2925,7 +2925,7 @@
       "dika_details": []
     },
     {
-      "id": 98,
+      "id": "tax-80/2",
       "section": "80/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2955,7 +2955,7 @@
       ]
     },
     {
-      "id": 99,
+      "id": "tax-81",
       "section": "81",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -2985,7 +2985,7 @@
       ]
     },
     {
-      "id": 100,
+      "id": "tax-81/1",
       "section": "81/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3003,7 +3003,7 @@
       "dika_details": []
     },
     {
-      "id": 101,
+      "id": "tax-81/2",
       "section": "81/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3033,7 +3033,7 @@
       ]
     },
     {
-      "id": 102,
+      "id": "tax-81/3",
       "section": "81/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3051,7 +3051,7 @@
       "dika_details": []
     },
     {
-      "id": 103,
+      "id": "tax-82",
       "section": "82",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3080,7 +3080,7 @@
       ]
     },
     {
-      "id": 104,
+      "id": "tax-82/1",
       "section": "82/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3110,7 +3110,7 @@
       ]
     },
     {
-      "id": 105,
+      "id": "tax-82/2",
       "section": "82/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3140,7 +3140,7 @@
       ]
     },
     {
-      "id": 106,
+      "id": "tax-82/3",
       "section": "82/3",
       "chapter": 5,
       "chapter_title": "ภาษีมูลค่าเพิ่ม",
@@ -3168,7 +3168,7 @@
       ]
     },
     {
-      "id": 107,
+      "id": "tax-82/4",
       "section": "82/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3198,7 +3198,7 @@
       ]
     },
     {
-      "id": 108,
+      "id": "tax-82/5",
       "section": "82/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3228,7 +3228,7 @@
       ]
     },
     {
-      "id": 109,
+      "id": "tax-82/6",
       "section": "82/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3258,7 +3258,7 @@
       ]
     },
     {
-      "id": 110,
+      "id": "tax-82/7",
       "section": "82/7",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3283,7 +3283,7 @@
       ]
     },
     {
-      "id": 111,
+      "id": "tax-82/8",
       "section": "82/8",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3316,7 +3316,7 @@
       ]
     },
     {
-      "id": 112,
+      "id": "tax-82/9",
       "section": "82/9",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3345,7 +3345,7 @@
       ]
     },
     {
-      "id": 113,
+      "id": "tax-82/10",
       "section": "82/10",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3369,7 +3369,7 @@
       ]
     },
     {
-      "id": 114,
+      "id": "tax-82/11",
       "section": "82/11",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3394,7 +3394,7 @@
       ]
     },
     {
-      "id": 115,
+      "id": "tax-82/12",
       "section": "82/12",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3424,7 +3424,7 @@
       ]
     },
     {
-      "id": 116,
+      "id": "tax-82/13",
       "section": "82/13",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3442,7 +3442,7 @@
       "dika_details": []
     },
     {
-      "id": 117,
+      "id": "tax-82/14",
       "section": "82/14",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3473,7 +3473,7 @@
       ]
     },
     {
-      "id": 118,
+      "id": "tax-82/15",
       "section": "82/15",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3502,7 +3502,7 @@
       ]
     },
     {
-      "id": 119,
+      "id": "tax-82/16",
       "section": "82/16",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3532,7 +3532,7 @@
       ]
     },
     {
-      "id": 120,
+      "id": "tax-82/17",
       "section": "82/17",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3560,7 +3560,7 @@
       ]
     },
     {
-      "id": 121,
+      "id": "tax-82/18",
       "section": "82/18",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3584,7 +3584,7 @@
       ]
     },
     {
-      "id": 122,
+      "id": "tax-83",
       "section": "83",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3615,7 +3615,7 @@
       ]
     },
     {
-      "id": 123,
+      "id": "tax-83/1",
       "section": "83/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3639,7 +3639,7 @@
       ]
     },
     {
-      "id": 124,
+      "id": "tax-83/2",
       "section": "83/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3668,7 +3668,7 @@
       ]
     },
     {
-      "id": 125,
+      "id": "tax-83/3",
       "section": "83/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3699,7 +3699,7 @@
       ]
     },
     {
-      "id": 126,
+      "id": "tax-83/4",
       "section": "83/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3729,7 +3729,7 @@
       ]
     },
     {
-      "id": 127,
+      "id": "tax-83/5",
       "section": "83/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3752,7 +3752,7 @@
       ]
     },
     {
-      "id": 128,
+      "id": "tax-83/6",
       "section": "83/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3777,7 +3777,7 @@
       ]
     },
     {
-      "id": 129,
+      "id": "tax-83/7",
       "section": "83/7",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3803,7 +3803,7 @@
       ]
     },
     {
-      "id": 130,
+      "id": "tax-83/8",
       "section": "83/8",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3832,7 +3832,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": "tax-83/9",
       "section": "83/9",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3864,7 +3864,7 @@
       ]
     },
     {
-      "id": 132,
+      "id": "tax-83/10",
       "section": "83/10",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3894,7 +3894,7 @@
       ]
     },
     {
-      "id": 133,
+      "id": "tax-84",
       "section": "84",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3924,7 +3924,7 @@
       ]
     },
     {
-      "id": 134,
+      "id": "tax-84/1",
       "section": "84/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3954,7 +3954,7 @@
       ]
     },
     {
-      "id": 135,
+      "id": "tax-84/2",
       "section": "84/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -3986,7 +3986,7 @@
       ]
     },
     {
-      "id": 136,
+      "id": "tax-84/3",
       "section": "84/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4011,7 +4011,7 @@
       ]
     },
     {
-      "id": 137,
+      "id": "tax-84/4",
       "section": "84/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4029,7 +4029,7 @@
       "dika_details": []
     },
     {
-      "id": 138,
+      "id": "tax-85",
       "section": "85",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4058,7 +4058,7 @@
       ]
     },
     {
-      "id": 139,
+      "id": "tax-85/1",
       "section": "85/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4082,7 +4082,7 @@
       ]
     },
     {
-      "id": 140,
+      "id": "tax-85/2",
       "section": "85/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4111,7 +4111,7 @@
       ]
     },
     {
-      "id": 141,
+      "id": "tax-85/3",
       "section": "85/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4137,7 +4137,7 @@
       ]
     },
     {
-      "id": 142,
+      "id": "tax-85/4",
       "section": "85/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4154,7 +4154,7 @@
       "dika_details": []
     },
     {
-      "id": 143,
+      "id": "tax-85/5",
       "section": "85/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4172,7 +4172,7 @@
       "dika_details": []
     },
     {
-      "id": 144,
+      "id": "tax-85/6",
       "section": "85/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4190,7 +4190,7 @@
       "dika_details": []
     },
     {
-      "id": 145,
+      "id": "tax-85/7",
       "section": "85/7",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4215,7 +4215,7 @@
       ]
     },
     {
-      "id": 146,
+      "id": "tax-85/8",
       "section": "85/8",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4233,7 +4233,7 @@
       "dika_details": []
     },
     {
-      "id": 147,
+      "id": "tax-85/9",
       "section": "85/9",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4251,7 +4251,7 @@
       "dika_details": []
     },
     {
-      "id": 148,
+      "id": "tax-85/10",
       "section": "85/10",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4269,7 +4269,7 @@
       "dika_details": []
     },
     {
-      "id": 149,
+      "id": "tax-85/11",
       "section": "85/11",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4287,7 +4287,7 @@
       "dika_details": []
     },
     {
-      "id": 150,
+      "id": "tax-85/12",
       "section": "85/12",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4305,7 +4305,7 @@
       "dika_details": []
     },
     {
-      "id": 151,
+      "id": "tax-85/13",
       "section": "85/13",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4329,7 +4329,7 @@
       ]
     },
     {
-      "id": 152,
+      "id": "tax-85/14",
       "section": "85/14",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4347,7 +4347,7 @@
       "dika_details": []
     },
     {
-      "id": 153,
+      "id": "tax-85/15",
       "section": "85/15",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4372,7 +4372,7 @@
       ]
     },
     {
-      "id": 154,
+      "id": "tax-85/16",
       "section": "85/16",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4403,7 +4403,7 @@
       ]
     },
     {
-      "id": 155,
+      "id": "tax-85/17",
       "section": "85/17",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4421,7 +4421,7 @@
       "dika_details": []
     },
     {
-      "id": 156,
+      "id": "tax-85/18",
       "section": "85/18",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4439,7 +4439,7 @@
       "dika_details": []
     },
     {
-      "id": 157,
+      "id": "tax-85/19",
       "section": "85/19",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4464,7 +4464,7 @@
       ]
     },
     {
-      "id": 158,
+      "id": "tax-85/20",
       "section": "85/20",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4489,7 +4489,7 @@
       ]
     },
     {
-      "id": 159,
+      "id": "tax-86",
       "section": "86",
       "chapter": 5,
       "chapter_title": "ภาษีมูลค่าเพิ่ม",
@@ -4518,7 +4518,7 @@
       ]
     },
     {
-      "id": 160,
+      "id": "tax-86/1",
       "section": "86/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4543,7 +4543,7 @@
       ]
     },
     {
-      "id": 161,
+      "id": "tax-86/2",
       "section": "86/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4573,7 +4573,7 @@
       ]
     },
     {
-      "id": 162,
+      "id": "tax-86/3",
       "section": "86/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4597,7 +4597,7 @@
       ]
     },
     {
-      "id": 163,
+      "id": "tax-86/4",
       "section": "86/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4622,7 +4622,7 @@
       ]
     },
     {
-      "id": 164,
+      "id": "tax-86/5",
       "section": "86/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4640,7 +4640,7 @@
       "dika_details": []
     },
     {
-      "id": 165,
+      "id": "tax-86/6",
       "section": "86/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4670,7 +4670,7 @@
       ]
     },
     {
-      "id": 166,
+      "id": "tax-86/7",
       "section": "86/7",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4695,7 +4695,7 @@
       ]
     },
     {
-      "id": 167,
+      "id": "tax-86/8",
       "section": "86/8",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4720,7 +4720,7 @@
       ]
     },
     {
-      "id": 168,
+      "id": "tax-86/9",
       "section": "86/9",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4738,7 +4738,7 @@
       "dika_details": []
     },
     {
-      "id": 169,
+      "id": "tax-86/10",
       "section": "86/10",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4768,7 +4768,7 @@
       ]
     },
     {
-      "id": 170,
+      "id": "tax-86/11",
       "section": "86/11",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4798,7 +4798,7 @@
       ]
     },
     {
-      "id": 171,
+      "id": "tax-86/12",
       "section": "86/12",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4816,7 +4816,7 @@
       "dika_details": []
     },
     {
-      "id": 172,
+      "id": "tax-86/13",
       "section": "86/13",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4841,7 +4841,7 @@
       ]
     },
     {
-      "id": 173,
+      "id": "tax-86/14",
       "section": "86/14",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4866,7 +4866,7 @@
       ]
     },
     {
-      "id": 174,
+      "id": "tax-87",
       "section": "87",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4896,7 +4896,7 @@
       ]
     },
     {
-      "id": 175,
+      "id": "tax-87/1",
       "section": "87/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4913,7 +4913,7 @@
       "dika_details": []
     },
     {
-      "id": 176,
+      "id": "tax-87/2",
       "section": "87/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4943,7 +4943,7 @@
       ]
     },
     {
-      "id": 177,
+      "id": "tax-87/3",
       "section": "87/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4961,7 +4961,7 @@
       "dika_details": []
     },
     {
-      "id": 178,
+      "id": "tax-88",
       "section": "88",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -4992,7 +4992,7 @@
       ]
     },
     {
-      "id": 179,
+      "id": "tax-88/1",
       "section": "88/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5017,7 +5017,7 @@
       ]
     },
     {
-      "id": 180,
+      "id": "tax-88/2",
       "section": "88/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5047,7 +5047,7 @@
       ]
     },
     {
-      "id": 181,
+      "id": "tax-88/3",
       "section": "88/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5065,7 +5065,7 @@
       "dika_details": []
     },
     {
-      "id": 182,
+      "id": "tax-88/4",
       "section": "88/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5095,7 +5095,7 @@
       ]
     },
     {
-      "id": 183,
+      "id": "tax-88/5",
       "section": "88/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5125,7 +5125,7 @@
       ]
     },
     {
-      "id": 184,
+      "id": "tax-88/6",
       "section": "88/6",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5156,7 +5156,7 @@
       ]
     },
     {
-      "id": 185,
+      "id": "tax-89",
       "section": "89",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5187,7 +5187,7 @@
       ]
     },
     {
-      "id": 186,
+      "id": "tax-89/1",
       "section": "89/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5217,7 +5217,7 @@
       ]
     },
     {
-      "id": 187,
+      "id": "tax-89/2",
       "section": "89/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5246,7 +5246,7 @@
       ]
     },
     {
-      "id": 188,
+      "id": "tax-90",
       "section": "90",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5276,7 +5276,7 @@
       ]
     },
     {
-      "id": 189,
+      "id": "tax-90/1",
       "section": "90/1",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5302,7 +5302,7 @@
       ]
     },
     {
-      "id": 190,
+      "id": "tax-90/2",
       "section": "90/2",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5332,7 +5332,7 @@
       ]
     },
     {
-      "id": 191,
+      "id": "tax-90/3",
       "section": "90/3",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5363,7 +5363,7 @@
       ]
     },
     {
-      "id": 192,
+      "id": "tax-90/4",
       "section": "90/4",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5389,7 +5389,7 @@
       ]
     },
     {
-      "id": 193,
+      "id": "tax-90/5",
       "section": "90/5",
       "chapter": 4,
       "chapter_title": "ภาษีมูลค่าเพิ่ม (VAT)",
@@ -5419,7 +5419,7 @@
       ]
     },
     {
-      "id": 194,
+      "id": "tax-91",
       "section": "91",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5451,7 +5451,7 @@
       ]
     },
     {
-      "id": 195,
+      "id": "tax-91/1",
       "section": "91/1",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5483,7 +5483,7 @@
       ]
     },
     {
-      "id": 196,
+      "id": "tax-91-2",
       "section": "91/2",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5519,7 +5519,7 @@
       ]
     },
     {
-      "id": 197,
+      "id": "tax-91/3",
       "section": "91/3",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5545,7 +5545,7 @@
       ]
     },
     {
-      "id": 198,
+      "id": "tax-91/4",
       "section": "91/4",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5574,7 +5574,7 @@
       ]
     },
     {
-      "id": 199,
+      "id": "tax-91/5",
       "section": "91/5",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5604,7 +5604,7 @@
       ]
     },
     {
-      "id": 200,
+      "id": "tax-91/6",
       "section": "91/6",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5628,7 +5628,7 @@
       ]
     },
     {
-      "id": 201,
+      "id": "tax-91/7",
       "section": "91/7",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5653,7 +5653,7 @@
       ]
     },
     {
-      "id": 202,
+      "id": "tax-91/8",
       "section": "91/8",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5676,7 +5676,7 @@
       ]
     },
     {
-      "id": 203,
+      "id": "tax-91/9",
       "section": "91/9",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5692,7 +5692,7 @@
       "dika_details": []
     },
     {
-      "id": 204,
+      "id": "tax-91/10",
       "section": "91/10",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5722,7 +5722,7 @@
       ]
     },
     {
-      "id": 205,
+      "id": "tax-91/11",
       "section": "91/11",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5747,7 +5747,7 @@
       ]
     },
     {
-      "id": 206,
+      "id": "tax-91/12",
       "section": "91/12",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5775,7 +5775,7 @@
       ]
     },
     {
-      "id": 207,
+      "id": "tax-91/13",
       "section": "91/13",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5800,7 +5800,7 @@
       ]
     },
     {
-      "id": 208,
+      "id": "tax-91/14",
       "section": "91/14",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5818,7 +5818,7 @@
       "dika_details": []
     },
     {
-      "id": 209,
+      "id": "tax-91/15",
       "section": "91/15",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5843,7 +5843,7 @@
       ]
     },
     {
-      "id": 210,
+      "id": "tax-91/16",
       "section": "91/16",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5866,7 +5866,7 @@
       ]
     },
     {
-      "id": 211,
+      "id": "tax-91/17",
       "section": "91/17",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5895,7 +5895,7 @@
       ]
     },
     {
-      "id": 212,
+      "id": "tax-91/18",
       "section": "91/18",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5924,7 +5924,7 @@
       ]
     },
     {
-      "id": 213,
+      "id": "tax-91/19",
       "section": "91/19",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5941,7 +5941,7 @@
       "dika_details": []
     },
     {
-      "id": 214,
+      "id": "tax-91/20",
       "section": "91/20",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5959,7 +5959,7 @@
       "dika_details": []
     },
     {
-      "id": 215,
+      "id": "tax-91/21",
       "section": "91/21",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -5984,7 +5984,7 @@
       ]
     },
     {
-      "id": 216,
+      "id": "tax-92",
       "section": "92",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -6016,7 +6016,7 @@
       ]
     },
     {
-      "id": 217,
+      "id": "tax-263",
       "section": "93",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -6028,7 +6028,7 @@
       "dika_details": []
     },
     {
-      "id": 218,
+      "id": "tax-94",
       "section": "94",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -6056,7 +6056,7 @@
       ]
     },
     {
-      "id": 219,
+      "id": "tax-102",
       "section": "102",
       "chapter": 5,
       "chapter_title": "ภาษีธุรกิจเฉพาะ",
@@ -6085,7 +6085,7 @@
       ]
     },
     {
-      "id": 220,
+      "id": "tax-103",
       "section": "103",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6118,7 +6118,7 @@
       ]
     },
     {
-      "id": 221,
+      "id": "tax-104",
       "section": "104",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6154,7 +6154,7 @@
       ]
     },
     {
-      "id": 222,
+      "id": "tax-105",
       "section": "105",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6183,7 +6183,7 @@
       ]
     },
     {
-      "id": 223,
+      "id": "tax-106",
       "section": "106",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6212,7 +6212,7 @@
       ]
     },
     {
-      "id": 224,
+      "id": "tax-107",
       "section": "107",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6240,7 +6240,7 @@
       ]
     },
     {
-      "id": 225,
+      "id": "tax-108",
       "section": "108",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6270,7 +6270,7 @@
       ]
     },
     {
-      "id": 226,
+      "id": "tax-109",
       "section": "109",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6299,7 +6299,7 @@
       ]
     },
     {
-      "id": 227,
+      "id": "tax-110",
       "section": "110",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6329,7 +6329,7 @@
       ]
     },
     {
-      "id": 228,
+      "id": "tax-111",
       "section": "111",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6358,7 +6358,7 @@
       ]
     },
     {
-      "id": 229,
+      "id": "tax-112",
       "section": "112",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6388,7 +6388,7 @@
       ]
     },
     {
-      "id": 230,
+      "id": "tax-113",
       "section": "113",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6419,7 +6419,7 @@
       ]
     },
     {
-      "id": 231,
+      "id": "tax-114",
       "section": "114",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6442,7 +6442,7 @@
       ]
     },
     {
-      "id": 232,
+      "id": "tax-115",
       "section": "115",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6471,7 +6471,7 @@
       ]
     },
     {
-      "id": 233,
+      "id": "tax-116",
       "section": "116",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6503,7 +6503,7 @@
       ]
     },
     {
-      "id": 234,
+      "id": "tax-117",
       "section": "117",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6526,7 +6526,7 @@
       ]
     },
     {
-      "id": 235,
+      "id": "tax-118",
       "section": "118",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6556,7 +6556,7 @@
       ]
     },
     {
-      "id": 236,
+      "id": "tax-119",
       "section": "119",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6586,7 +6586,7 @@
       ]
     },
     {
-      "id": 237,
+      "id": "tax-120",
       "section": "120",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6615,7 +6615,7 @@
       ]
     },
     {
-      "id": 238,
+      "id": "tax-121",
       "section": "121",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6646,7 +6646,7 @@
       ]
     },
     {
-      "id": 239,
+      "id": "tax-122",
       "section": "122",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6676,7 +6676,7 @@
       ]
     },
     {
-      "id": 240,
+      "id": "tax-123",
       "section": "123",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6706,7 +6706,7 @@
       ]
     },
     {
-      "id": 241,
+      "id": "tax-124",
       "section": "124",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6736,7 +6736,7 @@
       ]
     },
     {
-      "id": 242,
+      "id": "tax-125",
       "section": "125",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6766,7 +6766,7 @@
       ]
     },
     {
-      "id": 243,
+      "id": "tax-126",
       "section": "126",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6796,7 +6796,7 @@
       ]
     },
     {
-      "id": 244,
+      "id": "tax-127",
       "section": "127",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6825,7 +6825,7 @@
       ]
     },
     {
-      "id": 245,
+      "id": "tax-128",
       "section": "128",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6855,7 +6855,7 @@
       ]
     },
     {
-      "id": 246,
+      "id": "tax-129",
       "section": "129",
       "chapter": 6,
       "chapter_title": "อากรแสตมป์",
@@ -6885,7 +6885,7 @@
       ]
     },
     {
-      "id": 247,
+      "id": "tax-130",
       "section": "130",
       "chapter": null,
       "chapter_title": null,
@@ -6917,7 +6917,7 @@
       ]
     },
     {
-      "id": 248,
+      "id": "tax-143",
       "section": "143",
       "chapter": 0,
       "chapter_title": "อากรมหรสพ (ยกเลิก)",
@@ -6946,7 +6946,7 @@
       ]
     },
     {
-      "id": 249,
+      "id": "tax-144",
       "section": "144",
       "chapter": null,
       "chapter_title": null,
@@ -6978,7 +6978,7 @@
       ]
     },
     {
-      "id": 250,
+      "id": "tax-165",
       "section": "165",
       "chapter": null,
       "chapter_title": null,
@@ -7010,7 +7010,7 @@
       ]
     },
     {
-      "id": 251,
+      "id": "tax-166",
       "section": "166",
       "chapter": 0,
       "chapter_title": "ภาษีบำรุงท้องที่ (ยกเลิก)",
@@ -7037,7 +7037,7 @@
       ]
     },
     {
-      "id": 252,
+      "id": "tax-167",
       "section": "167",
       "chapter": null,
       "chapter_title": null,
@@ -7069,7 +7069,7 @@
       ]
     },
     {
-      "id": 253,
+      "id": "tax-179",
       "section": "179",
       "chapter": 0,
       "chapter_title": "เงินช่วยการประถมศึกษา (ยกเลิก)",
@@ -7096,7 +7096,7 @@
       ]
     },
     {
-      "id": 254,
+      "id": "tax-180",
       "section": "180",
       "chapter": 0,
       "chapter_title": "เงินช่วยการประถมศึกษา (ยกเลิก)",
@@ -7128,7 +7128,7 @@
       ]
     },
     {
-      "id": 255,
+      "id": "tax-212",
       "section": "212",
       "chapter": 0,
       "chapter_title": "ภาษีการซื้อข้าว (ยกเลิก)",
@@ -7155,7 +7155,7 @@
       ]
     },
     {
-      "id": 256,
+      "id": "tax-213",
       "section": "213",
       "chapter": null,
       "chapter_title": null,
@@ -7187,7 +7187,7 @@
       ]
     },
     {
-      "id": 257,
+      "id": "tax-247",
       "section": "247",
       "chapter": 0,
       "chapter_title": "ภาษีการซื้อน้ำตาล (ยกเลิก)",
@@ -7214,7 +7214,7 @@
       ]
     },
     {
-      "id": 258,
+      "id": "tax-264",
       "section": "248",
       "chapter": 0,
       "chapter_title": "ภาษีการซื้อน้ำตาล (ยกเลิก)",
@@ -7226,7 +7226,7 @@
       "dika_details": []
     },
     {
-      "id": 259,
+      "id": "tax-262",
       "section": "262",
       "chapter": 0,
       "chapter_title": "ภาษีโรงแรมภัตตาคาร (ยกเลิก)",
@@ -7253,7 +7253,7 @@
       ]
     },
     {
-      "id": 260,
+      "id": "tax-3-อัฏฐ",
       "section": "3 อัฏฐ",
       "chapter": null,
       "chapter_title": null,
@@ -7285,7 +7285,7 @@
       ]
     },
     {
-      "id": 261,
+      "id": "tax-3-นว",
       "section": "3 นว",
       "chapter": null,
       "chapter_title": null,
@@ -7318,7 +7318,7 @@
       ]
     },
     {
-      "id": 262,
+      "id": "tax-3-ทศ",
       "section": "3 ทศ",
       "chapter": null,
       "chapter_title": null,
@@ -7352,7 +7352,7 @@
       ]
     },
     {
-      "id": 263,
+      "id": "tax-3-เอกาทศ",
       "section": "3 เอกาทศ",
       "chapter": null,
       "chapter_title": null,
@@ -7384,7 +7384,7 @@
       ]
     },
     {
-      "id": 264,
+      "id": "tax-3-ทวาทศ",
       "section": "3 ทวาทศ",
       "chapter": null,
       "chapter_title": null,
@@ -7412,7 +7412,7 @@
       ]
     },
     {
-      "id": 265,
+      "id": "tax-3-เตรส",
       "section": "3 เตรส",
       "chapter": null,
       "chapter_title": null,
@@ -7444,7 +7444,7 @@
       ]
     },
     {
-      "id": 266,
+      "id": "tax-3-จตุทศ",
       "section": "3 จตุทศ",
       "chapter": null,
       "chapter_title": null,
@@ -7476,7 +7476,7 @@
       ]
     },
     {
-      "id": 267,
+      "id": "tax-3-ปัณรส",
       "section": "3 ปัณรส",
       "chapter": null,
       "chapter_title": null,
@@ -7508,7 +7508,7 @@
       ]
     },
     {
-      "id": 268,
+      "id": "tax-3-โสฬส",
       "section": "3 โสฬส",
       "chapter": null,
       "chapter_title": null,
@@ -7540,7 +7540,7 @@
       ]
     },
     {
-      "id": 269,
+      "id": "tax-3-อัฏฐารส",
       "section": "3 อัฏฐารส",
       "chapter": null,
       "chapter_title": null,
@@ -7573,7 +7573,7 @@
       ]
     },
     {
-      "id": 270,
+      "id": "tax-4-อัฏฐ",
       "section": "4 อัฏฐ",
       "chapter": null,
       "chapter_title": null,
@@ -7605,7 +7605,7 @@
       ]
     },
     {
-      "id": 271,
+      "id": "tax-4-นว",
       "section": "4 นว",
       "chapter": null,
       "chapter_title": null,
@@ -7639,7 +7639,7 @@
       ]
     },
     {
-      "id": 272,
+      "id": "tax-4-ทศ",
       "section": "4 ทศ",
       "chapter": null,
       "chapter_title": null,
@@ -7671,7 +7671,7 @@
       ]
     },
     {
-      "id": 273,
+      "id": "tax-13-อัฏฐ",
       "section": "13 อัฏฐ",
       "chapter": null,
       "chapter_title": null,
@@ -7698,7 +7698,7 @@
       ]
     },
     {
-      "id": 274,
+      "id": "tax-3-สัตตรส",
       "section": "3 สัตตรส",
       "chapter": null,
       "chapter_title": null,
@@ -7725,7 +7725,7 @@
       ]
     },
     {
-      "id": 275,
+      "id": "tax-3-ทวิ",
       "section": "3 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -7760,7 +7760,7 @@
       ]
     },
     {
-      "id": 276,
+      "id": "tax-3-ตรี",
       "section": "3 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -7792,7 +7792,7 @@
       ]
     },
     {
-      "id": 277,
+      "id": "tax-3-จัตวา",
       "section": "3 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -7824,7 +7824,7 @@
       ]
     },
     {
-      "id": 278,
+      "id": "tax-3-เบญจ",
       "section": "3 เบญจ",
       "chapter": null,
       "chapter_title": null,
@@ -7858,7 +7858,7 @@
       ]
     },
     {
-      "id": 279,
+      "id": "tax-3-ฉ",
       "section": "3 ฉ",
       "chapter": null,
       "chapter_title": null,
@@ -7892,7 +7892,7 @@
       ]
     },
     {
-      "id": 280,
+      "id": "tax-3-สัตต",
       "section": "3 สัตต",
       "chapter": null,
       "chapter_title": null,
@@ -7924,7 +7924,7 @@
       ]
     },
     {
-      "id": 281,
+      "id": "tax-4-ทวิ",
       "section": "4 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -7956,7 +7956,7 @@
       ]
     },
     {
-      "id": 282,
+      "id": "tax-4-ตรี",
       "section": "4 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -7988,7 +7988,7 @@
       ]
     },
     {
-      "id": 283,
+      "id": "tax-4-จัตวา",
       "section": "4 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -8020,7 +8020,7 @@
       ]
     },
     {
-      "id": 284,
+      "id": "tax-4-เบญจ",
       "section": "4 เบญจ",
       "chapter": null,
       "chapter_title": null,
@@ -8052,7 +8052,7 @@
       ]
     },
     {
-      "id": 285,
+      "id": "tax-4-ฉ",
       "section": "4 ฉ",
       "chapter": null,
       "chapter_title": null,
@@ -8084,7 +8084,7 @@
       ]
     },
     {
-      "id": 286,
+      "id": "tax-4-สัตต",
       "section": "4 สัตต",
       "chapter": null,
       "chapter_title": null,
@@ -8116,7 +8116,7 @@
       ]
     },
     {
-      "id": 287,
+      "id": "tax-9-ทวิ",
       "section": "9 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8148,7 +8148,7 @@
       ]
     },
     {
-      "id": 288,
+      "id": "tax-10-ทวิ",
       "section": "10 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8181,7 +8181,7 @@
       ]
     },
     {
-      "id": 289,
+      "id": "tax-11-ทวิ",
       "section": "11 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8214,7 +8214,7 @@
       ]
     },
     {
-      "id": 290,
+      "id": "tax-12-ทวิ",
       "section": "12 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8248,7 +8248,7 @@
       ]
     },
     {
-      "id": 291,
+      "id": "tax-12-ตรี",
       "section": "12 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8281,7 +8281,7 @@
       ]
     },
     {
-      "id": 292,
+      "id": "tax-13-ทวิ",
       "section": "13 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8315,7 +8315,7 @@
       ]
     },
     {
-      "id": 293,
+      "id": "tax-13-ตรี",
       "section": "13 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8349,7 +8349,7 @@
       ]
     },
     {
-      "id": 294,
+      "id": "tax-13-เบญจ",
       "section": "13 เบญจ",
       "chapter": null,
       "chapter_title": null,
@@ -8381,7 +8381,7 @@
       ]
     },
     {
-      "id": 295,
+      "id": "tax-13-ฉ",
       "section": "13 ฉ",
       "chapter": null,
       "chapter_title": null,
@@ -8414,7 +8414,7 @@
       ]
     },
     {
-      "id": 296,
+      "id": "tax-13-สัตต",
       "section": "13 สัตต",
       "chapter": null,
       "chapter_title": null,
@@ -8446,7 +8446,7 @@
       ]
     },
     {
-      "id": 297,
+      "id": "tax-18-ทวิ",
       "section": "18 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8478,7 +8478,7 @@
       ]
     },
     {
-      "id": 298,
+      "id": "tax-18-ตรี",
       "section": "18 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8512,7 +8512,7 @@
       ]
     },
     {
-      "id": 299,
+      "id": "tax-27-ทวิ",
       "section": "27 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8545,7 +8545,7 @@
       ]
     },
     {
-      "id": 300,
+      "id": "tax-27-ตรี",
       "section": "27 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8578,7 +8578,7 @@
       ]
     },
     {
-      "id": 301,
+      "id": "tax-27-จัตวา",
       "section": "27 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -8612,7 +8612,7 @@
       ]
     },
     {
-      "id": 302,
+      "id": "tax-35-ทวิ",
       "section": "35 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8646,7 +8646,7 @@
       ]
     },
     {
-      "id": 303,
+      "id": "tax-35-ตรี",
       "section": "35 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8679,7 +8679,7 @@
       ]
     },
     {
-      "id": 304,
+      "id": "tax-37-ทวิ",
       "section": "37 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8713,7 +8713,7 @@
       ]
     },
     {
-      "id": 305,
+      "id": "tax-40-ทวิ",
       "section": "40 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8747,7 +8747,7 @@
       ]
     },
     {
-      "id": 306,
+      "id": "tax-41-ทวิ",
       "section": "41 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8779,7 +8779,7 @@
       ]
     },
     {
-      "id": 307,
+      "id": "tax-42-ทวิ",
       "section": "42 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8812,7 +8812,7 @@
       ]
     },
     {
-      "id": 308,
+      "id": "tax-42-ตรี",
       "section": "42 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -8845,7 +8845,7 @@
       ]
     },
     {
-      "id": 309,
+      "id": "tax-47-ทวิ",
       "section": "47 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8880,7 +8880,7 @@
       ]
     },
     {
-      "id": 310,
+      "id": "tax-48-ทวิ",
       "section": "48 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8912,7 +8912,7 @@
       ]
     },
     {
-      "id": 311,
+      "id": "tax-49-ทวิ",
       "section": "49 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8946,7 +8946,7 @@
       ]
     },
     {
-      "id": 312,
+      "id": "tax-50-ทวิ",
       "section": "50 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -8978,7 +8978,7 @@
       ]
     },
     {
-      "id": 313,
+      "id": "tax-52-ทวิ",
       "section": "52 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9010,7 +9010,7 @@
       ]
     },
     {
-      "id": 314,
+      "id": "tax-56-ทวิ",
       "section": "56 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9042,7 +9042,7 @@
       ]
     },
     {
-      "id": 315,
+      "id": "tax-57-ทวิ",
       "section": "57 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9070,7 +9070,7 @@
       ]
     },
     {
-      "id": 316,
+      "id": "tax-57-จัตวา",
       "section": "57 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -9102,7 +9102,7 @@
       ]
     },
     {
-      "id": 317,
+      "id": "tax-57-ฉ",
       "section": "57 ฉ",
       "chapter": null,
       "chapter_title": null,
@@ -9134,7 +9134,7 @@
       ]
     },
     {
-      "id": 318,
+      "id": "tax-60-ทวิ",
       "section": "60 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9167,7 +9167,7 @@
       ]
     },
     {
-      "id": 319,
+      "id": "tax-65bis",
       "section": "65 ทวิ",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -9196,7 +9196,7 @@
       ]
     },
     {
-      "id": 320,
+      "id": "tax-65ter",
       "section": "65 ตรี",
       "chapter": 3,
       "chapter_title": "ภาษีเงินได้นิติบุคคล",
@@ -9225,7 +9225,7 @@
       ]
     },
     {
-      "id": 321,
+      "id": "tax-65-จัตวา",
       "section": "65 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -9252,7 +9252,7 @@
       ]
     },
     {
-      "id": 322,
+      "id": "tax-67-ทวิ",
       "section": "67 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9284,7 +9284,7 @@
       ]
     },
     {
-      "id": 323,
+      "id": "tax-67-ตรี",
       "section": "67 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9316,7 +9316,7 @@
       ]
     },
     {
-      "id": 324,
+      "id": "tax-68-ทวิ",
       "section": "68 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9349,7 +9349,7 @@
       ]
     },
     {
-      "id": 325,
+      "id": "tax-69-ทวิ",
       "section": "69 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9381,7 +9381,7 @@
       ]
     },
     {
-      "id": 326,
+      "id": "tax-69-ตรี",
       "section": "69 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9413,7 +9413,7 @@
       ]
     },
     {
-      "id": 327,
+      "id": "tax-70-ทวิ",
       "section": "70 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9445,7 +9445,7 @@
       ]
     },
     {
-      "id": 328,
+      "id": "tax-70-ตรี",
       "section": "70 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9479,7 +9479,7 @@
       ]
     },
     {
-      "id": 329,
+      "id": "tax-71-ทวิ",
       "section": "71 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9512,7 +9512,7 @@
       ]
     },
     {
-      "id": 330,
+      "id": "tax-71-ตรี",
       "section": "71 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9544,7 +9544,7 @@
       ]
     },
     {
-      "id": 331,
+      "id": "tax-76-ทวิ",
       "section": "76 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9577,7 +9577,7 @@
       ]
     },
     {
-      "id": 332,
+      "id": "tax-76-ตรี",
       "section": "76 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9609,7 +9609,7 @@
       ]
     },
     {
-      "id": 333,
+      "id": "tax-76-จัตวา",
       "section": "76 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -9636,7 +9636,7 @@
       ]
     },
     {
-      "id": 334,
+      "id": "tax-76-เบญจ",
       "section": "76 เบญจ",
       "chapter": null,
       "chapter_title": null,
@@ -9668,7 +9668,7 @@
       ]
     },
     {
-      "id": 335,
+      "id": "tax-76-ฉ",
       "section": "76 ฉ",
       "chapter": null,
       "chapter_title": null,
@@ -9700,7 +9700,7 @@
       ]
     },
     {
-      "id": 336,
+      "id": "tax-76-สัตต",
       "section": "76 สัตต",
       "chapter": null,
       "chapter_title": null,
@@ -9732,7 +9732,7 @@
       ]
     },
     {
-      "id": 337,
+      "id": "tax-105-ตรี",
       "section": "105 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9765,7 +9765,7 @@
       ]
     },
     {
-      "id": 338,
+      "id": "tax-105-จัตวา",
       "section": "105 จัตวา",
       "chapter": null,
       "chapter_title": null,
@@ -9797,7 +9797,7 @@
       ]
     },
     {
-      "id": 339,
+      "id": "tax-123-ทวิ",
       "section": "123 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9824,7 +9824,7 @@
       ]
     },
     {
-      "id": 340,
+      "id": "tax-123-ตรี",
       "section": "123 ตรี",
       "chapter": null,
       "chapter_title": null,
@@ -9858,7 +9858,7 @@
       ]
     },
     {
-      "id": 341,
+      "id": "tax-127-ทวิ",
       "section": "127 ทวิ",
       "chapter": null,
       "chapter_title": null,
@@ -9890,7 +9890,7 @@
       ]
     },
     {
-      "id": 342,
+      "id": "tax-199-ทวิ",
       "section": "199 ทวิ",
       "chapter": null,
       "chapter_title": null,

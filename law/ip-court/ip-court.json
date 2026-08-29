@@ -24,7 +24,7 @@
   ],
   "sections": [
     {
-      "id": 1,
+      "id": "ipc-1",
       "section": "1",
       "chapter": 1,
       "chapter_title": "",
@@ -43,7 +43,7 @@
       "dika_details": []
     },
     {
-      "id": 2,
+      "id": "ipc-2",
       "section": "2",
       "chapter": 1,
       "chapter_title": "",
@@ -62,7 +62,7 @@
       "dika_details": []
     },
     {
-      "id": 3,
+      "id": "ipc-3",
       "section": "3",
       "chapter": 1,
       "chapter_title": "",
@@ -81,7 +81,7 @@
       "dika_details": []
     },
     {
-      "id": 4,
+      "id": "ipc-4",
       "section": "4",
       "chapter": 1,
       "chapter_title": "",
@@ -100,7 +100,7 @@
       "dika_details": []
     },
     {
-      "id": 5,
+      "id": "ipc-5",
       "section": "5",
       "chapter": 1,
       "chapter_title": "",
@@ -119,7 +119,7 @@
       "dika_details": []
     },
     {
-      "id": 6,
+      "id": "ipc-6",
       "section": "6",
       "chapter": 1,
       "chapter_title": "",
@@ -138,7 +138,7 @@
       "dika_details": []
     },
     {
-      "id": 7,
+      "id": "ipc-7",
       "section": "7",
       "chapter": 1,
       "chapter_title": "",
@@ -157,7 +157,7 @@
       "dika_details": []
     },
     {
-      "id": 8,
+      "id": "ipc-8",
       "section": "8",
       "chapter": 1,
       "chapter_title": "",
@@ -176,7 +176,7 @@
       "dika_details": []
     },
     {
-      "id": 9,
+      "id": "ipc-9",
       "section": "9",
       "chapter": 1,
       "chapter_title": "",
@@ -195,7 +195,7 @@
       "dika_details": []
     },
     {
-      "id": 10,
+      "id": "ipc-10",
       "section": "10",
       "chapter": 1,
       "chapter_title": "",
@@ -214,7 +214,7 @@
       "dika_details": []
     },
     {
-      "id": 11,
+      "id": "ipc-11",
       "section": "11",
       "chapter": 1,
       "chapter_title": "",
@@ -233,7 +233,7 @@
       "dika_details": []
     },
     {
-      "id": 12,
+      "id": "ipc-12",
       "section": "12",
       "chapter": 1,
       "chapter_title": "",
@@ -252,7 +252,7 @@
       "dika_details": []
     },
     {
-      "id": 13,
+      "id": "ipc-13",
       "section": "13",
       "chapter": 1,
       "chapter_title": "",
@@ -271,7 +271,7 @@
       "dika_details": []
     },
     {
-      "id": 14,
+      "id": "ipc-14",
       "section": "14",
       "chapter": 1,
       "chapter_title": "",
@@ -290,7 +290,7 @@
       "dika_details": []
     },
     {
-      "id": 15,
+      "id": "ipc-15",
       "section": "15",
       "chapter": 1,
       "chapter_title": "",
@@ -309,7 +309,7 @@
       "dika_details": []
     },
     {
-      "id": 16,
+      "id": "ipc-16",
       "section": "16",
       "chapter": 1,
       "chapter_title": "",
@@ -328,7 +328,7 @@
       "dika_details": []
     },
     {
-      "id": 17,
+      "id": "ip-16/1",
       "section": "16/1",
       "chapter": 1,
       "chapter_title": "",
@@ -347,7 +347,7 @@
       "dika_details": []
     },
     {
-      "id": 18,
+      "id": "ipc-17",
       "section": "17",
       "chapter": 1,
       "chapter_title": "",
@@ -366,7 +366,7 @@
       "dika_details": []
     },
     {
-      "id": 19,
+      "id": "ipc-18",
       "section": "18",
       "chapter": 1,
       "chapter_title": "",
@@ -385,7 +385,7 @@
       "dika_details": []
     },
     {
-      "id": 20,
+      "id": "ipc-19",
       "section": "19",
       "chapter": 1,
       "chapter_title": "",
@@ -404,7 +404,7 @@
       "dika_details": []
     },
     {
-      "id": 21,
+      "id": "ipc-20",
       "section": "20",
       "chapter": 1,
       "chapter_title": "",
@@ -423,7 +423,7 @@
       "dika_details": []
     },
     {
-      "id": 22,
+      "id": "ipc-21",
       "section": "21",
       "chapter": 1,
       "chapter_title": "",
@@ -442,7 +442,7 @@
       "dika_details": []
     },
     {
-      "id": 23,
+      "id": "ipc-22",
       "section": "22",
       "chapter": 1,
       "chapter_title": "",
@@ -461,7 +461,7 @@
       "dika_details": []
     },
     {
-      "id": 24,
+      "id": "ipc-23",
       "section": "23",
       "chapter": 1,
       "chapter_title": "",
@@ -480,7 +480,7 @@
       "dika_details": []
     },
     {
-      "id": 25,
+      "id": "ipc-24",
       "section": "24",
       "chapter": 1,
       "chapter_title": "",
@@ -499,7 +499,7 @@
       "dika_details": []
     },
     {
-      "id": 26,
+      "id": "ipc-25",
       "section": "25",
       "chapter": 1,
       "chapter_title": "",
@@ -518,7 +518,7 @@
       "dika_details": []
     },
     {
-      "id": 27,
+      "id": "ipc-26",
       "section": "26",
       "chapter": 1,
       "chapter_title": "",
@@ -537,7 +537,7 @@
       "dika_details": []
     },
     {
-      "id": 28,
+      "id": "ipc-27",
       "section": "27",
       "chapter": 1,
       "chapter_title": "",
@@ -556,7 +556,7 @@
       "dika_details": []
     },
     {
-      "id": 29,
+      "id": "ipc-28",
       "section": "28",
       "chapter": 1,
       "chapter_title": "",
@@ -575,7 +575,7 @@
       "dika_details": []
     },
     {
-      "id": 30,
+      "id": "ipc-29",
       "section": "29",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -594,7 +594,7 @@
       "dika_details": []
     },
     {
-      "id": 31,
+      "id": "ipc-30",
       "section": "30",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -613,7 +613,7 @@
       "dika_details": []
     },
     {
-      "id": 32,
+      "id": "ipc-31",
       "section": "31",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -632,7 +632,7 @@
       "dika_details": []
     },
     {
-      "id": 33,
+      "id": "ipc-32",
       "section": "32",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -651,7 +651,7 @@
       "dika_details": []
     },
     {
-      "id": 34,
+      "id": "ipc-33",
       "section": "33",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -670,7 +670,7 @@
       "dika_details": []
     },
     {
-      "id": 35,
+      "id": "ipc-34",
       "section": "34",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -689,7 +689,7 @@
       "dika_details": []
     },
     {
-      "id": 36,
+      "id": "ipc-35",
       "section": "35",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -708,7 +708,7 @@
       "dika_details": []
     },
     {
-      "id": 37,
+      "id": "ipc-36",
       "section": "36",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -727,7 +727,7 @@
       "dika_details": []
     },
     {
-      "id": 38,
+      "id": "ipc-37",
       "section": "37",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -746,7 +746,7 @@
       "dika_details": []
     },
     {
-      "id": 39,
+      "id": "ipc-38",
       "section": "38",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -765,7 +765,7 @@
       "dika_details": []
     },
     {
-      "id": 40,
+      "id": "ipc-39",
       "section": "39",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -784,7 +784,7 @@
       "dika_details": []
     },
     {
-      "id": 41,
+      "id": "ipc-40",
       "section": "40",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -803,7 +803,7 @@
       "dika_details": []
     },
     {
-      "id": 42,
+      "id": "ip-court-41",
       "section": "41",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -822,7 +822,7 @@
       "dika_details": []
     },
     {
-      "id": 43,
+      "id": "ipc-48",
       "section": "42",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -834,7 +834,7 @@
       "dika_details": []
     },
     {
-      "id": 44,
+      "id": "ipc-49",
       "section": "43",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -846,7 +846,7 @@
       "dika_details": []
     },
     {
-      "id": 45,
+      "id": "ipc-50",
       "section": "44",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -858,7 +858,7 @@
       "dika_details": []
     },
     {
-      "id": 46,
+      "id": "ip-court-45",
       "section": "45",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -877,7 +877,7 @@
       "dika_details": []
     },
     {
-      "id": 47,
+      "id": "ipc-46",
       "section": "46",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",
@@ -896,7 +896,7 @@
       "dika_details": []
     },
     {
-      "id": 48,
+      "id": "ipc-47",
       "section": "47",
       "chapter": 4,
       "chapter_title": "อุทธรณ์และฎีกา[๑๓]",

@@ -18,7 +18,7 @@
   ],
   "sections": [
     {
-      "id": 1,
+      "id": "mag-1",
       "section": "1",
       "chapter": 1,
       "chapter_title": "",
@@ -38,7 +38,7 @@
       "dika_details": []
     },
     {
-      "id": 2,
+      "id": "mag-2",
       "section": "2",
       "chapter": 1,
       "chapter_title": "",
@@ -58,7 +58,7 @@
       "dika_details": []
     },
     {
-      "id": 3,
+      "id": "magistrate-court-3",
       "section": "3",
       "chapter": 1,
       "chapter_title": "",
@@ -77,7 +77,7 @@
       "dika_details": []
     },
     {
-      "id": 4,
+      "id": "mag-4",
       "section": "4",
       "chapter": 1,
       "chapter_title": "",
@@ -97,7 +97,7 @@
       "dika_details": []
     },
     {
-      "id": 5,
+      "id": "mc-5",
       "section": "5",
       "chapter": 1,
       "chapter_title": "",
@@ -115,7 +115,7 @@
       "dika_details": []
     },
     {
-      "id": 6,
+      "id": "mag-30",
       "section": "6",
       "chapter": 1,
       "chapter_title": "",
@@ -127,7 +127,7 @@
       "dika_details": []
     },
     {
-      "id": 7,
+      "id": "mag-7",
       "section": "7",
       "chapter": 1,
       "chapter_title": "",
@@ -147,7 +147,7 @@
       "dika_details": []
     },
     {
-      "id": 8,
+      "id": "mag-8",
       "section": "8",
       "chapter": 1,
       "chapter_title": "",
@@ -167,7 +167,7 @@
       "dika_details": []
     },
     {
-      "id": 9,
+      "id": "mag-9",
       "section": "9",
       "chapter": 1,
       "chapter_title": "",
@@ -187,7 +187,7 @@
       "dika_details": []
     },
     {
-      "id": 10,
+      "id": "mag-31",
       "section": "10",
       "chapter": 1,
       "chapter_title": "",
@@ -199,7 +199,7 @@
       "dika_details": []
     },
     {
-      "id": 11,
+      "id": "mag-32",
       "section": "11",
       "chapter": 1,
       "chapter_title": "",
@@ -211,7 +211,7 @@
       "dika_details": []
     },
     {
-      "id": 12,
+      "id": "mag-12",
       "section": "12",
       "chapter": 1,
       "chapter_title": "",
@@ -231,7 +231,7 @@
       "dika_details": []
     },
     {
-      "id": 13,
+      "id": "mc-13",
       "section": "13",
       "chapter": 1,
       "chapter_title": "",
@@ -249,7 +249,7 @@
       "dika_details": []
     },
     {
-      "id": 14,
+      "id": "mc-14",
       "section": "14",
       "chapter": 1,
       "chapter_title": "",
@@ -267,7 +267,7 @@
       "dika_details": []
     },
     {
-      "id": 15,
+      "id": "mag-33",
       "section": "15",
       "chapter": 1,
       "chapter_title": "",
@@ -279,7 +279,7 @@
       "dika_details": []
     },
     {
-      "id": 16,
+      "id": "mag-34",
       "section": "16",
       "chapter": 1,
       "chapter_title": "",
@@ -291,7 +291,7 @@
       "dika_details": []
     },
     {
-      "id": 17,
+      "id": "mag-35",
       "section": "17",
       "chapter": 1,
       "chapter_title": "",
@@ -303,7 +303,7 @@
       "dika_details": []
     },
     {
-      "id": 18,
+      "id": "magistrate-court-18",
       "section": "18",
       "chapter": 1,
       "chapter_title": "",
@@ -321,7 +321,7 @@
       "dika_details": []
     },
     {
-      "id": 19,
+      "id": "mag-19",
       "section": "19",
       "chapter": 1,
       "chapter_title": "",
@@ -341,7 +341,7 @@
       "dika_details": []
     },
     {
-      "id": 20,
+      "id": "mag-20",
       "section": "20",
       "chapter": 1,
       "chapter_title": "",
@@ -361,7 +361,7 @@
       "dika_details": []
     },
     {
-      "id": 21,
+      "id": "mag-21",
       "section": "21",
       "chapter": 1,
       "chapter_title": "",
@@ -381,7 +381,7 @@
       "dika_details": []
     },
     {
-      "id": 22,
+      "id": "mag-22",
       "section": "22",
       "chapter": 1,
       "chapter_title": "",
@@ -401,7 +401,7 @@
       "dika_details": []
     },
     {
-      "id": 23,
+      "id": "mc-23",
       "section": "23",
       "chapter": 1,
       "chapter_title": "",
@@ -419,7 +419,7 @@
       "dika_details": []
     },
     {
-      "id": 24,
+      "id": "mag-36",
       "section": "24",
       "chapter": 1,
       "chapter_title": "",
@@ -431,7 +431,7 @@
       "dika_details": []
     },
     {
-      "id": 25,
+      "id": "magistrate-court-25",
       "section": "25",
       "chapter": 1,
       "chapter_title": "",
@@ -449,7 +449,7 @@
       "dika_details": []
     },
     {
-      "id": 26,
+      "id": "mag-26",
       "section": "26",
       "chapter": 1,
       "chapter_title": "",
@@ -469,7 +469,7 @@
       "dika_details": []
     },
     {
-      "id": 27,
+      "id": "mag-37",
       "section": "27",
       "chapter": 1,
       "chapter_title": "",
@@ -481,7 +481,7 @@
       "dika_details": []
     },
     {
-      "id": 28,
+      "id": "mag-38",
       "section": "28",
       "chapter": 1,
       "chapter_title": "",
@@ -493,7 +493,7 @@
       "dika_details": []
     },
     {
-      "id": 29,
+      "id": "mag-29",
       "section": "29",
       "chapter": 1,
       "chapter_title": "",

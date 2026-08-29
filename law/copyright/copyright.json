@@ -60,7 +60,7 @@
   ],
   "sections": [
     {
-      "id": 1,
+      "id": "copyright-1",
       "section": "1",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "copyright-2",
       "section": "2",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "copyright-3",
       "section": "3",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -159,7 +159,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "copyright-4",
       "section": "4",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -194,7 +194,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "copyright-5",
       "section": "5",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "copyright-6",
       "section": "6",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "copyright-7",
       "section": "7",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -294,7 +294,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "copyright-8",
       "section": "8",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -328,7 +328,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "copyright-9",
       "section": "9",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -363,7 +363,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "copyright-10",
       "section": "10",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -396,7 +396,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "copyright-11",
       "section": "11",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -429,7 +429,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "copyright-12",
       "section": "12",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -462,7 +462,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "copyright-13",
       "section": "13",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -495,7 +495,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "copyright-14",
       "section": "14",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -528,7 +528,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "copyright-15",
       "section": "15",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -561,7 +561,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "copyright-16",
       "section": "16",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -594,7 +594,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "copyright-17",
       "section": "17",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -628,7 +628,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "copyright-18",
       "section": "18",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -662,7 +662,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "copyright-19",
       "section": "19",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -695,7 +695,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "copyright-20",
       "section": "20",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -728,7 +728,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "copyright-21",
       "section": "21",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -761,7 +761,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "copyright-22",
       "section": "22",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -794,7 +794,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "copyright-23",
       "section": "23",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -827,7 +827,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "copyright-24",
       "section": "24",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -860,7 +860,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "copyright-25",
       "section": "25",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -893,7 +893,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "copyright-26",
       "section": "26",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -927,7 +927,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "copyright-27",
       "section": "27",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -961,7 +961,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "copyright-28",
       "section": "28",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -995,7 +995,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "copy-28/1",
       "section": "28/1",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1029,7 +1029,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "copyright-29",
       "section": "29",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1063,7 +1063,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "copyright-30",
       "section": "30",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1097,7 +1097,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "copyright-31",
       "section": "31",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1131,7 +1131,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": "copyright-32",
       "section": "32",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1166,7 +1166,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": "copy-32/1",
       "section": "32/1",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1196,7 +1196,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": "copy-32/2",
       "section": "32/2",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1226,7 +1226,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": "copyright-7744",
       "section": "32/3",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1238,7 +1238,7 @@
       "dika_details": []
     },
     {
-      "id": 37,
+      "id": "copy-32/4",
       "section": "32/4",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1263,7 +1263,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": "copyright-33",
       "section": "33",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1297,7 +1297,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": "copyright-34",
       "section": "34",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1331,7 +1331,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": "copyright-35",
       "section": "35",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1366,7 +1366,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": "copyright-36",
       "section": "36",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1400,7 +1400,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": "copyright-37",
       "section": "37",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1434,7 +1434,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": "copyright-38",
       "section": "38",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1468,7 +1468,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": "copyright-39",
       "section": "39",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1502,7 +1502,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": "copyright-40",
       "section": "40",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1536,7 +1536,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": "copyright-41",
       "section": "41",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1570,7 +1570,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": "copyright-42",
       "section": "42",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1604,7 +1604,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": "copyright-43",
       "section": "43",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1639,7 +1639,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": "copy-43/1",
       "section": "43/1",
       "chapter": 1,
       "chapter_title": "ลิขสิทธิ์",
@@ -1669,7 +1669,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": "copy-43/2",
       "section": "43/2",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1699,7 +1699,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": "copyright-43/3",
       "section": "43/3",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1732,7 +1732,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": "copy-43/4",
       "section": "43/4",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1762,7 +1762,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": "copy-43/5",
       "section": "43/5",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1792,7 +1792,7 @@
       ]
     },
     {
-      "id": 54,
+      "id": "copy-43/6",
       "section": "43/6",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1822,7 +1822,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": "copy-43/7",
       "section": "43/7",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1852,7 +1852,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": "copy-43/8",
       "section": "43/8",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1882,7 +1882,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": "copyright-44",
       "section": "44",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1916,7 +1916,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": "copyright-45",
       "section": "45",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1950,7 +1950,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": "copyright-46",
       "section": "46",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -1983,7 +1983,7 @@
       ]
     },
     {
-      "id": 60,
+      "id": "copyright-47",
       "section": "47",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2017,7 +2017,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": "copyright-48",
       "section": "48",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2051,7 +2051,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": "copyright-49",
       "section": "49",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2084,7 +2084,7 @@
       ]
     },
     {
-      "id": 63,
+      "id": "copyright-50",
       "section": "50",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2117,7 +2117,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": "copyright-51",
       "section": "51",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2151,7 +2151,7 @@
       ]
     },
     {
-      "id": 65,
+      "id": "copy-51/1",
       "section": "51/1",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2181,7 +2181,7 @@
       ]
     },
     {
-      "id": 66,
+      "id": "copyright-52",
       "section": "52",
       "chapter": 2,
       "chapter_title": "สิทธิของนักแสดง",
@@ -2215,7 +2215,7 @@
       ]
     },
     {
-      "id": 67,
+      "id": "copy-53/1",
       "section": "53/1",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -2245,7 +2245,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": "copyright-53/2",
       "section": "53/2",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -2275,7 +2275,7 @@
       ]
     },
     {
-      "id": 69,
+      "id": "copy-53/3",
       "section": "53/3",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -2305,7 +2305,7 @@
       ]
     },
     {
-      "id": 70,
+      "id": "copy-53/4",
       "section": "53/4",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -2335,7 +2335,7 @@
       ]
     },
     {
-      "id": 71,
+      "id": "copy-53/5",
       "section": "53/5",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -2365,7 +2365,7 @@
       ]
     },
     {
-      "id": 72,
+      "id": "copy-53/6",
       "section": "53/6",
       "chapter": 3,
       "chapter_title": "การใช้ลิขสิทธิ์ในพฤติการณ์พิเศษ",
@@ -2395,7 +2395,7 @@
       ]
     },
     {
-      "id": 73,
+      "id": "copy-53/7",
       "section": "53/7",
       "chapter": 3,
       "chapter_title": "การใช้ลิขสิทธิ์ในพฤติการณ์พิเศษ",
@@ -2425,7 +2425,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": "copy-53/8",
       "section": "53/8",
       "chapter": 3,
       "chapter_title": "การใช้ลิขสิทธิ์ในพฤติการณ์พิเศษ",
@@ -2455,7 +2455,7 @@
       ]
     },
     {
-      "id": 75,
+      "id": "copyright-54",
       "section": "54",
       "chapter": 3,
       "chapter_title": "การใช้ลิขสิทธิ์ในพฤติการณ์พิเศษ",
@@ -2488,7 +2488,7 @@
       ]
     },
     {
-      "id": 76,
+      "id": "copyright-55",
       "section": "55",
       "chapter": 3,
       "chapter_title": "การใช้ลิขสิทธิ์ในพฤติการณ์พิเศษ",
@@ -2522,7 +2522,7 @@
       ]
     },
     {
-      "id": 77,
+      "id": "copyright-56",
       "section": "56",
       "chapter": 4,
       "chapter_title": "คณะกรรมการลิขสิทธิ์",
@@ -2555,7 +2555,7 @@
       ]
     },
     {
-      "id": 78,
+      "id": "copyright-57",
       "section": "57",
       "chapter": 4,
       "chapter_title": "คณะกรรมการลิขสิทธิ์",
@@ -2588,7 +2588,7 @@
       ]
     },
     {
-      "id": 79,
+      "id": "copyright-58",
       "section": "58",
       "chapter": 4,
       "chapter_title": "คณะกรรมการลิขสิทธิ์",
@@ -2622,7 +2622,7 @@
       ]
     },
     {
-      "id": 80,
+      "id": "copyright-59",
       "section": "59",
       "chapter": 4,
       "chapter_title": "คณะกรรมการลิขสิทธิ์",
@@ -2650,7 +2650,7 @@
       ]
     },
     {
-      "id": 81,
+      "id": "copyright-60",
       "section": "60",
       "chapter": 4,
       "chapter_title": "คณะกรรมการลิขสิทธิ์",
@@ -2684,7 +2684,7 @@
       ]
     },
     {
-      "id": 82,
+      "id": "copyright-61",
       "section": "61",
       "chapter": 5,
       "chapter_title": "ลิขสิทธิ์และสิทธิของนักแสดงระหว่างประเทศ",
@@ -2718,7 +2718,7 @@
       ]
     },
     {
-      "id": 83,
+      "id": "copyright-62",
       "section": "62",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2752,7 +2752,7 @@
       ]
     },
     {
-      "id": 84,
+      "id": "copyright-63",
       "section": "63",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2787,7 +2787,7 @@
       ]
     },
     {
-      "id": 85,
+      "id": "copyright-64",
       "section": "64",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2822,7 +2822,7 @@
       ]
     },
     {
-      "id": 86,
+      "id": "copyright-65",
       "section": "65",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2856,7 +2856,7 @@
       ]
     },
     {
-      "id": 87,
+      "id": "copy-65/1",
       "section": "65/1",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2886,7 +2886,7 @@
       ]
     },
     {
-      "id": 88,
+      "id": "copyright-66",
       "section": "66",
       "chapter": 6,
       "chapter_title": "คดีเกี่ยวกับลิขสิทธิ์ สิทธิของนักแสดง",
@@ -2921,7 +2921,7 @@
       ]
     },
     {
-      "id": 89,
+      "id": "copyright-67",
       "section": "67",
       "chapter": 7,
       "chapter_title": "พนักงานเจ้าหน้าที่",
@@ -2956,7 +2956,7 @@
       ]
     },
     {
-      "id": 90,
+      "id": "copyright-68",
       "section": "68",
       "chapter": 7,
       "chapter_title": "พนักงานเจ้าหน้าที่",
@@ -2990,7 +2990,7 @@
       ]
     },
     {
-      "id": 91,
+      "id": "copyright-69",
       "section": "69",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3024,7 +3024,7 @@
       ]
     },
     {
-      "id": 92,
+      "id": "copy-69/1",
       "section": "69/1",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3054,7 +3054,7 @@
       ]
     },
     {
-      "id": 93,
+      "id": "copyright-70",
       "section": "70",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3089,7 +3089,7 @@
       ]
     },
     {
-      "id": 94,
+      "id": "copy-70/1",
       "section": "70/1",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3119,7 +3119,7 @@
       ]
     },
     {
-      "id": 95,
+      "id": "copyright-71",
       "section": "71",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3153,7 +3153,7 @@
       ]
     },
     {
-      "id": 96,
+      "id": "copyright-72",
       "section": "72",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3188,7 +3188,7 @@
       ]
     },
     {
-      "id": 97,
+      "id": "copyright-73",
       "section": "73",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3221,7 +3221,7 @@
       ]
     },
     {
-      "id": 98,
+      "id": "copyright-76",
       "section": "76",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3256,7 +3256,7 @@
       ]
     },
     {
-      "id": 99,
+      "id": "copyright-78",
       "section": "78",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3290,7 +3290,7 @@
       ]
     },
     {
-      "id": 100,
+      "id": "copy-217",
       "section": "217",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3322,7 +3322,7 @@
       ]
     },
     {
-      "id": 101,
+      "id": "copy-5324",
       "section": "5324",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3352,7 +3352,7 @@
       ]
     },
     {
-      "id": 102,
+      "id": "copy-7441",
       "section": "7441",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3382,7 +3382,7 @@
       ]
     },
     {
-      "id": 103,
+      "id": "copy-7542",
       "section": "7542",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
@@ -3412,7 +3412,7 @@
       ]
     },
     {
-      "id": 104,
+      "id": "copy-7743",
       "section": "7743",
       "chapter": 8,
       "chapter_title": "บทก าหนดโทษ",
