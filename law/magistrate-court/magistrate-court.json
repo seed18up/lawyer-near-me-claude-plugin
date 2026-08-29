@@ -18,7 +18,7 @@
   ],
   "sections": [
     {
-      "id": "mag-1",
+      "id": 1,
       "section": "1",
       "chapter": 1,
       "chapter_title": "",
@@ -38,7 +38,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-2",
+      "id": 2,
       "section": "2",
       "chapter": 1,
       "chapter_title": "",
@@ -58,7 +58,7 @@
       "dika_details": []
     },
     {
-      "id": "magistrate-court-3",
+      "id": 3,
       "section": "3",
       "chapter": 1,
       "chapter_title": "",
@@ -77,7 +77,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-4",
+      "id": 4,
       "section": "4",
       "chapter": 1,
       "chapter_title": "",
@@ -97,7 +97,7 @@
       "dika_details": []
     },
     {
-      "id": "mc-5",
+      "id": 5,
       "section": "5",
       "chapter": 1,
       "chapter_title": "",
@@ -115,7 +115,19 @@
       "dika_details": []
     },
     {
-      "id": "mag-7",
+      "id": 6,
+      "section": "6",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 7,
       "section": "7",
       "chapter": 1,
       "chapter_title": "",
@@ -135,7 +147,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-8",
+      "id": 8,
       "section": "8",
       "chapter": 1,
       "chapter_title": "",
@@ -155,7 +167,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-9",
+      "id": 9,
       "section": "9",
       "chapter": 1,
       "chapter_title": "",
@@ -175,7 +187,31 @@
       "dika_details": []
     },
     {
-      "id": "mag-12",
+      "id": 10,
+      "section": "10",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 11,
+      "section": "11",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 12,
       "section": "12",
       "chapter": 1,
       "chapter_title": "",
@@ -195,7 +231,7 @@
       "dika_details": []
     },
     {
-      "id": "mc-13",
+      "id": 13,
       "section": "13",
       "chapter": 1,
       "chapter_title": "",
@@ -213,7 +249,7 @@
       "dika_details": []
     },
     {
-      "id": "mc-14",
+      "id": 14,
       "section": "14",
       "chapter": 1,
       "chapter_title": "",
@@ -231,7 +267,43 @@
       "dika_details": []
     },
     {
-      "id": "magistrate-court-18",
+      "id": 15,
+      "section": "15",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 16,
+      "section": "16",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 17,
+      "section": "17",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 18,
       "section": "18",
       "chapter": 1,
       "chapter_title": "",
@@ -249,7 +321,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-19",
+      "id": 19,
       "section": "19",
       "chapter": 1,
       "chapter_title": "",
@@ -269,7 +341,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-20",
+      "id": 20,
       "section": "20",
       "chapter": 1,
       "chapter_title": "",
@@ -289,7 +361,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-21",
+      "id": 21,
       "section": "21",
       "chapter": 1,
       "chapter_title": "",
@@ -309,7 +381,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-22",
+      "id": 22,
       "section": "22",
       "chapter": 1,
       "chapter_title": "",
@@ -329,7 +401,7 @@
       "dika_details": []
     },
     {
-      "id": "mc-23",
+      "id": 23,
       "section": "23",
       "chapter": 1,
       "chapter_title": "",
@@ -347,7 +419,19 @@
       "dika_details": []
     },
     {
-      "id": "magistrate-court-25",
+      "id": 24,
+      "section": "24",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 25,
       "section": "25",
       "chapter": 1,
       "chapter_title": "",
@@ -365,7 +449,7 @@
       "dika_details": []
     },
     {
-      "id": "mag-26",
+      "id": 26,
       "section": "26",
       "chapter": 1,
       "chapter_title": "",
@@ -385,7 +469,31 @@
       "dika_details": []
     },
     {
-      "id": "mag-29",
+      "id": 27,
+      "section": "27",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 28,
+      "section": "28",
+      "chapter": 1,
+      "chapter_title": "",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 29,
       "section": "29",
       "chapter": 1,
       "chapter_title": "",

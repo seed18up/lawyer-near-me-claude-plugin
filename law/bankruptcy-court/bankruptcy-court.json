@@ -30,7 +30,7 @@
   ],
   "sections": [
     {
-      "id": "bankruptcy-court-1",
+      "id": 1,
       "section": "1",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -50,7 +50,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-2",
+      "id": 2,
       "section": "2",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -69,7 +69,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-3",
+      "id": 3,
       "section": "3",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -89,7 +89,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-4",
+      "id": 4,
       "section": "4",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -110,7 +110,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-5",
+      "id": 5,
       "section": "5",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -132,7 +132,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-6",
+      "id": 6,
       "section": "6",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -152,7 +152,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-7",
+      "id": 7,
       "section": "7",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -173,7 +173,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-8",
+      "id": 8,
       "section": "8",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -193,7 +193,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-9",
+      "id": 9,
       "section": "9",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -213,7 +213,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-10",
+      "id": 10,
       "section": "10",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -233,7 +233,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-11",
+      "id": 11,
       "section": "11",
       "chapter": 1,
       "chapter_title": "ศาลล้มละลาย",
@@ -253,7 +253,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-12",
+      "id": 12,
       "section": "12",
       "chapter": 2,
       "chapter_title": "ผู้พิพากษาในศาลล้มละลาย",
@@ -274,7 +274,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-13",
+      "id": 13,
       "section": "13",
       "chapter": 2,
       "chapter_title": "ผู้พิพากษาในศาลล้มละลาย",
@@ -294,7 +294,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-14",
+      "id": 14,
       "section": "14",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -314,7 +314,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-15",
+      "id": 15,
       "section": "15",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -334,7 +334,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-16",
+      "id": 16,
       "section": "16",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -354,7 +354,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-17",
+      "id": 17,
       "section": "17",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -375,7 +375,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-18",
+      "id": 18,
       "section": "18",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -395,7 +395,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-19",
+      "id": 19,
       "section": "19",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -414,7 +414,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-20",
+      "id": 20,
       "section": "20",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -434,7 +434,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-21",
+      "id": 21,
       "section": "21",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -454,7 +454,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-22",
+      "id": 22,
       "section": "22",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -474,7 +474,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-23",
+      "id": 23,
       "section": "23",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -496,7 +496,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-24",
+      "id": 24,
       "section": "24",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -516,7 +516,19 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-25",
+      "id": 25,
+      "section": "24/1",
+      "chapter": 3,
+      "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 26,
       "section": "25",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -539,7 +551,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-26",
+      "id": 27,
       "section": "26",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -559,7 +571,19 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-27",
+      "id": 28,
+      "section": "26/1",
+      "chapter": 3,
+      "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
+      "title": "(ยกเลิก)",
+      "text": "(ยกเลิก)",
+      "summary": "",
+      "keywords": [],
+      "dika": [],
+      "dika_details": []
+    },
+    {
+      "id": 29,
       "section": "27",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -579,7 +603,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-28",
+      "id": 30,
       "section": "28",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -599,7 +623,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-28/1",
+      "id": 31,
       "section": "28/1",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -619,7 +643,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-28/2",
+      "id": 32,
       "section": "28/2",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -640,7 +664,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-29",
+      "id": 33,
       "section": "29",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
@@ -660,7 +684,7 @@
       "dika_details": []
     },
     {
-      "id": "bankruptcy-court-30",
+      "id": 34,
       "section": "30",
       "chapter": 3,
       "chapter_title": "วิธีพิจารณาคดีล้มละลาย ส่วนที่ ๒ อุทธรณ์ แก้ไขเพิ่มเติมโดยพระราชบัญญัติ",
