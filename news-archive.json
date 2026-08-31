@@ -1,5 +1,139 @@
 [
   {
+    "date": "2026-09-01",
+    "date_th": "1 กันยายน 2569",
+    "stories": [
+      {
+        "id": 1,
+        "category": "คดีอาญา",
+        "category_en": "criminal",
+        "title": "ตำรวจเมายิงปืนขึ้นฟ้ากลางชุมชน ชาวบ้านผวา — แบบนี้ผิดกฎหมายอะไรบ้าง?",
+        "what_happened": "ร.ต.อ.รายหนึ่งขับรถกลับจากงานแต่งในสภาพเมาสุรา จอดรถแล้วยิงปืนขึ้นฟ้ากลางชุมชน ทำให้ชาวบ้านในละแวกนั้นตื่นตกใจและหวาดกลัวอย่างหนัก เหตุการณ์นี้เกิดขึ้นต่อหน้าพยานหลายคน",
+        "impact": "ชาวบ้านในพื้นที่รู้สึกไม่ปลอดภัยในชีวิตและทรัพย์สิน และยังสะท้อนปัญหาเจ้าหน้าที่รัฐใช้อาวุธโดยมิชอบซึ่งสังคมกำลังจับตามอง",
+        "action": "ผู้เสียหายหรือประจักษ์พยานควรบันทึกหลักฐาน แจ้งความที่สถานีตำรวจอื่น และปรึกษาทนายเพื่อยื่นร้องเรียนต่อ ก.ตร. ควบคู่กัน",
+        "practice_area": "Criminal Law / Administrative Law",
+        "urgency": "high",
+        "trending_angle": "กระแสสังคมตั้งคำถามถึงพฤติกรรมเจ้าหน้าที่ตำรวจที่ใช้อาวุธปืนโดยมิชอบและการบังคับใช้กฎหมายกับผู้มีอำนาจ",
+        "drama_hook": "ตำรวจเมาหลังงานแต่ง ยิงปืนขึ้นฟ้ากลางชุมชน — ถ้าเป็นประชาชนทำแบบนี้ โดนคุกแน่นอน แล้วทำไมเขาถึงยังลอยนวล?",
+        "hashtags": [
+          "#ตำรวจยิงปืน",
+          "#เจ้าหน้าที่รัฐผิดกฎหมาย",
+          "#ร้องเรียนตำรวจ",
+          "#สิทธิประชาชน",
+          "#กฎหมายอาวุธปืน"
+        ],
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25B2%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2595%25E0%25B8%25B3%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2588%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B8%259B%25E0%25B8%25B7%25E0%25B8%2599%25E0%25B8%2582%25E0%25B8%25B6%25E0%25B9%2589%25E0%25B8%2599%25E0%25B8%259F%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%258A%25E0%25B8%25B8%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%2599%2520%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%259A%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259C%25E0%25B8%25A7%25E0%25B8%25B2%2520%25E2%2580%2594%2520%25E0%25B9%2581%25E0%25B8%259A%25E0%25B8%259A%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B9%2589%25E0%25B8%259C%25E0%25B8%25B4%25E0%25B8%2594%25E0%25B8%2581%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-ss1",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 2,
+        "category": "ผู้บริโภค",
+        "category_en": "consumer",
+        "title": "ฮาย อาภาพร ยันไม่ได้จ้างทนายอาร์ม — คนดังถูกอ้างชื่อโดยไม่รู้เรื่อง ประชาชนต้องรู้สิทธิ์อะไร?",
+        "what_happened": "ฮาย อาภาพร ออกมาชี้แจงว่าไม่ได้จ้างหรือมีความสนิทสนมกับทนายอาร์ม และทนายคนดังกล่าวไม่ใช่ทนายส่วนตัวของตน หลังสังคมเข้าใจผิดและมีการแชร์ข้อมูลเชื่อมโยงทั้งสองฝ่าย เหตุการณ์นี้สร้างความเสียหายต่อภาพลักษณ์ของเจ้าตัว",
+        "impact": "กรณีนี้สะท้อนปัญหาการอ้างชื่อบุคคลโดยไม่ได้รับอนุญาต ซึ่งอาจเกิดขึ้นกับประชาชนทั่วไปได้ในชีวิตประจำวัน เช่น ถูกอ้างชื่อในสัญญา, โฆษณา หรือโซเชียลมีเดีย",
+        "action": "หากถูกอ้างชื่อโดยไม่ได้รับความยินยอม ควรออกแถลงการณ์ปฏิเสธทันที บันทึกหลักฐาน และปรึกษาทนายเพื่อดำเนินคดีหมิ่นประมาทหรือละเมิดสิทธิ์ส่วนบุคคล",
+        "practice_area": "Civil Law / Defamation Law",
+        "urgency": "medium",
+        "trending_angle": "กระแสดราม่าคนดังและทนายดังที่สังคมกำลังติดตาม เปิดโอกาสให้ความรู้เรื่องการอ้างชื่อผู้อื่นโดยมิชอบในทางกฎหมาย",
+        "drama_hook": "เธอบอกว่าไม่รู้จัก ไม่ได้จ้าง แต่ชื่อเธอถูกพาดพิงไปทั่วโลกออนไลน์ — ถ้าเกิดแบบนี้กับคุณ คุณจะทำอะไรได้บ้าง?",
+        "hashtags": [
+          "#ฮายอาภาพร",
+          "#ทนายอาร์ม",
+          "#ถูกอ้างชื่อ",
+          "#กฎหมายหมิ่นประมาท",
+          "#สิทธิส่วนบุคคล"
+        ],
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B9%2582%25E0%25B8%25A0%25E0%25B8%2584%2520,co_white,b_rgb:8E44AD,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%25AE%25E0%25B8%25B2%25E0%25B8%25A2%2520%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%259E%25E0%25B8%25A3%2520%25E0%25B8%25A2%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B9%2584%25E0%25B8%25A1%25E0%25B9%2588%25E0%25B9%2584%25E0%25B8%2594%25E0%25B9%2589%25E0%25B8%2588%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B9%258C%25E0%25B8%25A1%2520%25E2%2580%2594%2520%25E0%25B8%2584%25E0%25B8%2599%25E0%25B8%2594%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%2596%25E0%25B8%25B9%25E0%25B8%2581%25E0%25B8%25AD%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%258A%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B9%2582%25E0%25B8%2594%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-consumer-gov1",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 3,
+        "category": "ผู้บริโภค",
+        "category_en": "consumer",
+        "title": "ซื้อประกันภัยพิบัติแล้วน้ำท่วม-ดินถล่ม จริงๆ ได้รับความคุ้มครองหรือเปล่า? รู้ก่อนสายเกินไป",
+        "what_happened": "รัฐบาลผ่านหลักประกันภัยพิบัติครอบคลุมเหตุดินโคลนถล่ม น้ำท่วม และแผ่นดินไหว แต่ประชาชนจำนวนมากยังไม่เข้าใจเงื่อนไขที่แท้จริงของกรมธรรม์ประกันภัยที่ตนเองถือครองอยู่ว่าคุ้มครองถึงขั้นไหน มีข้อยกเว้นอะไรบ้าง และต้องแจ้งความเสียหายภายในกี่วัน",
+        "impact": "หากไม่เข้าใจเงื่อนไขกรมธรรม์อย่างถ่องแท้ ผู้เอาประกันอาจสูญเสียสิทธิ์เรียกร้องค่าสินไหมทดแทนได้ทั้งหมด แม้เกิดความเสียหายจริง",
+        "action": "ตรวจสอบกรมธรรม์ของตนว่าครอบคลุมภัยพิบัติประเภทใดบ้าง กำหนดการแจ้งเคลมภายใน 3-7 วัน และปรึกษาทนายหากบริษัทประกันปฏิเสธการจ่ายชดเชยโดยไม่มีเหตุอันสมควร",
+        "practice_area": "Insurance Law / Consumer Law",
+        "urgency": "medium",
+        "trending_angle": "กระแสประกันภัยพิบัติหลังรัฐบาลประกาศนโยบายใหม่ที่หลายคนยังสับสนเรื่องสิทธิ์ที่ตนเองได้รับจริง",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B9%2582%25E0%25B8%25A0%25E0%25B8%2584%2520,co_white,b_rgb:8E44AD,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%258B%25E0%25B8%25B7%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%25A2%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%259A%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25A7%25E0%25B8%2599%25E0%25B9%2589%25E0%25B8%25B3%25E0%25B8%2597%25E0%25B9%2588%25E0%25B8%25A7%25E0%25B8%25A1-%25E0%25B8%2594%25E0%25B8%25B4%25E0%25B8%2599%25E0%25B8%2596%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%25A1%2520%25E0%25B8%2588%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2587%25E0%25B9%2586%2520%25E0%25B9%2584%25E0%25B8%2594%25E0%25B9%2589%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%2584%25E0%25B8%25A7%25E0%25B8%25B2%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-consumer-px7",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 4,
+        "category": "คดีอาญา",
+        "category_en": "criminal",
+        "title": "ช่างกล ปทุมวัน รุมทำร้าย อุเทนถวาย คาสยาม — ยกพวกตีกันผิดกฎหมายข้อไหน?",
+        "trending_angle": "เหตุนักเรียนยกพวกตีกันในพื้นที่สาธารณะ จุดกระแสถกเถียงเรื่องความรับผิดชอบของสถานศึกษาและโทษทางอาญาสำหรับผู้เยาว์",
+        "urgency": "high",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25B2%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%258A%25E0%25B9%2588%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2581%25E0%25B8%25A5%2520%25E0%25B8%259B%25E0%25B8%2597%25E0%25B8%25B8%25E0%25B8%25A1%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2599%2520%25E0%25B8%25A3%25E0%25B8%25B8%25E0%25B8%25A1%25E0%25B8%2597%25E0%25B8%25B3%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A2%2520%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B9%2580%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%2596%25E0%25B8%25A7%25E0%25B8%25B2%25E0%25B8%25A2%2520%25E0%25B8%2584%25E0%25B8%25B2%25E0%25B8%25AA%25E0%25B8%25A2%25E0%25B8%25B2%25E0%25B8%25A1%2520%25E2%2580%2594%2520%25E0%25B8%25A2%25E0%25B8%2581%25E0%25B8%259E%25E0%25B8%25A7%25E0%25B8%2581%25E0%25B8%2595%25E0%25B8%25B5%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%2599%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-ss2",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 5,
+        "category": "สัญญาธุรกิจ",
+        "category_en": "contract",
+        "title": "แมนฯ ซิตี้ เสนอ 80 ล้านปอนด์ แต่ลิเวอร์พูลปฏิเสธ — ในไทยถ้าไม่ขายทั้งที่มีคนซื้อ ผิดสัญญาไหม?",
+        "trending_angle": "กระแสข่าวซื้อขายนักฟุตบอลโลก เปิดโอกาสให้ความรู้เรื่องสิทธิ์ปฏิเสธข้อเสนอและการผูกมัดในสัญญาจ้างงาน",
+        "urgency": "low",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588%2520,co_white,b_rgb:2C3E50,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2581%25E0%25B8%25A1%25E0%25B8%2599%25E0%25B8%25AF%2520%25E0%25B8%258B%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25B5%25E0%25B9%2589%2520%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%2599%25E0%25B8%25AD%252080%2520%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259B%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%2594%25E0%25B9%258C%2520%25E0%25B9%2581%25E0%25B8%2595%25E0%25B9%2588%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B9%2580%25E0%25B8%25A7%25E0%25B8%25AD%25E0%25B8%25A3%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%25B9%25E0%25B8%25A5%25E0%25B8%259B%25E0%25B8%258F%25E0%25B8%25B4%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%2598%2520%25E2%2580%2594%2520%25E0%25B9%2583%25E0%25B8%2599%25E0%25B9%2584%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-contract-px2",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 6,
+        "category": "แรงงาน",
+        "category_en": "labor",
+        "title": "โฆษกรัฐบาลคนใหม่ดึง อดีต สส. พรรคก้าวไกล — ย้ายงานการเมืองแบบนี้มีข้อกฎหมายอะไรต้องระวัง?",
+        "trending_angle": "การเปลี่ยนโฆษกรัฐบาลโยงนักการเมืองข้ามพรรค สะท้อนประเด็นกฎหมายเรื่องผลประโยชน์ทับซ้อนและการดำรงตำแหน่งรัฐ",
+        "urgency": "medium",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B9%2581%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2520,co_white,b_rgb:E67E22,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2582%25E0%25B8%2586%25E0%25B8%25A9%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2590%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%25A5%25E0%25B8%2584%25E0%25B8%2599%25E0%25B9%2583%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B9%2588%25E0%25B8%2594%25E0%25B8%25B6%25E0%25B8%2587%2520%25E0%25B8%25AD%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%2595%2520%25E0%25B8%25AA%25E0%25B8%25AA.%2520%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2584%25E0%25B8%2581%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B9%2584%25E0%25B8%2581%25E0%25B8%25A5%2520%25E2%2580%2594%2520%25E0%25B8%25A2%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B9%2580%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-labor-t8",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 7,
+        "category": "ครอบครัว",
+        "category_en": "family",
+        "title": "เมสซีประกาศเลิกเล่นทีมชาติ — ถ้าดาราหรือนักกีฬาไทยเลิกสัญญากลางคัน ใครรับผิดชอบค่าเสียหาย?",
+        "trending_angle": "ข่าวเมสซีเลิกทีมชาติเป็นกระแสโลก เปิดโอกาสให้ความรู้เรื่องการบอกเลิกสัญญาจ้างก่อนกำหนดและค่าชดเชยในกฎหมายไทย",
+        "urgency": "low",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A7%2520,co_white,b_rgb:2980B9,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%25AA%25E0%25B8%258B%25E0%25B8%25B5%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25A8%25E0%25B9%2580%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B9%2580%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595%25E0%25B8%25B4%2520%25E2%2580%2594%2520%25E0%25B8%2596%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2594%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%25AB%25E0%25B8%25A3%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B8%25AC%25E0%25B8%25B2%25E0%25B9%2584%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B9%2580%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%2581%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-family-t8",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 8,
+        "category": "อสังหาริมทรัพย์",
+        "category_en": "property",
+        "title": "โตโยต้าทุ่ม 9,300 ล้านตั้งโรงงานในเวียดนาม — นักลงทุนไทยซื้อที่ดินต่างประเทศต้องรู้กฎหมายอะไร?",
+        "trending_angle": "การลงทุนโรงงานขนาดใหญ่ในอาเซียนกำลังร้อนแรง กระตุ้นความสนใจคนไทยที่อยากลงทุนหรือซื้อทรัพย์สินในต่างประเทศ",
+        "urgency": "low",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AD%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%25AB%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25A1%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259E%25E0%25B8%25A2%25E0%25B9%258C%2520,co_white,b_rgb:27AE60,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2582%25E0%25B8%2595%25E0%25B9%2582%25E0%25B8%25A2%25E0%25B8%2595%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%25B8%25E0%25B9%2588%25E0%25B8%25A1%25209%252C300%2520%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%2587%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B9%2583%25E0%25B8%2599%25E0%25B9%2580%25E0%25B8%25A7%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2594%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A1%2520%25E2%2580%2594%2520%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B8%2587%25E0%25B8%2597%25E0%25B8%25B8%25E0%25B8%2599%25E0%25B9%2584%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-property-gov4",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 9,
+        "category": "คดีอาญา",
+        "category_en": "criminal",
+        "title": "ไฟไหม้คลองถมเซ็นเตอร์ — ถ้าไฟลามมาจากร้านข้างเคียง เจ้าของร้านต้นเหตุรับผิดทางกฎหมายอย่างไร?",
+        "trending_angle": "เหตุเพลิงไหม้ห้างดังกลางกรุงกำลังเป็นกระแส เปิดโอกาสให้ความรู้เรื่องความรับผิดจากอัคคีภัยและการเรียกค่าเสียหายจากผู้ก่อเหตุ",
+        "urgency": "high",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25B2%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2584%25E0%25B8%259F%25E0%25B9%2584%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B9%2589%25E0%25B8%2584%25E0%25B8%25A5%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B8%2596%25E0%25B8%25A1%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%2599%25E0%25B9%2580%25E0%25B8%2595%25E0%25B8%25AD%25E0%25B8%25A3%25E0%25B9%258C%2520%25E2%2580%2594%2520%25E0%25B8%2596%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B9%2584%25E0%25B8%259F%25E0%25B8%25A5%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%2588%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2582%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%2584%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2587%2520%25E0%25B9%2580%25E0%25B8%2588%25E0%25B9%2589%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-ss2",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      },
+      {
+        "id": 10,
+        "category": "สัญญาธุรกิจ",
+        "category_en": "contract",
+        "title": "กกต. นัด 14 ก.ย. ลงมติคดีฮั้ว ส.ว. — ฮั้วประมูลหรือฮั้วเลือกตั้ง โทษต่างกันอย่างไรในกฎหมายไทย?",
+        "trending_angle": "คดีฮั้ว ส.ว. ที่ กกต. กำลังพิจารณา จุดกระแสสังคมเรื่องความโปร่งใสทางการเมืองและบทลงโทษการทุจริตเลือกตั้ง",
+        "urgency": "high",
+        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588%2520,co_white,b_rgb:2C3E50,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%2595.%2520%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2594%252014%2520%25E0%25B8%2581.%25E0%25B8%25A2.%2520%25E0%25B8%25A5%25E0%25B8%2587%25E0%25B8%25A1%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AE%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%25A7%2520%25E0%25B8%25AA.%25E0%25B8%25A7.%2520%25E2%2580%2594%2520%25E0%25B8%25AE%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%25A7%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%25A1%25E0%25B8%25B9%25E0%25B8%25A5%25E0%25B8%25AB%25E0%25B8%25A3%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%25AE%25E0%25B8%25B1%25E0%25B9%2589%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-contract-4",
+        "article_url": "https://lawyernearme.in.th/news.html"
+      }
+    ]
+  },
+  {
     "date": "2026-08-31",
     "date_th": "31 สิงหาคม 2569",
     "stories": [
@@ -3851,141 +3985,6 @@
         "trending_angle": "คดีราชทัณฑ์และ JSOC โยนความรับผิดให้กันกระตุ้นคำถามว่าประชาชนจะฟ้องหน่วยงานรัฐได้จริงหรือเปล่า",
         "urgency": "high",
         "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%259B%25E0%25B8%2581%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%2587%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2599%25E0%25B8%25AB%25E0%25B8%2599%25E0%25B9%2588%25E0%25B8%25A7%25E0%25B8%25A2%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2590%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25A1%25E0%25B9%2580%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B8%25A7%2520%25E2%2580%2594%2520%25E0%25B8%259F%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B8%25B2%25E0%25B8%25A5%25E0%25B8%259B%25E0%25B8%2581%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2584%25E0%25B8%2594%25E0%25B9%2589%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B9%2584%25E0%25B8%25AB%25E0%25B8%25A3%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-t6",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      }
-    ]
-  },
-  {
-    "date": "2026-08-01",
-    "date_th": "1 สิงหาคม 2569",
-    "stories": [
-      {
-        "id": 1,
-        "category": "คดีอาญา",
-        "category_en": "criminal",
-        "title": "แต่งชุดตำรวจปลอมอุ้มฆ่า 5 ศพ ออกคุกแค่ 2 เดือน กฎหมายไทยล้มเหลวจริงหรือ?",
-        "what_happened": "แก๊งป๋อง-ธง แต่งกายเลียนแบบเจ้าหน้าที่ตำรวจ บุกทวงหนี้และอุ้มฆ่าพ่อแม่ลูก 3 ศพ รวมถึงพี่น้องชาวรัสเซียอีก 2 คน ฝังศพปิดปากในหลุมเดียวกัน โดยผู้ก่อเหตุคนหลักเพิ่งพ้นโทษจำคุกมาได้เพียง 2 เดือน ยังมีผู้ร่วมแก๊งอีก 2 คนที่ตำรวจยังตามล่าอยู่",
-        "impact": "เหยื่อและครอบครัวสูญเสียชีวิตและทรัพย์สิน ขณะที่สังคมตั้งคำถามถึงระบบการปล่อยตัวนักโทษและการแก้ไขพฤติกรรมผู้กระทำผิดที่อาจยังไม่มีประสิทธิภาพเพียงพอ",
-        "action": "หากถูกบุคคลแอบอ้างเป็นเจ้าหน้าที่และบังคับอุ้มตัว ให้ตะโกนขอความช่วยเหลือ บันทึกภาพทะเบียนรถ และแจ้งตำรวจทันทีผ่านสายด่วน 191 หรือขอคำปรึกษาทนายเพื่อดำเนินคดีแจ้งความดำเนินคดีกับผู้แอบอ้างอำนาจเจ้าพนักงาน",
-        "practice_area": "Criminal Law / Public Law",
-        "urgency": "high",
-        "trending_angle": "กระแสสังคมตั้งคำถามถึงช่องโหว่ระบบยุติธรรมหลังอดีตนักโทษก่อคดีฆ่ายกครัวทันทีหลังพ้นโทษ",
-        "drama_hook": "ออกคุกแค่ 2 เดือน แล้วเอาชีวิตคนไป 5 คน — ถ้าระบบกฎหมายป้องกันไม่ได้ แล้วเราจะทำอะไรได้?",
-        "hashtags": [
-          "#ป๋องธง",
-          "#แก๊งแต่งชุดตำรวจปลอม",
-          "#กฎหมายไทย",
-          "#ฆ่ายกครัว",
-          "#ความปลอดภัยในสังคม"
-        ],
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25B2%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2581%25E0%25B8%2595%25E0%25B9%2588%25E0%25B8%2587%25E0%25B8%258A%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B8%2595%25E0%25B8%25B3%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2588%25E0%25B8%259B%25E0%25B8%25A5%25E0%25B8%25AD%25E0%25B8%25A1%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B9%2589%25E0%25B8%25A1%25E0%25B8%2586%25E0%25B9%2588%25E0%25B8%25B2%25205%2520%25E0%25B8%25A8%25E0%25B8%259E%2520%25E0%25B8%25AD%25E0%25B8%25AD%25E0%25B8%2581%25E0%25B8%2584%25E0%25B8%25B8%25E0%25B8%2581%25E0%25B9%2581%25E0%25B8%2584%25E0%25B9%2588%25202%2520%25E0%25B9%2580%25E0%25B8%2594%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%2599%2520%25E0%25B8%2581%25E0%25B8%258E%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2584%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-ss5",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 2,
-        "category": "คดีแรงงาน",
-        "category_en": "labor",
-        "title": "คนขับรถขยะทับเพื่อนร่วมงานตาย ใครรับผิด? สิทธิครอบครัวผู้เสียชีวิตได้อะไรบ้าง",
-        "what_happened": "คนขับรถขยะในบ่อขยะหนามแดงไม่เห็นเพื่อนร่วมงานที่กำลังทำงานอยู่ จึงขับรถทับจนเสียชีวิต ลูกสาวของผู้เสียชีวิตวิ่งมาพบร่างพ่อกลางบ่อขยะ เหตุการณ์สะเทือนขวัญเกิดขึ้นขณะปฏิบัติหน้าที่ตามปกติ",
-        "impact": "ครอบครัวผู้เสียชีวิตสูญเสียเสาหลักทันทีโดยไม่มีการเตรียมตัว และอาจไม่ทราบว่าตนมีสิทธิได้รับเงินชดเชยและสิทธิประโยชน์จากกองทุนเงินทดแทนของประกันสังคม",
-        "action": "ทายาทผู้เสียชีวิตควรติดต่อสำนักงานประกันสังคมทันทีเพื่อขอรับเงินทดแทนกรณีเสียชีวิตระหว่างทำงาน และปรึกษาทนายความเพื่อพิจารณาสิทธิฟ้องเรียกค่าเสียหายจากนายจ้างเพิ่มเติม",
-        "practice_area": "Civil / Labor Law",
-        "urgency": "high",
-        "trending_angle": "กระแสอุบัติเหตุแรงงานนอกระบบที่มักไม่ได้รับการคุ้มครองอย่างเพียงพอ กลายเป็นประเด็นสังคมที่คนทำงานทุกคนควรรู้สิทธิของตัวเอง",
-        "drama_hook": "ลูกสาวปล่อยโฮกลางบ่อขยะ เห็นร่างพ่อที่จากไประหว่างทำงาน — แต่คำถามคือ ครอบครัวนี้จะได้รับความยุติธรรมอะไรบ้าง?",
-        "hashtags": [
-          "#อุบัติเหตุแรงงาน",
-          "#สิทธิแรงงาน",
-          "#ประกันสังคม",
-          "#บ่อขยะหนามแดง",
-          "#ทนายแรงงาน"
-        ],
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B9%2581%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2520,co_white,b_rgb:E67E22,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2584%25E0%25B8%2599%25E0%25B8%2582%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%2596%25E0%25B8%2582%25E0%25B8%25A2%25E0%25B8%25B0%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B9%2580%25E0%25B8%259E%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25A3%25E0%25B9%2588%25E0%25B8%25A7%25E0%25B8%25A1%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%25B2%25E0%25B8%25A2%2520%25E0%25B9%2583%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%259C%25E0%25B8%25B4%25E0%25B8%2594%253F%2520%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A7%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-labor-px2",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 3,
-        "category": "ผู้บริโภค",
-        "category_en": "consumer",
-        "title": "นักท่องเที่ยวโซโล่เสียชีวิตจากก๊าซ CO — เช็กสิทธิ์ก่อนไปคนเดียว กฎหมายคุ้มครองคุณแค่ไหน?",
-        "what_happened": "หมอเบ็นซ์ออกมาเตือนนักท่องเที่ยวแบบ Solo Backpacker หลังพบสถิติการเสียชีวิตจากก๊าซคาร์บอนมอนอกไซด์รั่วในห้องพักเพิ่มขึ้น โดยมักเกิดในที่พักขนาดเล็กราคาถูกที่ไม่ผ่านมาตรฐานความปลอดภัย ผู้ป่วยมักหมดสติโดยไม่รู้ตัวและไม่มีคนช่วยเหลือ",
-        "impact": "นักท่องเที่ยวที่เดินทางคนเดียวมีความเสี่ยงสูงกว่า เนื่องจากไม่มีคนสังเกตอาการ และที่พักที่ไม่ได้มาตรฐานอาจหลีกเลี่ยงความรับผิดทางกฎหมายได้หากไม่มีหลักฐานเพียงพอ",
-        "action": "ผู้บริโภคควรตรวจสอบมาตรฐานที่พักจากใบอนุญาตของกรมการท่องเที่ยว หากเกิดอุบัติเหตุจากสภาพห้องพักที่ไม่ปลอดภัย สามารถฟ้องเรียกค่าเสียหายจากเจ้าของที่พักได้ตามพระราชบัญญัติความรับผิดต่อความเสียหายที่เกิดขึ้นจากสินค้าที่ไม่ปลอดภัย และแจ้งสคบ.",
-        "practice_area": "Consumer Protection Law / Civil Law",
-        "urgency": "medium",
-        "trending_angle": "กระแสการท่องเที่ยวคนเดียวที่เพิ่มขึ้นในกลุ่ม Gen Z และ Millennial ทำให้ประเด็นความปลอดภัยและสิทธิผู้บริโภคในที่พักกลายเป็นเรื่องสำคัญ",
-        "trending_angle_note": "โยงกับคำเตือนของหมอเบ็นซ์ที่กำลังเป็นกระแสในโซเชียลวันนี้",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B9%2582%25E0%25B8%25A0%25E0%25B8%2584%2520,co_white,b_rgb:8E44AD,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%2597%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B8%25A2%25E0%25B8%25A7%25E0%25B9%2582%25E0%25B8%258B%25E0%25B9%2582%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%258A%25E0%25B8%25B5%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%2588%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%2581%25E0%25B9%258A%25E0%25B8%25B2%25E0%25B8%258B%2520CO%2520%25E2%2580%2594%2520%25E0%25B9%2580%25E0%25B8%258A%25E0%25B9%2587%25E0%25B8%2581%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B9%258C%25E0%25B8%2581%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2599%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-consumer-px7",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 4,
-        "category": "สัญญาธุรกิจ",
-        "category_en": "contract",
-        "title": "โรงงานไฟไหม้มีสารเคมี นายจ้างต้องรับผิดชอบค่าเสียหายพนักงานแค่ไหน?",
-        "trending_angle": "กระแสไฟไหม้โรงงานสารเคมีและดับเพลิงล้มป่วยกระตุ้นคำถามเรื่องมาตรฐานความปลอดภัยและสิทธิพนักงาน",
-        "urgency": "high",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588%2520,co_white,b_rgb:2C3E50,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B9%2584%25E0%25B8%259F%25E0%25B9%2584%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B9%2589%25E0%25B8%25A1%25E0%25B8%25B5%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B9%2580%25E0%25B8%2584%25E0%25B8%25A1%25E0%25B8%25B5%2520%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%2588%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2595%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%259C%25E0%25B8%25B4%25E0%25B8%2594%25E0%25B8%258A%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%2584%25E0%25B9%2588%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%25AB%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%259E%25E0%25B8%2599%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-contract-px5",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 5,
-        "category": "คดีอาญา",
-        "category_en": "criminal",
-        "title": "แต่งเครื่องแบบตำรวจปลอมขู่จับ — โทษหนักแค่ไหน รู้ไว้ก่อนตกเป็นเหยื่อ",
-        "trending_angle": "คดีป๋อง-ธงจุดกระแสให้คนตั้งคำถามว่าจะรู้ได้อย่างไรว่าเป็นตำรวจจริงหรือปลอม และกฎหมายกำหนดโทษผู้แอบอ้างอย่างไร",
-        "urgency": "high",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25B2%2520,co_white,b_rgb:C0392B,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2581%25E0%25B8%2595%25E0%25B9%2588%25E0%25B8%2587%25E0%25B9%2580%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2587%25E0%25B9%2581%25E0%25B8%259A%25E0%25B8%259A%25E0%25B8%2595%25E0%25B8%25B3%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2588%25E0%25B8%259B%25E0%25B8%25A5%25E0%25B8%25AD%25E0%25B8%25A1%25E0%25B8%2582%25E0%25B8%25B9%25E0%25B9%2588%25E0%25B8%2588%25E0%25B8%25B1%25E0%25B8%259A%2520%25E2%2580%2594%2520%25E0%25B9%2582%25E0%25B8%2597%25E0%25B8%25A9%25E0%25B8%25AB%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B9%2581%25E0%25B8%2584%25E0%25B9%2588%25E0%25B9%2584%25E0%25B8%25AB%25E0%25B8%2599%2520%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B9%2584%25E0%25B8%25A7%25E0%25B9%2589%25E0%25B8%2581%25E0%25B9%2588%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-criminal-ss3",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 6,
-        "category": "ครอบครัว",
-        "category_en": "family",
-        "title": "ฆ่าข่มขืนลูกสาวก่อนฝังทั้งครอบครัว — ทายาทผู้เสียหายมีสิทธิเรียกค่าเสียหายอะไรบ้าง?",
-        "trending_angle": "คดีสะเทือนขวัญฆ่ายกครัวกระตุ้นให้สังคมอยากรู้ว่าญาติผู้เสียชีวิตจากคดีอาญาร้ายแรงสามารถใช้สิทธิทางแพ่งคู่ขนานได้อย่างไร",
-        "urgency": "high",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A7%2520,co_white,b_rgb:2980B9,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2586%25E0%25B9%2588%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B9%2588%25E0%25B8%25A1%25E0%25B8%2582%25E0%25B8%25B7%25E0%25B8%2599%25E0%25B8%25A5%25E0%25B8%25B9%25E0%25B8%2581%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%2581%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%259D%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B9%2589%25E0%25B8%2587%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A7%2520%25E2%2580%2594%2520%25E0%25B8%2597%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%25AB%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%25A1%25E0%25B8%25B5%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-family-t3",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 7,
-        "category": "ผู้บริโภค",
-        "category_en": "consumer",
-        "title": "นักกีฬาโดนแบนจากสารกระตุ้น แต่อุทธรณ์สำเร็จ — สิทธิอุทธรณ์ในกฎหมายไทยใช้ได้แบบไหน?",
-        "trending_angle": "กรณีมูดริกอุทธรณ์สำเร็จเป็นแรงบันดาลใจให้ประชาชนอยากรู้เรื่องสิทธิการอุทธรณ์คำสั่งลงโทษที่ตนเห็นว่าไม่เป็นธรรม",
-        "urgency": "low",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%259A%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B9%2582%25E0%25B8%25A0%25E0%25B8%2584%2520,co_white,b_rgb:8E44AD,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B8%25AC%25E0%25B8%25B2%25E0%25B9%2582%25E0%25B8%2594%25E0%25B8%2599%25E0%25B9%2581%25E0%25B8%259A%25E0%25B8%2599%25E0%25B8%2588%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2595%25E0%25B8%25B8%25E0%25B9%2589%25E0%25B8%2599%2520%25E0%25B9%2581%25E0%25B8%2595%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B8%2597%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%2593%25E0%25B9%258C%25E0%25B8%25AA%25E0%25B8%25B3%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B9%2587%25E0%25B8%2588%2520%25E2%2580%2594%2520%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B8%25AD%25E0%25B8%25B8%25E0%25B8%2597%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-consumer-ss1",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 8,
-        "category": "สัญญาธุรกิจ",
-        "category_en": "contract",
-        "title": "ประชาธิปัตย์-เพื่อไทยจับมือบล็อกเสียงสภา กทม. — การเสียบบัตรแทนกันผิดกฎหมายอย่างไร?",
-        "trending_angle": "ข่าวพรรคการเมืองร่วมมือกันเสียบบัตรแทนในสภา กทม. จุดกระแสถามหามาตรการทางกฎหมายและการลงโทษผู้กระทำผิดระเบียบสภา",
-        "urgency": "medium",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588%2520,co_white,b_rgb:2C3E50,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B8%259B%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%25A2%25E0%25B9%258C-%25E0%25B9%2580%25E0%25B8%259E%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B9%2584%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B8%2588%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%25A1%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%259A%25E0%25B8%25A5%25E0%25B9%2587%25E0%25B8%25AD%25E0%25B8%2581%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%2587%25E0%25B8%25AA%25E0%25B8%25A0%25E0%25B8%25B2%2520%25E0%25B8%2581%25E0%25B8%2597%25E0%25B8%25A1.%2520%25E2%2580%2594%2520%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25B5%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-contract-gov3",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 9,
-        "category": "อสังหาริมทรัพย์",
-        "category_en": "property",
-        "title": "เศรษฐกิจไทย Q2 ชะลอ พลังงานแพง — ผู้เช่าและผู้กู้บ้านกระทบ มีสิทธิ์ขอปรับสัญญาได้หรือไม่?",
-        "trending_angle": "ภาวะเศรษฐกิจชะลอตัวและต้นทุนพลังงานพุ่งสูงทำให้ประชาชนจำนวนมากเริ่มตั้งคำถามถึงสิทธิในการเจรจาปรับเงื่อนไขสัญญาเช่าและสินเชื่อบ้าน",
-        "urgency": "medium",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%25AD%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%25AB%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25A1%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259E%25E0%25B8%25A2%25E0%25B9%258C%2520,co_white,b_rgb:27AE60,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B9%2580%25E0%25B8%25A8%25E0%25B8%25A3%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588%25E0%25B9%2584%25E0%25B8%2597%25E0%25B8%25A2%2520Q2%2520%25E0%25B8%258A%25E0%25B8%25B0%25E0%25B8%25A5%25E0%25B8%25AD%2520%25E0%25B8%259E%25E0%25B8%25A5%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B9%2581%25E0%25B8%259E%25E0%25B8%2587%2520%25E2%2580%2594%2520%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B9%2580%25E0%25B8%258A%25E0%25B9%2588%25E0%25B8%25B2%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0%25E0%25B8%259C%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%2581%25E0%25B8%25B9%25E0%25B9%2589%25E0%25B8%259A%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2581%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-property-px7",
-        "article_url": "https://lawyernearme.in.th/news.html"
-      },
-      {
-        "id": 10,
-        "category": "คดีแรงงาน",
-        "category_en": "labor",
-        "title": "พบลูกช้างบาดเจ็บกลางป่า — หากพบสัตว์ป่วยในป่า ประชาชนมีหน้าที่และสิทธิตามกฎหมายอะไรบ้าง?",
-        "trending_angle": "ข่าวลูกช้างพลัดหลงบาดเจ็บสร้างกระแสรักสัตว์และทำให้คนสงสัยว่ากฎหมายคุ้มครองสัตว์ป่ากำหนดสิทธิและหน้าที่ของประชาชนไว้อย่างไร",
-        "urgency": "low",
-        "image_url": "https://res.cloudinary.com/de50nluyy/image/upload/w_1200,h_630,c_fill,g_auto,q_auto:good/e_brightness:-15/l_lawyernearme-gradient/w_1200,h_150,c_fill/e_gradient_fade,y_0.5/a_180/fl_layer_apply,g_north,o_60/l_lawyernearme-gradient/w_1200,h_380,c_fill/e_gradient_fade,y_0.5/fl_layer_apply,g_south,o_78/l_text:Sarabun_38_bold:%25E0%25B8%2597%25E0%25B8%2599%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599,co_white,g_north_west,x_50,y_35,e_shadow:50/l_text:Sarabun_28_bold:%2520%25E0%25B8%2584%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B9%2581%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2520,co_white,b_rgb:E67E22,g_north_west,x_50,y_90/l_text:Sarabun_68_bold:%25E0%25B8%259E%25E0%25B8%259A%25E0%25B8%25A5%25E0%25B8%25B9%25E0%25B8%2581%25E0%25B8%258A%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2594%25E0%25B9%2580%25E0%25B8%2588%25E0%25B9%2587%25E0%25B8%259A%25E0%25B8%2581%25E0%25B8%25A5%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%259B%25E0%25B9%2588%25E0%25B8%25B2%2520%25E2%2580%2594%2520%25E0%25B8%25AB%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%259E%25E0%25B8%259A%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%25A7%25E0%25B9%258C%25E0%25B8%259B%25E0%25B9%2588%25E0%25B8%25A7%25E0%25B8%25A2%25E0%25B9%2583%25E0%25B8%2599%25E0%25B8%259B%25E0%25B9%2588%25E0%25B8%25B2%2520%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%258A%25E0%25B8%2599%25E0%25B8%25A1%25E2%2580%25A6,co_white,g_south_west,x_60,y_25,w_900,c_fit,e_shadow:80/l_text:Sarabun_26_bold:lawyernearme.in.th,co_white,g_south_east,x_50,y_35,e_shadow:30/l_text:Sarabun_26_bold:%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B6%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B8%25B2%25E0%25B8%259F%25E0%25B8%25A3%25E0%25B8%25B5,co_rgb:FFD700,g_south_east,x_50,y_70,e_shadow:30/legal-bg-labor-gov2",
         "article_url": "https://lawyernearme.in.th/news.html"
       }
     ]
