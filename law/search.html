@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ค้นหากฎหมายทุกฉบับ | ทนายใกล้ฉัน</title>
+  <meta name="description" content="ค้นหามาตรากฎหมายไทยทุกฉบับ กว่า 6,800 มาตรา ครอบคลุมกฎหมายอาญา แพ่ง แรงงาน ที่ดิน และอื่นๆ">
+  <link rel="canonical" href="https://lawyernearme.in.th/law/search.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#1B3A8B;--navy-dark:#112566;--navy-light:#e8edf8;--navy-mid:#2a4fa8;--gold:#F9A825;--white:#fff;--gray-bg:#f5f7fc;--gray-border:#e2e8f0;--gray-100:#f1f5f9;--gray-200:#e2e8f0;--text-main:#111827;--text-muted:#6b7280;--font:"Sarabun",sans-serif;--radius-sm:6px;--radius:10px;--radius-lg:16px;--shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow:0 4px 16px rgba(27,58,139,.10)}
+    html{scroll-behavior:smooth} body{font-family:var(--font);background:var(--white);color:var(--text-main);line-height:1.65;font-size:16px}
+    a{text-decoration:none} button{cursor:pointer;font-family:var(--font)}
+    .navbar{position:sticky;top:0;left:0;right:0;height:64px;background:var(--white);border-bottom:1px solid var(--gray-border);display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:100;box-shadow:0 2px 12px rgba(27,58,139,.07)}
+    .navbar-brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--navy)}
+    .brand-icon{width:38px;height:38px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+    .navbar-nav{display:flex;align-items:center;gap:4px}
+    .nav-link{font-size:14px;font-weight:600;color:var(--text-muted);padding:8px 14px;border-radius:var(--radius-sm);transition:color .15s,background .15s}
+    .nav-link:hover,.nav-link.active{color:var(--navy);background:var(--navy-light)}
+    .nav-cta{background:#B71C1C;color:var(--white);font-size:14px;font-weight:700;padding:9px 22px;border-radius:var(--radius-sm);margin-left:8px;transition:background .2s}
+    .nav-cta:hover{background:#8f1515}
+    .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:56px 32px 48px;color:var(--white);text-align:center}
+    .hero h1{font-size:32px;font-weight:800;margin-bottom:8px}
+    .hero p{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:28px}
+    .search-box{max-width:680px;margin:0 auto;position:relative}
+    .search-box input{width:100%;padding:18px 56px 18px 22px;border-radius:var(--radius-lg);border:none;font-family:var(--font);font-size:16px;background:var(--white);color:var(--text-main);outline:none;box-shadow:0 4px 24px rgba(0,0,0,.15)}
+    .search-box input::placeholder{color:var(--text-muted)}
+    .search-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;pointer-events:none}
+    .filter-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+    .filter-btn{font-size:12px;font-weight:600;padding:5px 14px;border-radius:12px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);cursor:pointer;transition:all .15s}
+    .filter-btn:hover,.filter-btn.active{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.6)}
+    .stats-bar{background:var(--gray-100);border-bottom:1px solid var(--gray-200);padding:10px 32px;font-size:13px;color:var(--text-muted);display:flex;align-items:center;gap:16px}
+    .stats-bar strong{color:var(--navy)}
+    .main{padding:32px;max-width:1120px;margin:0 auto}
+    .result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+    .result-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:18px 20px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:8px;transition:box-shadow .15s,border-color .15s}
+    .result-card:hover{box-shadow:var(--shadow);border-color:var(--navy)}
+    .rc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .rc-sec{font-size:11px;font-weight:800;background:var(--navy-light);color:var(--navy);padding:3px 10px;border-radius:var(--radius-sm)}
+    .rc-law{font-size:11px;font-weight:600;background:var(--gray-100);color:var(--text-muted);padding:3px 10px;border-radius:var(--radius-sm)}
+    .rc-title{font-size:14px;font-weight:700;color:var(--text-main);line-height:1.35}
+    .rc-summary{font-size:13px;color:var(--text-muted);line-height:1.65}
+    .rc-dika{font-size:11px;color:var(--text-muted);margin-top:2px}
+    .rc-dika span{background:var(--gray-100);padding:1px 6px;border-radius:4px;margin-right:4px}
+    .rc-footer{display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid var(--gray-100);margin-top:auto}
+    .rc-link{font-size:12px;font-weight:700;color:var(--navy)}
+    .cite-btn{font-size:11px;font-weight:700;color:var(--navy);background:var(--navy-light);border:none;padding:4px 10px;border-radius:var(--radius-sm);cursor:pointer;transition:background .15s;display:inline-flex;align-items:center;gap:4px}
+    .cite-btn:hover{background:#d0d9f0} .cite-btn.copied{background:#e8f5e9;color:#2e7d32}
+    .empty{text-align:center;padding:64px 0;color:var(--text-muted)}
+    .empty-icon{font-size:48px;margin-bottom:12px}
+    .load-more{display:none;width:100%;padding:14px;background:var(--navy-light);color:var(--navy);font-size:14px;font-weight:700;border:none;border-radius:var(--radius);margin-top:20px;cursor:pointer;transition:background .15s}
+    .load-more:hover{background:#d0d9f0}
+    .hint{text-align:center;color:var(--text-muted);font-size:14px;padding:48px 0}
+    .hint-icon{font-size:40px;margin-bottom:12px}
+    @media(max-width:700px){.result-grid{grid-template-columns:1fr}.hero h1{font-size:24px}.navbar-nav{display:none}}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <a class="navbar-brand" href="../index.html"><div class="brand-icon">⚖️</div>ทนายใกล้ฉัน</a>
+  <div class="navbar-nav">
+    <a class="nav-link" href="../index.html">หน้าหลัก</a>
+    <a class="nav-link" href="../news.html">ข่าวกฎหมาย</a>
+    <a class="nav-link" href="../blog/">บทความ</a>
+    <a class="nav-link active" href="./index.html">คลังกฎหมาย</a>
+    <a class="nav-link" href="../consult.html">ปรึกษาทนาย</a>
+    <a class="nav-cta" href="../consult.html">ค้นหาทนาย ➜</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>🔍 ค้นหากฎหมายทุกฉบับ</h1>
+  <p>ครอบคลุม 45 กฎหมาย กว่า 6,800 มาตรา — พิมพ์มาตรา คำสำคัญ หรือหัวข้อที่ต้องการ</p>
+  <div class="search-box">
+    <input type="text" id="q" placeholder="เช่น เจตนา, มาตรา 59, ค่าชดเชย, ละเมิด..." autocomplete="off" autofocus>
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="filter-bar" id="filter-bar"></div>
+</section>
+
+<div class="stats-bar" id="stats-bar" style="display:none">
+  พบ <strong id="count">0</strong> มาตรา
+  <span id="filter-label"></span>
+</div>
+
+<div class="main">
+  <div id="hint" class="hint">
+    <div class="hint-icon">📚</div>
+    <div>พิมพ์คำค้นหาด้านบนเพื่อเริ่มต้น</div>
+    <div style="font-size:13px;margin-top:8px;color:var(--text-muted)">หรือ <a href="./index.html" style="color:var(--navy);font-weight:600;">เลือกกฎหมายตามหมวด</a></div>
+  </div>
+  <div class="result-grid" id="results"></div>
+  <div id="empty" class="empty" style="display:none">
+    <div class="empty-icon">🔎</div>
+    <div>ไม่พบมาตราที่ตรงกับ "<span id="empty-q"></span>"</div>
+    <div style="font-size:13px;margin-top:8px">ลองเปลี่ยนคำค้นหา หรือ <a href="./index.html" style="color:var(--navy);">เลือกกฎหมายตามหมวด</a></div>
+  </div>
+  <button class="load-more" id="load-more" onclick="loadMore()">แสดงเพิ่มเติม</button>
+</div>
+
+<script>
+var INDEX = [];
+var filtered = [];
+var shown = 0;
+var PAGE = 20;
+var activeFilter = '';
+
+fetch('./search-index.json').then(function(r){return r.json()}).then(function(data){
+  INDEX = data;
+  buildFilters();
+  // ถ้ามี query param ?q= ให้ search เลย
+  var params = new URLSearchParams(location.search);
+  var q = params.get('q');
+  if (q) { document.getElementById('q').value = q; doSearch(q); }
+});
+
+function buildFilters() {
+  var laws = {};
+  INDEX.forEach(function(e){ laws[e.law] = (laws[e.law]||0)+1; });
+  var bar = document.getElementById('filter-bar');
+  var html = '<button class="filter-btn active" onclick="setFilter(\'\',this)">ทั้งหมด</button>';
+  Object.keys(laws).sort().forEach(function(law){
+    html += '<button class="filter-btn" onclick="setFilter(\''+law+'\',this)">'+law+'</button>';
+  });
+  bar.innerHTML = html;
+}
+
+function setFilter(law, btn) {
+  activeFilter = law;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var q = document.getElementById('q').value.trim();
+  if (q) doSearch(q); else if (law) { filtered = INDEX.filter(function(e){ return e.law === law; }); renderResults(); }
+  else showHint();
+}
+
+function doSearch(q) {
+  var hint = document.getElementById('hint');
+  hint.style.display = 'none';
+  if (!q && !activeFilter) { showHint(); return; }
+  var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+  filtered = INDEX.filter(function(e) {
+    if (activeFilter && e.law !== activeFilter) return false;
+    if (!terms.length) return true;
+    var haystack = (e.section+' '+e.title+' '+e.summary+' '+e.keywords+' '+e.chapter+' '+e.law+' '+e.dika.join(' ')).toLowerCase();
+    return terms.every(function(t){ return haystack.includes(t); });
+  });
+  shown = 0;
+  renderResults();
+  if (q) { var url = new URL(location); url.searchParams.set('q',q); history.replaceState(null,'',url); }
+}
+
+function renderResults() {
+  var grid = document.getElementById('results');
+  var empty = document.getElementById('empty');
+  var statsBar = document.getElementById('stats-bar');
+  var countEl = document.getElementById('count');
+  var loadMore = document.getElementById('load-more');
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    document.getElementById('empty-q').textContent = document.getElementById('q').value;
+    statsBar.style.display = 'none';
+    loadMore.style.display = 'none';
+    return;
+  }
+  empty.style.display = 'none';
+  statsBar.style.display = 'flex';
+  countEl.textContent = filtered.length;
+  var slice = filtered.slice(0, Math.min(shown + PAGE, filtered.length));
+  shown = slice.length;
+  grid.innerHTML = slice.map(renderCard).join('');
+  loadMore.style.display = shown < filtered.length ? 'block' : 'none';
+}
+
+function loadMore() {
+  var grid = document.getElementById('results');
+  var slice = filtered.slice(shown, shown + PAGE);
+  shown += slice.length;
+  grid.innerHTML += slice.map(renderCard).join('');
+  document.getElementById('load-more').style.display = shown < filtered.length ? 'block' : 'none';
+}
+
+function renderCard(e) {
+  var dikaHtml = e.dika && e.dika.length ? '<div class="rc-dika">ฎีกา: '+e.dika.map(function(d){return'<span>'+d+'</span>'}).join('')+'</div>' : '';
+  var citeText = 'มาตรา '+e.section+' '+e.law;
+  return '<div class="result-card">'+
+    '<div class="rc-top"><span class="rc-sec">มาตรา '+e.section+'</span><span class="rc-law">'+e.law+'</span></div>'+
+    (e.title ? '<div class="rc-title">'+e.title+'</div>' : '')+
+    (e.summary ? '<div class="rc-summary">'+e.summary.substring(0,160)+(e.summary.length>160?'…':'')+'</div>' : '')+
+    dikaHtml+
+    '<div class="rc-footer">'+
+      '<a class="rc-link" href="'+e.url+'">ดูทั้งหมด →</a>'+
+      '<button class="cite-btn" onclick="copyCite(this,\''+citeText.replace(/'/g,"\\'")+'\')" >📋 คัดลอกอ้างอิง</button>'+
+    '</div>'+
+  '</div>';
+}
+
+function copyCite(btn, text) {
+  navigator.clipboard.writeText(text).then(function(){
+    btn.textContent = '✓ คัดลอกแล้ว';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent = '📋 คัดลอกอ้างอิง'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+function showHint() {
+  document.getElementById('hint').style.display = 'block';
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('empty').style.display = 'none';
+  document.getElementById('stats-bar').style.display = 'none';
+  document.getElementById('load-more').style.display = 'none';
+}
+
+document.getElementById('q').addEventListener('input', function(){
+  var q = this.value.trim();
+  if (q.length === 0) { if (!activeFilter) showHint(); else setFilter(activeFilter, document.querySelector('.filter-btn.active')); }
+  else if (q.length >= 2) doSearch(q);
+});
+
+document.getElementById('q').addEventListener('keydown', function(e){
+  if (e.key === 'Enter') doSearch(this.value.trim());
+});
+</script>
+</body>
+</html>
